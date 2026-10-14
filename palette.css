@@ -1,0 +1,91 @@
+/* White paper and neutral grey surfaces; figure colours stay in the accents. */
+:root{--paper:#fff;--white:#fff;--ink:#303743;--muted:#666b73;--line:#ddd;--green:#526381;--pale:#f1f1f1;--accent:#ad6651;--cream:#ead1a5;--violet:#8279b4;--navy:#29364b}
+body{background:var(--paper)}
+.paper-lead,.overview-text p,.result-text p:not(.study-label){color:#565c65}
+.research-route a{border-color:#bd9485}.research-route a:first-child{border-color:#8995ac}
+.part-label,.study-label{color:#596a86}.refinement-part .part-label,.refinement-part .study-label{color:#a6614b}
+.part-takeaway,.refinement-part .part-takeaway{background:#f5f5f5;border-color:#b7b7b7}
+.method-steps li{border-color:#c9c9c9}
+.part-demo,.refinement-part .part-demo,.soft-band,.demo-band{background:#f5f5f5;border-color:#e5e5e5}
+.demo-disclosure{border-color:#d8d8d8;border-radius:4px;box-shadow:none}
+.demo-disclosure>summary{color:#3c475a}.demo-disclosure>summary>span{font-size:13px}
+.judge-panel,.rules-panel{background:#fff;border-color:#dedede;border-radius:3px}
+.judge-picker{margin-top:14px}
+.preference-chart{background:#f5f5f5}.result-bar>div{background-image:linear-gradient(90deg,#ddd 1px,transparent 1px)}
+.result-bar i{background:#b9bac1}.result-bar.ours{color:#9b5a44}.result-bar.ours i{background:#b76d55}
+.chart-axis{border-color:#ccc}.paper-table thead{background:#f5f5f5}.paper-table tr.ours{background:#f5f5f5;color:#945640}
+.figure-image{border:0;border-radius:0}
+.paper-figure figcaption{font-size:14px}.paper-figure figcaption a{color:#526381}
+.segmented,.version-switch{background:#eee}
+.segmented button.active{color:#3d4d69;box-shadow:0 1px 3px #00000012}
+.judge-chip[aria-pressed=true]{background:#f3f3f3;border-color:#74809a}.judge-chip:hover{background:#f5f5f5}
+.dimension-track{background:#e7e7e7}.dimension-track i{background:#8985b5}.dimension-reason{border-color:#bdbdbd}
+.quote-card{background:#f5f5f5}.quote-mark{color:#bcbcbc}
+.dimension-compare{background:#fff;border-color:#ddd;color:var(--ink)}
+.compare-row>i{background:linear-gradient(to right,#8780b0 calc(var(--score) * 20%),#e7e7e7 0)}
+.compare-heading b,.compare-heading>span,.compare-row{font-size:12px}
+.replay-controls,.live-action-panel{background:#f7f7f7;border-color:#ddd}
+.icon-button:hover,.subtle-button:hover{background:#eee}.subtle-button{border-color:#ccc}
+.range-track{background:#e7e7e7}.range-track i{background:#8580ac}
+.source-details pre{background:#f5f5f5}
+.refinement-intro,.target-stat,.target-description,.rule-item{border-color:#ddd}
+.persona-icon{background:#f2f2f2;color:#a9654c}
+.dimension-feedback{background:#fff;border:0;border-radius:0;padding:0;margin:0;color:var(--ink)}
+.dimension-feedback h4{font-size:16px;margin-bottom:12px}
+.feedback-row{border-color:#ddd;font-size:14px;padding-block:15px}.feedback-row>b{font-size:14px}.feedback-row>small{font-size:13px;color:#80685e}.feedback-row.accepted>small{color:#526381}
+.pilot-details blockquote{border-color:#bcbcbc}
+.live-actions button{background:#fff;border-color:#aeb7c6;color:#465776;font-size:13px}.live-actions button:hover{background:#edf0f4}
+.live-actions button.risk{border-color:#c5947c;background:#f6ebe4;color:#954e34}
+.mechanic-cue{border-color:#ddd;color:#5c626c}.mechanic-cue:empty,.live-actions:empty{display:none}
+.motion-toggle{color:var(--muted);font-size:12px}.motion-toggle input{accent-color:#526381}
+.text-button,.utility-actions span{font-size:12px}
+.felt{background:#29364b;color:#f5f3ef;box-shadow:none}
+.felt:before{border-color:#a2acc430}.felt:after{color:#cbd3e20b}
+.card-back{background:repeating-linear-gradient(45deg,#8584ad 0,#8584ad 2px,#5f658c 2px,#5f658c 5px);border-color:#ede8df;box-shadow:0 1px 2px #101b3444}
+.table-pile>.card-back{box-shadow:3px 3px 0 #18243b,4px 4px 0 #8993ad}
+.flying-card .card-back{background-color:#59628a;border-color:#ede8df;background-image:repeating-linear-gradient(45deg,transparent,transparent 4px,#ede8df22 4px,#ede8df22 5px)}
+.table-card{color:#283451;background:#fffaf3;border-color:#e6ded2;box-shadow:0 3px 7px #101b3425}.table-card.red{color:#b56952}
+.table-card.legal-card:hover,.live-table button.legal-card:hover,.live-table button.legal-card:focus-visible{box-shadow:0 7px 15px #101b3455}
+.opponent-count,.table-pile small,.hand-label,.turn-banner small{color:#cbd0e3}.table-facts,.terminal-panel>p{color:#d5d8e7}
+.action-callout,.payoff-grid div,.book-badge{border-color:#a0aac740}
+.draw-meter{color:#e6e7ee}.draw-meter i{border-color:#d3d6e355;color:#d3d6e388}.draw-meter i.filled{background:#dfbc87;color:#283451;border-color:#dfbc87}.draw-meter small{color:#c7cbe1}
+.status-dot{background:#788ba8}
+.resources{background:#f5f5f5;color:var(--ink);border-color:#ddd}
+.paper-resources>a,.resource-details,.citation-details{border-color:#ddd}
+.paper-resources>a{padding-block:21px}.paper-resources>a b{color:#465776;font-size:16px;font-weight:550}
+.citation-details pre{background:#fff;border-color:#ddd;color:var(--ink)}
+.resources .subtle-button{border-color:#ccc}.resources .subtle-button:hover{background:#eaeaea}
+.resource-details a{font-size:13px}.citation-details summary{font-size:15px}
+.teaser-hero{background:#121b2c}.teaser-hero:before{background:linear-gradient(180deg,#0c1429b8 0%,#111a2c70 35%,#111a2c75 65%,#0c1429e5 100%),radial-gradient(ellipse at 50% 48%,#162039a8 0%,#16203962 42%,#16203914 78%)}
+.site-header nav a{text-shadow:0 1px 8px #0d1528}
+.teaser-hero .submission,.teaser-hero .paper-authors{color:#dfdeee}.teaser-hero h1 .project-title{color:#f6f3f8}
+.teaser-hero .button.primary{background:#f7f7f7;color:#303956;border-color:#f7f7f7}.teaser-hero .button.primary:hover{background:#fff}
+.teaser-hero .button.secondary{background:#17223a75}.hero-scroll{color:#e7e4ef}
+/* Rules precede the table; evaluation follows it in reading and keyboard order. */
+.live-layout,.evaluation-workbench{grid-template-columns:1fr;gap:28px}
+.live-column,.replay-column,.judge-panel{width:min(100%,780px);margin-inline:auto}
+.live-toolbar{gap:14px;padding-bottom:18px;margin-bottom:0}.version-switch{flex:0 1 340px}
+.rules-panel{padding:24px 26px}.rules-panel h3{font:600 24px/1.3 var(--sans);margin:0 0 15px}
+.rules-invariants{margin:0 0 22px;font-size:14px}.rules-invariants p{margin-top:5px}.rules-invariants>span{font-size:12px;color:var(--muted)}
+#rules-summary,.recorded-rule-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.rules-panel .rule-item,.recorded-rules .rule-item{padding:0;border:0;gap:12px}.rule-item b{font-size:15px}.rule-item p{font-size:14px;line-height:1.65}.rule-item>span{font-size:22px}
+.rules-panel .source-details{font-size:13px}.rules-panel .source-details a{font-size:13px}
+.refinement-evaluation{margin-top:32px;padding-top:28px;border-top:1px solid #ddd}
+.refinement-evaluation>h3{font-size:24px}.refinement-evaluation .refinement-intro{grid-template-columns:minmax(0,1fr) auto;padding:18px 0;border:0;margin:0 0 18px}.refinement-intro .persona-stamp h3{font-size:20px}
+.refinement-evaluation .target-stat{border:0;padding:0}.target-stat>span{font-size:12px}
+.recorded-rules{margin:0 0 28px;padding:0 0 26px;border-bottom:1px solid #ddd}
+.recorded-rules-heading{display:flex;align-items:baseline;justify-content:space-between;gap:15px;margin-bottom:18px}.recorded-rules-heading h3{font-size:23px}.recorded-rules-heading>a{font-size:13px;white-space:nowrap;color:#526381}
+.judge-panel{padding:26px}.judge-heading .eyebrow{font-size:12px}.judge-chip{font-size:12px}.dimension-top{font-size:12px}.dimension-reason{font-size:13px}.quote-card blockquote{font-size:15px}
+@media(max-width:800px){#rules-summary,.recorded-rule-grid{grid-template-columns:1fr;gap:18px}.rules-panel{padding:22px}.recorded-rules-heading h3{font-size:21px}}
+@media(max-width:540px){.paper-figure figcaption{font-size:13px}.demo-disclosure>summary>span{font-size:12px}.feedback-row{grid-template-columns:1fr;gap:5px}.feedback-row>b{justify-self:start}.feedback-row>small{grid-column:auto}.turn-banner small{font-size:10px}.compare-row>span{width:92px}.utility-actions{gap:6px 14px}.live-toolbar{gap:9px}.version-switch{flex:1 1 100%}.refinement-evaluation .refinement-intro{grid-template-columns:1fr;gap:14px}.rules-panel{padding:18px}.rule-item p{font-size:13px}.judge-panel{padding:17px}.dimension-top{font-size:11px}}
+/* Persona mechanics use the existing flat table palette. */
+.live-toolbar{flex-wrap:wrap}.persona-label{flex:1 1 240px}.persona-label select{width:100%;max-width:260px}.version-switch{flex:1 1 310px}
+.refinement-evaluation .refinement-intro{grid-template-columns:minmax(220px,1fr) auto auto;gap:30px}.refinement-evaluation .target-stat>strong{font-size:34px}
+.suit-progress{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;color:#eee4cf;font-size:12px;margin:8px 0 12px}.suit-progress b{font-weight:500;color:#dfbc87}.opponent .suit-progress{display:block;font-size:10px;line-height:1.6;margin:5px 0}.opponent .suit-progress b{display:block}
+.shared-suit{flex-direction:column;gap:4px}
+.set-aside{border-top:1px solid #a2acc440;padding-top:9px;margin-top:12px}.set-aside>span{display:block;font-size:11px;color:#cbd0e3;margin-bottom:7px}.set-aside-cards{display:flex;gap:5px;justify-content:center;flex-wrap:wrap;min-height:49px}.set-aside-cards .table-card,.set-aside-cards .incoming-card{width:34px;height:48px;flex:0 0 34px}.set-aside-cards .card-rank{font-size:15px}.set-aside-cards .card-suit{font-size:17px}.set-aside-cards .card-corner{font-size:7px;top:3px;left:3px}
+.opponent .set-aside{margin-top:6px;padding-top:5px}.opponent .set-aside>span{font-size:9px;margin-bottom:5px}.opponent .set-aside-cards{gap:3px;min-height:33px}.opponent .set-aside-cards .table-card,.opponent .set-aside-cards .incoming-card{width:23px;height:32px;flex-basis:23px}.opponent .set-aside-cards .card-rank{font-size:10px}.opponent .set-aside-cards .card-suit{font-size:13px}.opponent .set-aside-cards .card-corner{display:none}
+.burden-choice{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.burden-choice strong{flex-basis:100%;font-size:13px}.payoff-grid small{display:block;color:#cbd0e3;font-size:11px;margin-top:6px}.payoff-note{margin-top:20px}
+[hidden]{display:none!important}
+@media(max-width:800px){.refinement-evaluation .refinement-intro{grid-template-columns:1fr 1fr;gap:20px}.refinement-evaluation .persona-stamp{grid-column:1/-1}.persona-label{flex-basis:100%}.persona-label select{max-width:none}}
+@media(max-width:540px){.set-aside-cards{gap:4px}.suit-progress{font-size:11px}.opponent .set-aside-cards{gap:2px}.refinement-evaluation .target-stat>strong{font-size:28px}.burden-choice button{flex:1 1 40%}}

@@ -1,0 +1,46 @@
+{
+  "condition": "gate_feedback_pilot_crazy_eights_thrill_v1",
+  "feedback_retry": true,
+  "preference_available_to_gate": false,
+  "attempt": {
+    "target_dimension": "challenge_fit",
+    "target_direction": "increase",
+    "baseline_target_value": 2.0,
+    "modified_target_value": 3.0,
+    "signed_target_improvement": 1.0,
+    "gate_threshold": 0.25,
+    "experience_delta": {
+      "autonomy": 1.0,
+      "challenge_fit": 1.0,
+      "cognitive_challenge": 0.0,
+      "curiosity": 2.0,
+      "decision_challenge": 0.0,
+      "ease_of_control": 1.0,
+      "emotional_challenge": 1.0,
+      "goals_rules": 0.0,
+      "immersion": 2.0,
+      "mastery": 1.0,
+      "meaning": 1.0,
+      "progress_feedback": 0.0
+    },
+    "predicted_score_delta_12d": 3.276065036835199,
+    "predicted_score_contributions": {
+      "autonomy": 0.2654169781451969,
+      "challenge_fit": 0.642746783113305,
+      "cognitive_challenge": -0.0,
+      "curiosity": 0.5050635425013041,
+      "decision_challenge": 0.0,
+      "ease_of_control": 0.02559552374825206,
+      "emotional_challenge": 0.6606341887517374,
+      "goals_rules": 0.0,
+      "immersion": 0.3675779102439051,
+      "mastery": 0.3620989721512422,
+      "meaning": 0.44693113818025654,
+      "progress_feedback": 0.0
+    },
+    "prediction_gate_threshold": 0.0,
+    "accepted": true,
+    "rejection_reason": null,
+    "preference_score_observed_at_decision_time": false
+  }
+}

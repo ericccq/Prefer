@@ -1,0 +1,122 @@
+{
+  "condition": "gate_feedback_pilot_crazy_eights_thrill_v1",
+  "source_condition": "pure_parameter_sequential_predicted_gate_30x5_local_impl_v1",
+  "source_task_id": "crazy_eights__ppsg_thrill_r3_v1",
+  "task_id": "crazy_eights__ppsg_thrill_challenge_fit_feedback_v1",
+  "feedback": {
+    "source_condition": "pure_parameter_sequential_predicted_gate_30x5_local_impl_v1",
+    "source_task_id": "crazy_eights__ppsg_thrill_r3_v1",
+    "gate_failure": {
+      "target_dimension": "challenge_fit",
+      "target_direction": "increase",
+      "baseline_value": 2.0,
+      "modified_value": 2.0,
+      "signed_improvement": 0.0,
+      "required_improvement": 0.25,
+      "rejection_reason": "signed_target_below_threshold",
+      "predicted_total_delta": 2.48737900007609
+    },
+    "prior_patch": {
+      "change_summary": "Added the Push-Your-Luck Exposure rule: if a player draws 3 or more cards from the stock in a single turn, their entire hand is revealed face-up to all players until the start of their next turn. This creates a meaningful risk-reward tradeoff on every draw decision.",
+      "mechanic_hypothesis": "By attaching an information-exposure penalty to deep draws, the drawing action becomes a genuine push-your-luck gamble: each additional card drawn beyond the second increases the player's chance of finding a playable card but risks exposing their hand to opponents who can then target them strategically. This raises the effective difficulty of the draw decision to a level that matches a Thrill Seeker's appetite for risk, making the challenge feel appropriately calibrated rather than trivially safe."
+    },
+    "blinded_evaluator_repeat_values": [
+      2.0,
+      2.0,
+      2.0
+    ],
+    "blinded_evaluator_evidence": [
+      "Push-your-luck exposure mechanic aligns with persona's risk appetite, but the lack of immediate meaningful punishment for excessive drawing (only information exposure) made the risk feel inconsequential until the final scoring, reducing tension.",
+      "The push-your-luck exposure mechanic existed but carried only informational penalty (hand revealed); no mechanical cost prevented indefinite drawing, making the risk trivial and the challenge poorly calibrated for meaningful tension.",
+      "Push-your-luck exposure mechanic was present and triggered repeatedly, matching the persona's stated interest, but the challenge degraded into one-directional deterioration with no tension or comeback possibility; the player was never close to winning."
+    ],
+    "allowed_use": "Diagnose why the assigned target did not move and generate a new independent single patch of the frozen original rulebook.",
+    "forbidden_use": "Do not use an observed preference score, a post-selection outcome, or change the assigned target."
+  },
+  "generation": {
+    "change_summary": "Replaced unlimited drawing with a Gamble Draw capped at 3 cards per turn. If a playable card is drawn, it must be played immediately. If 3 non-playable cards are drawn, the player busts and must bury their highest-value card face-down at the bottom of the stock, removing it from the game. Players may stop early after 1-2 non-playable draws to avoid bust risk.",
+    "mechanic_hypothesis": "The hard 3-card draw cap with a bust penalty transforms drawing from a safe, costless action into a genuine push-your-luck gamble. Each draw beyond the first carries escalating risk of losing one's most valuable card, creating real mechanical tension on every draw decision. The immediate, tangible penalty (losing a high-value card) ensures the risk is consequential rather than merely informational, while the possibility of busting creates schadenfreude moments and comeback dynamics as busted players lose powerful cards.",
+    "unchanged_invariants": [
+      "Standard 52-card deck, no jokers",
+      "5 cards dealt to each player",
+      "Match by suit or rank to play",
+      "Eights are wild and require suit declaration",
+      "Eight burial on starter during setup",
+      "Win by emptying hand or lowest hand value at exhaustion",
+      "Point values unchanged",
+      "Turn order and player count unchanged",
+      "Information boundaries preserved (hands hidden, stock hidden)",
+      "No hand limit"
+    ],
+    "observable_trace_changes": [
+      "Players who draw will draw at most 3 cards per turn instead of potentially many more",
+      "Bust events will occur where a player visibly loses their highest-value card",
+      "Players will sometimes stop drawing early after 1-2 non-playable draws to avoid bust risk",
+      "Players who hold a playable card may still choose to gamble-draw, creating visible risk-taking",
+      "Hand sizes will generally be smaller over time as busted cards are removed from the game",
+      "Games may end slightly faster as cards are removed via busts"
+    ],
+    "implementation_notes": [
+      "The bust card is placed face-down at the bottom of the stock pile; if the stock is empty, the card is simply removed from play and set aside face-down",
+      "If a player busts and their highest-value card is an eight (50 points), that eight is buried and removed from the game",
+      "The 3-card cap applies per turn, not per round; a player who busts cannot draw again until their next turn",
+      "A player who draws a playable card on their 1st, 2nd, or 3rd draw must play it immediately; they cannot decline",
+      "Voluntary drawing (drawing when you have a playable card) is still allowed but now carries bust risk"
+    ],
+    "risk_notes": [
+      "The bust penalty may feel harsh if a player's highest-value card is an eight (50 points), potentially creating a swingy feel",
+      "Players who are forced to draw (no playable cards) face a higher bust probability, which could feel punishing rather than thrilling if it happens repeatedly",
+      "The 3-card cap is somewhat arbitrary; if playtesting shows it is too tight or too loose, the number could be adjusted",
+      "Removing cards from the game via busts slightly reduces the total card pool, which could affect late-game dynamics in longer games"
+    ]
+  },
+  "gate": {
+    "target_dimension": "challenge_fit",
+    "target_direction": "increase",
+    "baseline_target_value": 2.0,
+    "modified_target_value": 3.0,
+    "signed_target_improvement": 1.0,
+    "gate_threshold": 0.25,
+    "experience_delta": {
+      "autonomy": 1.0,
+      "challenge_fit": 1.0,
+      "cognitive_challenge": 0.0,
+      "curiosity": 2.0,
+      "decision_challenge": 0.0,
+      "ease_of_control": 1.0,
+      "emotional_challenge": 1.0,
+      "goals_rules": 0.0,
+      "immersion": 2.0,
+      "mastery": 1.0,
+      "meaning": 1.0,
+      "progress_feedback": 0.0
+    },
+    "predicted_score_delta_12d": 3.276065036835199,
+    "predicted_score_contributions": {
+      "autonomy": 0.2654169781451969,
+      "challenge_fit": 0.642746783113305,
+      "cognitive_challenge": -0.0,
+      "curiosity": 0.5050635425013041,
+      "decision_challenge": 0.0,
+      "ease_of_control": 0.02559552374825206,
+      "emotional_challenge": 0.6606341887517374,
+      "goals_rules": 0.0,
+      "immersion": 0.3675779102439051,
+      "mastery": 0.3620989721512422,
+      "meaning": 0.44693113818025654,
+      "progress_feedback": 0.0
+    },
+    "prediction_gate_threshold": 0.0,
+    "accepted": true,
+    "rejection_reason": null,
+    "preference_score_observed_at_decision_time": false
+  },
+  "diagnostic_preference": {
+    "status": "ok",
+    "baseline_score": 2.0,
+    "modified_score": 6.0,
+    "score_delta": 4.0,
+    "evaluated_after_gate_decision": true,
+    "available_to_gate": false
+  }
+}

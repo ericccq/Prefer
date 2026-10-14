@@ -1,0 +1,1184 @@
+[
+  {
+    "id": "models-0",
+    "mode": "models",
+    "name": "glm-5.3",
+    "model": "glm-5.3",
+    "persona": null,
+    "score": 7,
+    "reason": "The player progressed coherently through a full Gin Rummy game, making sensible draw/discard choices, and ended with a decisive gin victory (payoff 1 vs 0), indicating an engaged and successful session; however, opponents were random agents and no subjective feedback was logged, so evidence of experience quality is moderate.",
+    "evidence": [
+      "Decision 1: took the useful Q♣ from the discard pile rather than blind stock draw.",
+      "Decisions 2-27: consistent draw-then-discard cycle, discarding unpaired cards like 2♠ and 6♣ while retaining queens and melds.",
+      "Decision 12: chose knock when legal, showing active pursuit of the win condition.",
+      "Decision 28: declared gin (action 14) and won with terminal payoff [1,0]."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 4,
+      "mastery": 3,
+      "curiosity": 3,
+      "challenge_fit": 2,
+      "cognitive_challenge": 3,
+      "decision_challenge": 3,
+      "meaning": 2,
+      "immersion": 3,
+      "emotional_challenge": 1,
+      "progress_feedback": 3,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "Draw-then-discard structure, knock/gin options, and terminal payoff were consistently represented in legal action lists, making the goal path clear throughout.",
+      "autonomy": "Each turn offered a genuine choice between stock and discard draws plus 10-11 discard candidates, and the player varied choices (e.g., took the opening discard Q♣, later drew from discard 10♦ and 9♦).",
+      "mastery": "The player steadily shaped melds (queens set, J♦-10♦-9♦ run) across ~28 decisions and culminated in a successful Gin declaration, showing skill progression within the hand.",
+      "curiosity": "Repeated stock draws despite an unchanging weak hand suggest limited exploration of discard-pile inference, though occasional discard pickups show some attention to revealed cards.",
+      "challenge_fit": "The opponent was a RandomAgent and the player achieved a clean Gin win, indicating difficulty was poorly matched (too easy).",
+      "cognitive_challenge": "Tracking meld potential across a 10-card hand and choosing discards (e.g., shedding 2♠, 6♣, 9♥ while holding queens) required moderate but not deep reasoning.",
+      "decision_challenge": "Discard choices among near-equivalent dead cards (e.g., decision 4 choosing among unpaired cards) carried modest consequences given the random opponent.",
+      "meaning": "Play consisted of competent legal moves toward Gin with no recorded narrative, stakes, or personal resonance beyond the win.",
+      "immersion": "Sustained engagement across 28 consecutive decisions with consistent hand-improvement strategy indicates absorption in the game state.",
+      "emotional_challenge": "No moral, social, or emotionally consequential choices appeared; play was purely combinatorial.",
+      "progress_feedback": "Visible hand, discard pile, and stock count updated every decision, but no intermediate meld or deadwood summary was shown, and outcome feedback arrived only at termination.",
+      "ease_of_control": "Every selected action was legal and accepted without friction; card-indexed discard actions translated intentions cleanly."
+    },
+    "limitations": [
+      "Opponent was a RandomAgent, so competitive-pressure dimensions cannot be assessed against skilled play.",
+      "No reasoning, timing, or subjective reports were logged, so curiosity, meaning, and immersion are inferred only from action patterns.",
+      "Opponent's hand and intermediate actions are only indirectly visible via discard-pile changes, limiting evidence about interactive dynamics.",
+      "Only one partial game was recorded, so long-run mastery and score-progress feedback across hands are unobserved."
+    ],
+    "sources": [
+      {
+        "label": "recovery",
+        "job_id": "glm-5.3/461cd0b0d0b36c6496d5688b/play_score",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "glm-5.3",
+        "judge_persona": null,
+        "instrument": "play_score",
+        "branch": "neutral_external",
+        "system_sha256": "7418cd97230da7e59e0fe266395507e17a4211e11f2a095f148a9e60a1c4b285",
+        "user_sha256": "2090a4fb350911f6937244033f615d7372438c2d601af3e9594617e5b7efcd5b",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/glm-5.3/461cd0b0d0b36c6496d5688b/play_score/result.json",
+        "source_sha256": "643042f2e9c1ddc96fad100686717f3c513c3b948bb77afb5cc36d4c60c1d253",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "glm-5.3",
+        "original_response": {
+          "status": "ok",
+          "play_experience_score": 7,
+          "reasoning": "The player progressed coherently through a full Gin Rummy game, making sensible draw/discard choices, and ended with a decisive gin victory (payoff 1 vs 0), indicating an engaged and successful session; however, opponents were random agents and no subjective feedback was logged, so evidence of experience quality is moderate.",
+          "trajectory_evidence": [
+            "Decision 1: took the useful Q♣ from the discard pile rather than blind stock draw.",
+            "Decisions 2-27: consistent draw-then-discard cycle, discarding unpaired cards like 2♠ and 6♣ while retaining queens and melds.",
+            "Decision 12: chose knock when legal, showing active pursuit of the win condition.",
+            "Decision 28: declared gin (action 14) and won with terminal payoff [1,0]."
+          ],
+          "confidence": 4
+        }
+      },
+      {
+        "label": "recovery",
+        "job_id": "glm-5.3/2ff5731230e7d95661d81609/experience12",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "glm-5.3",
+        "judge_persona": null,
+        "instrument": "experience12",
+        "branch": "neutral_external",
+        "system_sha256": "84e1adbc981e57ab8d0175fe7beb8943106a106886af29912397747382c2d2a0",
+        "user_sha256": "5226b1c258960d64263ec2789b561be5f55a973b38f95f4fbf313926c17a1819",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/glm-5.3/2ff5731230e7d95661d81609/experience12/result.json",
+        "source_sha256": "c2b922fb2e1ba0f233a0e4bf9bc95ddb2042445e6ca22bfd5f275cdfac8ae3f2",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "glm-5.3",
+        "original_response": {
+          "experience_vector": {
+            "goals_rules": 4,
+            "autonomy": 4,
+            "mastery": 3,
+            "curiosity": 3,
+            "challenge_fit": 2,
+            "cognitive_challenge": 3,
+            "decision_challenge": 3,
+            "meaning": 2,
+            "immersion": 3,
+            "emotional_challenge": 1,
+            "progress_feedback": 3,
+            "ease_of_control": 4
+          },
+          "evidence": {
+            "goals_rules": "Draw-then-discard structure, knock/gin options, and terminal payoff were consistently represented in legal action lists, making the goal path clear throughout.",
+            "autonomy": "Each turn offered a genuine choice between stock and discard draws plus 10-11 discard candidates, and the player varied choices (e.g., took the opening discard Q♣, later drew from discard 10♦ and 9♦).",
+            "mastery": "The player steadily shaped melds (queens set, J♦-10♦-9♦ run) across ~28 decisions and culminated in a successful Gin declaration, showing skill progression within the hand.",
+            "curiosity": "Repeated stock draws despite an unchanging weak hand suggest limited exploration of discard-pile inference, though occasional discard pickups show some attention to revealed cards.",
+            "challenge_fit": "The opponent was a RandomAgent and the player achieved a clean Gin win, indicating difficulty was poorly matched (too easy).",
+            "cognitive_challenge": "Tracking meld potential across a 10-card hand and choosing discards (e.g., shedding 2♠, 6♣, 9♥ while holding queens) required moderate but not deep reasoning.",
+            "decision_challenge": "Discard choices among near-equivalent dead cards (e.g., decision 4 choosing among unpaired cards) carried modest consequences given the random opponent.",
+            "meaning": "Play consisted of competent legal moves toward Gin with no recorded narrative, stakes, or personal resonance beyond the win.",
+            "immersion": "Sustained engagement across 28 consecutive decisions with consistent hand-improvement strategy indicates absorption in the game state.",
+            "emotional_challenge": "No moral, social, or emotionally consequential choices appeared; play was purely combinatorial.",
+            "progress_feedback": "Visible hand, discard pile, and stock count updated every decision, but no intermediate meld or deadwood summary was shown, and outcome feedback arrived only at termination.",
+            "ease_of_control": "Every selected action was legal and accepted without friction; card-indexed discard actions translated intentions cleanly."
+          },
+          "limitations": [
+            "Opponent was a RandomAgent, so competitive-pressure dimensions cannot be assessed against skilled play.",
+            "No reasoning, timing, or subjective reports were logged, so curiosity, meaning, and immersion are inferred only from action patterns.",
+            "Opponent's hand and intermediate actions are only indirectly visible via discard-pile changes, limiting evidence about interactive dynamics.",
+            "Only one partial game was recorded, so long-run mastery and score-progress feedback across hands are unobserved."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "models-1",
+    "mode": "models",
+    "name": "deepseek-v4.1-flash",
+    "model": "deepseek-v4.1-flash",
+    "persona": null,
+    "score": 5,
+    "reason": "The record shows a long, coherent Gin Rummy session where the focal player drew, discarded, and eventually declared gin (action 14) to win 1-0. Decisions are consistent and the win is a clear positive outcome, but the play is largely routine: repeated draw/discard cycles with no visible strategic tension, opponent interaction, or notable feedback beyond the terminal payoff. Evidence is sufficient to rate as ordinary/mixed rather than clearly good or poor.",
+    "evidence": [
+      "Decision 1: drew from stock (action 1) with no discard available.",
+      "Decision 2: drew from discard pile (action 10), taking the Q of clubs.",
+      "Decisions 3-27: alternating draw and discard actions, gradually assembling a hand.",
+      "Decision 28: declared gin (action 14), ending the game.",
+      "Terminal payoffs: focal player 1, opponent 0."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 3,
+      "mastery": 3,
+      "curiosity": 2,
+      "challenge_fit": 3,
+      "cognitive_challenge": 3,
+      "decision_challenge": 3,
+      "meaning": 2,
+      "immersion": 2,
+      "emotional_challenge": 1,
+      "progress_feedback": 3,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "Legal action sets were consistently small and interpretable (draw stock/discard, discard index, knock, gin), and the final decision offered knock/gin options consistent with the rules.",
+      "autonomy": "Most turns presented only two legal actions (draw stock or draw discard), with discard choices constrained to hand indices, limiting meaningful branching.",
+      "mastery": "The player repeatedly drew from stock and discarded, and at decision 28 selected gin, showing some ability to build toward a winning hand.",
+      "curiosity": "No recorded action or feedback indicates exploration of hidden stock contents or deliberate probing of opponent tendencies.",
+      "challenge_fit": "The session ran 28 decisions against a RandomAgent and ended in a win, suggesting difficulty was manageable but not clearly calibrated.",
+      "cognitive_challenge": "The player had to track a growing discard pile and hand composition across many turns, requiring moderate planning.",
+      "decision_challenge": "Choices were mostly binary draw-source decisions plus discard index selection, with limited consequence visibility at decision time.",
+      "meaning": "The record shows only mechanical draw/discard/gin actions with no evidence of personal significance beyond completing the partial game.",
+      "immersion": "The delta-encoded state changes provide no evidence of sustained absorption or felt involvement.",
+      "progress_feedback": "Stock size decremented steadily (31 to 15) and discard pile grew, giving clear but coarse status feedback.",
+      "ease_of_control": "Actions mapped directly to small legal action lists with no procedural friction evident in the record.",
+      "emotional_challenge": "No undercut, knock risk, or morally/socially consequential pressure is evidenced in the recorded decisions."
+    },
+    "limitations": [
+      "No opponent private observations or reasoning are included.",
+      "No wall-clock timing, subjective feelings, or think-aloud data were logged.",
+      "Terminal payoff [1,0] confirms a win but does not reveal margin or partial-game scores.",
+      "The record is delta-encoded and may omit intermediate opponent actions not visible at focal decisions."
+    ],
+    "sources": [
+      {
+        "label": "recovery",
+        "job_id": "deepseek-v4.1-flash/461cd0b0d0b36c6496d5688b/play_score",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "deepseek-v4.1-flash",
+        "judge_persona": null,
+        "instrument": "play_score",
+        "branch": "neutral_external",
+        "system_sha256": "7418cd97230da7e59e0fe266395507e17a4211e11f2a095f148a9e60a1c4b285",
+        "user_sha256": "2090a4fb350911f6937244033f615d7372438c2d601af3e9594617e5b7efcd5b",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/deepseek-v4.1-flash/461cd0b0d0b36c6496d5688b/play_score/result.json",
+        "source_sha256": "b3e226352b12a63d819889b9843612bdaaebaa3308f05b95f68aa49888a8207c",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "deepseek-v4.1-flash",
+        "original_response": {
+          "status": "ok",
+          "play_experience_score": 5,
+          "reasoning": "The record shows a long, coherent Gin Rummy session where the focal player drew, discarded, and eventually declared gin (action 14) to win 1-0. Decisions are consistent and the win is a clear positive outcome, but the play is largely routine: repeated draw/discard cycles with no visible strategic tension, opponent interaction, or notable feedback beyond the terminal payoff. Evidence is sufficient to rate as ordinary/mixed rather than clearly good or poor.",
+          "trajectory_evidence": [
+            "Decision 1: drew from stock (action 1) with no discard available.",
+            "Decision 2: drew from discard pile (action 10), taking the Q of clubs.",
+            "Decisions 3-27: alternating draw and discard actions, gradually assembling a hand.",
+            "Decision 28: declared gin (action 14), ending the game.",
+            "Terminal payoffs: focal player 1, opponent 0."
+          ],
+          "confidence": 3
+        }
+      },
+      {
+        "label": "recovery",
+        "job_id": "deepseek-v4.1-flash/2ff5731230e7d95661d81609/experience12",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "deepseek-v4.1-flash",
+        "judge_persona": null,
+        "instrument": "experience12",
+        "branch": "neutral_external",
+        "system_sha256": "84e1adbc981e57ab8d0175fe7beb8943106a106886af29912397747382c2d2a0",
+        "user_sha256": "5226b1c258960d64263ec2789b561be5f55a973b38f95f4fbf313926c17a1819",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/deepseek-v4.1-flash/2ff5731230e7d95661d81609/experience12/result.json",
+        "source_sha256": "bf2eaed71dda07f25fd345057d023459fe864dee48a141d417d665f1c5f89ef7",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "deepseek-v4.1-flash",
+        "original_response": {
+          "experience_vector": {
+            "goals_rules": 4,
+            "autonomy": 3,
+            "mastery": 3,
+            "curiosity": 2,
+            "challenge_fit": 3,
+            "cognitive_challenge": 3,
+            "decision_challenge": 3,
+            "meaning": 2,
+            "immersion": 2,
+            "progress_feedback": 3,
+            "ease_of_control": 4,
+            "emotional_challenge": 1
+          },
+          "evidence": {
+            "goals_rules": "Legal action sets were consistently small and interpretable (draw stock/discard, discard index, knock, gin), and the final decision offered knock/gin options consistent with the rules.",
+            "autonomy": "Most turns presented only two legal actions (draw stock or draw discard), with discard choices constrained to hand indices, limiting meaningful branching.",
+            "mastery": "The player repeatedly drew from stock and discarded, and at decision 28 selected gin, showing some ability to build toward a winning hand.",
+            "curiosity": "No recorded action or feedback indicates exploration of hidden stock contents or deliberate probing of opponent tendencies.",
+            "challenge_fit": "The session ran 28 decisions against a RandomAgent and ended in a win, suggesting difficulty was manageable but not clearly calibrated.",
+            "cognitive_challenge": "The player had to track a growing discard pile and hand composition across many turns, requiring moderate planning.",
+            "decision_challenge": "Choices were mostly binary draw-source decisions plus discard index selection, with limited consequence visibility at decision time.",
+            "meaning": "The record shows only mechanical draw/discard/gin actions with no evidence of personal significance beyond completing the partial game.",
+            "immersion": "The delta-encoded state changes provide no evidence of sustained absorption or felt involvement.",
+            "progress_feedback": "Stock size decremented steadily (31 to 15) and discard pile grew, giving clear but coarse status feedback.",
+            "ease_of_control": "Actions mapped directly to small legal action lists with no procedural friction evident in the record.",
+            "emotional_challenge": "No undercut, knock risk, or morally/socially consequential pressure is evidenced in the recorded decisions."
+          },
+          "limitations": [
+            "No opponent private observations or reasoning are included.",
+            "No wall-clock timing, subjective feelings, or think-aloud data were logged.",
+            "Terminal payoff [1,0] confirms a win but does not reveal margin or partial-game scores.",
+            "The record is delta-encoded and may omit intermediate opponent actions not visible at focal decisions."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "models-2",
+    "mode": "models",
+    "name": "kimi-k2.7-code",
+    "model": "kimi-k2.7-code",
+    "persona": null,
+    "score": 8,
+    "reason": "Player 0 drew from the discard pile in the opening turn, which in Gin Rummy can be suboptimal by giving the opponent information, but it quickly built a strong hand. The player steadily accumulated queens and diamond runs, avoided discarding cards that would obviously help the opponent, and eventually declared 'gin' to win the partial game. The opponent used RandomAgent, so the strategic bar is lower, but the focal player's decisions showed coherent hand-building throughout. The game was short and decisive, with a clear terminal payoff of 1 for Player 0.",
+    "evidence": [
+      "Decision 1: Drew Q♣ from discard pile rather than drawing from stock.",
+      "Decision 2: Discarded 2♠, a low-value isolated card, keeping the queen pair and diamond candidates.",
+      "Decision 6: Drew from stock and discarded A♣, keeping the developing diamond run and queen pair.",
+      "Decision 8: Took back 10♦ from discard to strengthen the diamond run, then discarded 7♦.",
+      "Decision 15: Drew 9♦ from discard, completing a diamond sequence foundation, and discarded 9♥.",
+      "Decision 28: Declared gin with a low deadwood hand to win the partial game."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 4,
+      "mastery": 4,
+      "curiosity": 3,
+      "challenge_fit": 2,
+      "cognitive_challenge": 4,
+      "decision_challenge": 4,
+      "meaning": 2,
+      "immersion": 2,
+      "emotional_challenge": 1,
+      "progress_feedback": 4,
+      "ease_of_control": 5
+    },
+    "dimension_evidence": {
+      "goals_rules": "The interface clearly presented the 10-card hand, visible discard pile, stock count, and legal draw/discard/Gin options each turn, and the player successfully declared Gin at the end.",
+      "autonomy": "Player repeatedly chose between drawing from stock or discard and selected which card to discard across 14 focal turns, including the final Gin declaration.",
+      "mastery": "Player's hand improved from scattered high and low cards to a complete Gin hand with a 4-queen set and two diamond runs.",
+      "curiosity": "Hidden stock and opponent hand created uncertainty about upcoming draws, though the random-opponent context limited discovery of strategic depth.",
+      "challenge_fit": "Opponent used RandomAgent, and Player 0 won the partial game by Gin without apparent difficulty, suggesting low challenge.",
+      "cognitive_challenge": "Over 28 decisions the player had to evaluate card combinations, decide which discards least damaged potential melds, and track the evolving discard pile.",
+      "decision_challenge": "Each discard carried consequences for future meld potential and for what the opponent might take from the discard pile.",
+      "meaning": "The log contains no narrative, social, or personal stakes beyond accumulating points and winning the partial game.",
+      "immersion": "There is no theme or story in the log; engagement appears limited to the abstract card-matching task.",
+      "emotional_challenge": "No evidence of emotional, moral, or social pressure appears in the recorded events.",
+      "progress_feedback": "State updates after each action showed the new hand, discard pile, stock size, and eventually the terminal payoff [1,0].",
+      "ease_of_control": "Player selected clearly enumerated legal actions (draw source, discard index, Gin) without any illegal moves or interface friction."
+    },
+    "limitations": [
+      "The log omits the acting model's reasoning and any subjective experience.",
+      "Only one partial game is shown against a RandomAgent, so full-game progression to 100 points is not observed.",
+      "No opponent private observations, model reasoning, other ratings, or persona labels are included.",
+      "No wall-clock or affect data were recorded."
+    ],
+    "sources": [
+      {
+        "label": "recovery",
+        "job_id": "kimi-k2.7-code/461cd0b0d0b36c6496d5688b/play_score",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "kimi-k2.7-code",
+        "judge_persona": null,
+        "instrument": "play_score",
+        "branch": "neutral_external",
+        "system_sha256": "7418cd97230da7e59e0fe266395507e17a4211e11f2a095f148a9e60a1c4b285",
+        "user_sha256": "2090a4fb350911f6937244033f615d7372438c2d601af3e9594617e5b7efcd5b",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/kimi-k2.7-code/461cd0b0d0b36c6496d5688b/play_score/result.json",
+        "source_sha256": "c175a010ee616c55acf495b153e52b209c6fde52453562c9694f9f1700df1ace",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "kimi-k2.7-code",
+        "original_response": {
+          "status": "ok",
+          "play_experience_score": 8,
+          "reasoning": "Player 0 drew from the discard pile in the opening turn, which in Gin Rummy can be suboptimal by giving the opponent information, but it quickly built a strong hand. The player steadily accumulated queens and diamond runs, avoided discarding cards that would obviously help the opponent, and eventually declared 'gin' to win the partial game. The opponent used RandomAgent, so the strategic bar is lower, but the focal player's decisions showed coherent hand-building throughout. The game was short and decisive, with a clear terminal payoff of 1 for Player 0.",
+          "trajectory_evidence": [
+            "Decision 1: Drew Q♣ from discard pile rather than drawing from stock.",
+            "Decision 2: Discarded 2♠, a low-value isolated card, keeping the queen pair and diamond candidates.",
+            "Decision 6: Drew from stock and discarded A♣, keeping the developing diamond run and queen pair.",
+            "Decision 8: Took back 10♦ from discard to strengthen the diamond run, then discarded 7♦.",
+            "Decision 15: Drew 9♦ from discard, completing a diamond sequence foundation, and discarded 9♥.",
+            "Decision 28: Declared gin with a low deadwood hand to win the partial game."
+          ],
+          "confidence": 4
+        }
+      },
+      {
+        "label": "recovery",
+        "job_id": "kimi-k2.7-code/2ff5731230e7d95661d81609/experience12",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "kimi-k2.7-code",
+        "judge_persona": null,
+        "instrument": "experience12",
+        "branch": "neutral_external",
+        "system_sha256": "84e1adbc981e57ab8d0175fe7beb8943106a106886af29912397747382c2d2a0",
+        "user_sha256": "5226b1c258960d64263ec2789b561be5f55a973b38f95f4fbf313926c17a1819",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/kimi-k2.7-code/2ff5731230e7d95661d81609/experience12/result.json",
+        "source_sha256": "a5df3eb89826d9c63785d629c8cf7d6268eab429cc0eaec626b61d5d24374890",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "kimi-k2.7-code",
+        "original_response": {
+          "experience_vector": {
+            "goals_rules": 4,
+            "autonomy": 4,
+            "mastery": 4,
+            "curiosity": 3,
+            "challenge_fit": 2,
+            "cognitive_challenge": 4,
+            "decision_challenge": 4,
+            "meaning": 2,
+            "immersion": 2,
+            "emotional_challenge": 1,
+            "progress_feedback": 4,
+            "ease_of_control": 5
+          },
+          "evidence": {
+            "goals_rules": "The interface clearly presented the 10-card hand, visible discard pile, stock count, and legal draw/discard/Gin options each turn, and the player successfully declared Gin at the end.",
+            "autonomy": "Player repeatedly chose between drawing from stock or discard and selected which card to discard across 14 focal turns, including the final Gin declaration.",
+            "mastery": "Player's hand improved from scattered high and low cards to a complete Gin hand with a 4-queen set and two diamond runs.",
+            "curiosity": "Hidden stock and opponent hand created uncertainty about upcoming draws, though the random-opponent context limited discovery of strategic depth.",
+            "challenge_fit": "Opponent used RandomAgent, and Player 0 won the partial game by Gin without apparent difficulty, suggesting low challenge.",
+            "cognitive_challenge": "Over 28 decisions the player had to evaluate card combinations, decide which discards least damaged potential melds, and track the evolving discard pile.",
+            "decision_challenge": "Each discard carried consequences for future meld potential and for what the opponent might take from the discard pile.",
+            "meaning": "The log contains no narrative, social, or personal stakes beyond accumulating points and winning the partial game.",
+            "immersion": "There is no theme or story in the log; engagement appears limited to the abstract card-matching task.",
+            "emotional_challenge": "No evidence of emotional, moral, or social pressure appears in the recorded events.",
+            "progress_feedback": "State updates after each action showed the new hand, discard pile, stock size, and eventually the terminal payoff [1,0].",
+            "ease_of_control": "Player selected clearly enumerated legal actions (draw source, discard index, Gin) without any illegal moves or interface friction."
+          },
+          "limitations": [
+            "The log omits the acting model's reasoning and any subjective experience.",
+            "Only one partial game is shown against a RandomAgent, so full-game progression to 100 points is not observed.",
+            "No opponent private observations, model reasoning, other ratings, or persona labels are included.",
+            "No wall-clock or affect data were recorded."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "models-3",
+    "mode": "models",
+    "name": "MiniMax-M2.5",
+    "model": "MiniMax-M2.5",
+    "persona": null,
+    "score": 7,
+    "reason": "The player engaged in a complete Gin Rummy game with consistent decision-making patterns: alternating between drawing from stock/discard and discarding each turn. The game progressed smoothly through 28 decisions with no apparent errors, confusion, or system failures. The player won (payoff 1 vs 0). The play was coherent and functional throughout, though the record doesn't reveal strategic quality or decision-making reasoning—only that actions were legal and the game completed normally.",
+    "evidence": [
+      "Decision 1: Initial draw from discard (Q♣)",
+      "Decision 2: First discard (9♠)",
+      "Consistent draw-discard pattern through 28 decisions",
+      "Terminal payoff: Player 0 won (1,0)"
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 4,
+      "mastery": 3,
+      "curiosity": 3,
+      "challenge_fit": 3,
+      "cognitive_challenge": 3,
+      "decision_challenge": 3,
+      "meaning": 3,
+      "immersion": 3,
+      "emotional_challenge": 2,
+      "progress_feedback": 4,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "The rules for Gin Rummy (melds, knocking eligibility ≤10 points, undercut mechanics) are clearly structured and visible throughout; the phase indicator shows regular play.",
+      "autonomy": "Player consistently chose between drawing from stock or discard each turn, with 10-14 discard options available after picking up from discard.",
+      "mastery": "Player improved hand across 28 decisions, eventually achieving Gin (all cards in valid melds) - demonstrating learning of hand-building strategy.",
+      "curiosity": "Player drew from discard pile multiple times (decisions 1, 8, 16) to pursue specific cards rather than always taking stock, showing exploratory play.",
+      "challenge_fit": "Stock decreased from 31 to 15 cards across 28 player decisions; game ended with Gin before stock exhaustion, appropriate for this skill level.",
+      "cognitive_challenge": "Player had to track which cards were discarded, evaluate hand combinations after each draw, and decide when to continue vs. declare.",
+      "decision_challenge": "With 10-14 legal discards each turn after drawing, player faced meaningful choice of which card to discard while maintaining meld potential.",
+      "meaning": "The game concluded with a decisive Gin victory (31 points), giving the partial game win meaningful consequence for the overall game score.",
+      "immersion": "Player engaged through 28 decision points with alternating turns, maintaining attention to the unfolding hand development.",
+      "emotional_challenge": "No evidence of emotional pressure - player steadily drew and discarded without time pressure or contested decisions; RandomAgent posed no strategic threat.",
+      "progress_feedback": "After each action, player received updated hand, discard pile contents, and stock size; Gin declaration clearly ended the partial game with visible payoff.",
+      "ease_of_control": "All 28 selected actions were legal (draw stock/discard, various discards, finally gin); no invalid action attempts or interface friction observed."
+    },
+    "limitations": [
+      "No opponent private information visible to assess strategic awareness",
+      "No evidence of time pressure or emotional engagement markers",
+      "Cannot assess if player understood undercut risk when choosing to play for Gin",
+      "Game ended after one partial game - longer game context unavailable"
+    ],
+    "sources": [
+      {
+        "label": "recovery",
+        "job_id": "MiniMax-M2.5/461cd0b0d0b36c6496d5688b/play_score",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "MiniMax-M2.5",
+        "judge_persona": null,
+        "instrument": "play_score",
+        "branch": "neutral_external",
+        "system_sha256": "7418cd97230da7e59e0fe266395507e17a4211e11f2a095f148a9e60a1c4b285",
+        "user_sha256": "2090a4fb350911f6937244033f615d7372438c2d601af3e9594617e5b7efcd5b",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/MiniMax-M2.5/461cd0b0d0b36c6496d5688b/play_score/result.json",
+        "source_sha256": "e1909601b712feedcc8bac28d03dac6d258198568a5d9b5d1082dc4af0f3c388",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "MiniMax-M2.5",
+        "original_response": {
+          "status": "ok",
+          "play_experience_score": 7,
+          "reasoning": "The player engaged in a complete Gin Rummy game with consistent decision-making patterns: alternating between drawing from stock/discard and discarding each turn. The game progressed smoothly through 28 decisions with no apparent errors, confusion, or system failures. The player won (payoff 1 vs 0). The play was coherent and functional throughout, though the record doesn't reveal strategic quality or decision-making reasoning—only that actions were legal and the game completed normally.",
+          "trajectory_evidence": [
+            "Decision 1: Initial draw from discard (Q♣)",
+            "Decision 2: First discard (9♠)",
+            "Consistent draw-discard pattern through 28 decisions",
+            "Terminal payoff: Player 0 won (1,0)"
+          ],
+          "confidence": 5
+        }
+      },
+      {
+        "label": "recovery",
+        "job_id": "MiniMax-M2.5/2ff5731230e7d95661d81609/experience12",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "MiniMax-M2.5",
+        "judge_persona": null,
+        "instrument": "experience12",
+        "branch": "neutral_external",
+        "system_sha256": "84e1adbc981e57ab8d0175fe7beb8943106a106886af29912397747382c2d2a0",
+        "user_sha256": "5226b1c258960d64263ec2789b561be5f55a973b38f95f4fbf313926c17a1819",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/MiniMax-M2.5/2ff5731230e7d95661d81609/experience12/result.json",
+        "source_sha256": "ab54ad3ea6413e4023c665ffb7259252a7d22f084dd74dfa0a9241c0d1e043bb",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "MiniMax-M2.5",
+        "original_response": {
+          "experience_vector": {
+            "goals_rules": 4,
+            "autonomy": 4,
+            "mastery": 3,
+            "curiosity": 3,
+            "challenge_fit": 3,
+            "cognitive_challenge": 3,
+            "decision_challenge": 3,
+            "meaning": 3,
+            "immersion": 3,
+            "emotional_challenge": 2,
+            "progress_feedback": 4,
+            "ease_of_control": 4
+          },
+          "evidence": {
+            "goals_rules": "The rules for Gin Rummy (melds, knocking eligibility ≤10 points, undercut mechanics) are clearly structured and visible throughout; the phase indicator shows regular play.",
+            "autonomy": "Player consistently chose between drawing from stock or discard each turn, with 10-14 discard options available after picking up from discard.",
+            "mastery": "Player improved hand across 28 decisions, eventually achieving Gin (all cards in valid melds) - demonstrating learning of hand-building strategy.",
+            "curiosity": "Player drew from discard pile multiple times (decisions 1, 8, 16) to pursue specific cards rather than always taking stock, showing exploratory play.",
+            "challenge_fit": "Stock decreased from 31 to 15 cards across 28 player decisions; game ended with Gin before stock exhaustion, appropriate for this skill level.",
+            "cognitive_challenge": "Player had to track which cards were discarded, evaluate hand combinations after each draw, and decide when to continue vs. declare.",
+            "decision_challenge": "With 10-14 legal discards each turn after drawing, player faced meaningful choice of which card to discard while maintaining meld potential.",
+            "meaning": "The game concluded with a decisive Gin victory (31 points), giving the partial game win meaningful consequence for the overall game score.",
+            "immersion": "Player engaged through 28 decision points with alternating turns, maintaining attention to the unfolding hand development.",
+            "emotional_challenge": "No evidence of emotional pressure - player steadily drew and discarded without time pressure or contested decisions; RandomAgent posed no strategic threat.",
+            "progress_feedback": "After each action, player received updated hand, discard pile contents, and stock size; Gin declaration clearly ended the partial game with visible payoff.",
+            "ease_of_control": "All 28 selected actions were legal (draw stock/discard, various discards, finally gin); no invalid action attempts or interface friction observed."
+          },
+          "limitations": [
+            "No opponent private information visible to assess strategic awareness",
+            "No evidence of time pressure or emotional engagement markers",
+            "Cannot assess if player understood undercut risk when choosing to play for Gin",
+            "Game ended after one partial game - longer game context unavailable"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "models-4",
+    "mode": "models",
+    "name": "qwen/qwen3.8-max-0902@openrouter/alibaba/low",
+    "model": "qwen/qwen3.8-max-0902@openrouter/alibaba/low",
+    "persona": null,
+    "score": 6,
+    "reason": "Player 0 achieved a perfect gin (all 11 cards melded: four Queens, A-2-3-4 diamonds, 9-10-J diamonds) against a RandomAgent. Decisions were generally sound: early pickup of Q♣ from discard to build a set, later pickup of 10♦ and 9♦ to complete diamond runs, and consistent discarding of isolated cards. The outcome is clearly positive, but the opponent was a RandomAgent, limiting strategic challenge, and the path to gin, while competent, followed a fairly linear accumulation pattern without notable tactical tension or difficult trade-offs.",
+    "evidence": [
+      "Decision 1: Drew Q♣ from discard to begin building a Queen set alongside Q♦ in hand.",
+      "Decision 7: Picked up 10♦ from discard, enabling the 10♦-J♦-Q♦ diamond run.",
+      "Decision 12: Discarded J♥ despite holding J♦, correctly prioritizing the existing diamond run over a redundant Jack.",
+      "Decision 16: Picked up 9♦ from discard, completing the 9♦-10♦-J♦ run.",
+      "Decision 18: Drew Q♥ from stock, completing a four-Queen set.",
+      "Decisions 22-26: Repeatedly drew from stock and immediately discarded the drawn card, indicating the hand was already complete and waiting for the right draw or a gin opportunity.",
+      "Decision 28: Declared gin with all 11 cards perfectly melded (4 Queens + A-2-3-4♦ + 9-10-J♦), winning the game."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 4,
+      "mastery": 3,
+      "curiosity": 3,
+      "challenge_fit": 2,
+      "cognitive_challenge": 3,
+      "decision_challenge": 3,
+      "meaning": 2,
+      "immersion": 3,
+      "emotional_challenge": 1,
+      "progress_feedback": 3,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "Legal actions were explicitly enumerated at each decision point (draw stock/discard, discard by index, knock, gin), and the game state clearly showed hand, discard pile top, and stock size.",
+      "autonomy": "Player chose between stock and discard draws, selected specific discards from 10-11 options, and decided at decision 18 to forgo a legal knock in pursuit of Gin.",
+      "mastery": "Player's strategy evolved from scattered early discards (9♠, A♣, 6♣) to a focused plan of completing A♦-2♦-3♦-4♦ for Gin, demonstrating learning within the session.",
+      "curiosity": "Player opportunistically picked up Q♣ (decision 1), 10♦ (decision 7), and 9♦ (decision 15) from the discard pile, exploring different meld possibilities before converging on the diamond-run plan.",
+      "challenge_fit": "Opponent was a RandomAgent that never knocked or declared Gin, creating no time pressure; the player drew from stock unopposed for many consecutive turns without threat.",
+      "cognitive_challenge": "Player tracked a multi-card diamond run (A-2-3-4♦) across several turns while maintaining the Q set and 9-10-J♦ run, requiring planning across decisions 14-28.",
+      "decision_challenge": "At decision 18, the player had a legal knock (unmatched ~7 points) but chose to continue risking an opponent Gin in exchange for a potential Gin declaration, a consequential tradeoff.",
+      "meaning": "The session was a single partial game against a random opponent with no narrative framing, stakes beyond the hand score, or personal resonance evident in the record.",
+      "immersion": "The sustained pursuit of 2♦ across decisions 19-28 (discarding every drawn card that wasn't 2♦) suggests focused engagement, though no subjective absorption data is available.",
+      "emotional_challenge": "No moral, social, or emotional pressure was present; the opponent was a RandomAgent and no interpersonal or ethical decisions arose.",
+      "progress_feedback": "Hand composition was fully visible after each draw, discard pile history accumulated visibly, and stock size decreased, but no explicit progress metric toward Gin was displayed.",
+      "ease_of_control": "Actions were selected by index from a clearly enumerated legal list; the player never appeared to attempt an illegal action or struggle with the interface across 28 decisions."
+    },
+    "limitations": [
+      "No subjective player reports, think-aloud data, or post-session ratings are available.",
+      "Opponent was a RandomAgent, so no adaptive pressure or social interaction occurred.",
+      "Only one partial game was recorded, limiting evidence about multi-game progression or score-chasing dynamics.",
+      "Wall-clock timing between decisions is absent, preventing inference about deliberation or hesitation.",
+      "The delta encoding does not reveal whether the player considered and rejected specific alternatives before selecting an action."
+    ],
+    "sources": [
+      {
+        "label": "openrouter",
+        "job_id": "461cd0b0d0b36c6496d5688b/play_score",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "qwen/qwen3.8-max-0902@openrouter/alibaba/low",
+        "judge_persona": null,
+        "instrument": "play_score",
+        "branch": "neutral_external",
+        "system_sha256": "7418cd97230da7e59e0fe266395507e17a4211e11f2a095f148a9e60a1c4b285",
+        "user_sha256": "2090a4fb350911f6937244033f615d7372438c2d601af3e9594617e5b7efcd5b",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/openrouter_recovery_20260924_v1/STATE.json#461cd0b0d0b36c6496d5688b/play_score",
+        "source_sha256": "960f50aba24d9077cf9293236b82b296c385577a4c6d7973173f46d21d7dbaff",
+        "protocol": "neutral49.openrouter-authorized-recovery.v1",
+        "actual_model": [
+          "qwen/qwen3.8-max-0902"
+        ],
+        "original_response": {
+          "status": "ok",
+          "play_experience_score": 6,
+          "reasoning": "Player 0 achieved a perfect gin (all 11 cards melded: four Queens, A-2-3-4 diamonds, 9-10-J diamonds) against a RandomAgent. Decisions were generally sound: early pickup of Q♣ from discard to build a set, later pickup of 10♦ and 9♦ to complete diamond runs, and consistent discarding of isolated cards. The outcome is clearly positive, but the opponent was a RandomAgent, limiting strategic challenge, and the path to gin, while competent, followed a fairly linear accumulation pattern without notable tactical tension or difficult trade-offs.",
+          "trajectory_evidence": [
+            "Decision 1: Drew Q♣ from discard to begin building a Queen set alongside Q♦ in hand.",
+            "Decision 7: Picked up 10♦ from discard, enabling the 10♦-J♦-Q♦ diamond run.",
+            "Decision 12: Discarded J♥ despite holding J♦, correctly prioritizing the existing diamond run over a redundant Jack.",
+            "Decision 16: Picked up 9♦ from discard, completing the 9♦-10♦-J♦ run.",
+            "Decision 18: Drew Q♥ from stock, completing a four-Queen set.",
+            "Decisions 22-26: Repeatedly drew from stock and immediately discarded the drawn card, indicating the hand was already complete and waiting for the right draw or a gin opportunity.",
+            "Decision 28: Declared gin with all 11 cards perfectly melded (4 Queens + A-2-3-4♦ + 9-10-J♦), winning the game."
+          ],
+          "confidence": 4
+        }
+      },
+      {
+        "label": "openrouter",
+        "job_id": "2ff5731230e7d95661d81609/experience12",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "qwen/qwen3.8-max-0902@openrouter/alibaba/low",
+        "judge_persona": null,
+        "instrument": "experience12",
+        "branch": "neutral_external",
+        "system_sha256": "84e1adbc981e57ab8d0175fe7beb8943106a106886af29912397747382c2d2a0",
+        "user_sha256": "5226b1c258960d64263ec2789b561be5f55a973b38f95f4fbf313926c17a1819",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/openrouter_recovery_20260924_v1/STATE.json#2ff5731230e7d95661d81609/experience12",
+        "source_sha256": "28ea459f4f37e02c8f3e126b49e39ca93bddac5dd6b170d61ea76ca00e9875d6",
+        "protocol": "neutral49.openrouter-authorized-recovery.v1",
+        "actual_model": [
+          "qwen/qwen3.8-max-0902"
+        ],
+        "original_response": {
+          "experience_vector": {
+            "goals_rules": 4,
+            "autonomy": 4,
+            "mastery": 3,
+            "curiosity": 3,
+            "challenge_fit": 2,
+            "cognitive_challenge": 3,
+            "decision_challenge": 3,
+            "meaning": 2,
+            "immersion": 3,
+            "emotional_challenge": 1,
+            "progress_feedback": 3,
+            "ease_of_control": 4
+          },
+          "evidence": {
+            "goals_rules": "Legal actions were explicitly enumerated at each decision point (draw stock/discard, discard by index, knock, gin), and the game state clearly showed hand, discard pile top, and stock size.",
+            "autonomy": "Player chose between stock and discard draws, selected specific discards from 10-11 options, and decided at decision 18 to forgo a legal knock in pursuit of Gin.",
+            "mastery": "Player's strategy evolved from scattered early discards (9♠, A♣, 6♣) to a focused plan of completing A♦-2♦-3♦-4♦ for Gin, demonstrating learning within the session.",
+            "curiosity": "Player opportunistically picked up Q♣ (decision 1), 10♦ (decision 7), and 9♦ (decision 15) from the discard pile, exploring different meld possibilities before converging on the diamond-run plan.",
+            "challenge_fit": "Opponent was a RandomAgent that never knocked or declared Gin, creating no time pressure; the player drew from stock unopposed for many consecutive turns without threat.",
+            "cognitive_challenge": "Player tracked a multi-card diamond run (A-2-3-4♦) across several turns while maintaining the Q set and 9-10-J♦ run, requiring planning across decisions 14-28.",
+            "decision_challenge": "At decision 18, the player had a legal knock (unmatched ~7 points) but chose to continue risking an opponent Gin in exchange for a potential Gin declaration, a consequential tradeoff.",
+            "meaning": "The session was a single partial game against a random opponent with no narrative framing, stakes beyond the hand score, or personal resonance evident in the record.",
+            "immersion": "The sustained pursuit of 2♦ across decisions 19-28 (discarding every drawn card that wasn't 2♦) suggests focused engagement, though no subjective absorption data is available.",
+            "emotional_challenge": "No moral, social, or emotional pressure was present; the opponent was a RandomAgent and no interpersonal or ethical decisions arose.",
+            "progress_feedback": "Hand composition was fully visible after each draw, discard pile history accumulated visibly, and stock size decreased, but no explicit progress metric toward Gin was displayed.",
+            "ease_of_control": "Actions were selected by index from a clearly enumerated legal list; the player never appeared to attempt an illegal action or struggle with the interface across 28 decisions."
+          },
+          "limitations": [
+            "No subjective player reports, think-aloud data, or post-session ratings are available.",
+            "Opponent was a RandomAgent, so no adaptive pressure or social interaction occurred.",
+            "Only one partial game was recorded, limiting evidence about multi-game progression or score-chasing dynamics.",
+            "Wall-clock timing between decisions is absent, preventing inference about deliberation or hesitation.",
+            "The delta encoding does not reveal whether the player considered and rejected specific alternatives before selecting an action."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "personas-5",
+    "mode": "personas",
+    "name": "The Efficiency Essentialist",
+    "model": "qwen3.8-max",
+    "persona": "The Efficiency Essentialist",
+    "score": 5,
+    "reason": "Gin Rummy's mechanics are elegant and streamlined with minimal fiddliness, aligning well with the Efficiency Essentialist's preferences. However, playing against a RandomAgent eliminates meaningful strategic tension and flow. The player showed coherent strategy (building diamond runs, collecting queens, timely knock), but the lack of a responsive opponent makes decisions feel mechanical rather than engaging. The game length was moderate and pacing smooth, but the experience is ultimately hollow without genuine competition.",
+    "evidence": [
+      "Player drew Q♣ from discard on turn 2, showing early meld-building intent",
+      "Player consistently drew from stock when no useful discard was available, showing efficient decision-making",
+      "Player built toward a diamond run (3♦,4♦,7♦,9♦,10♦,J♦,Q♦) and queen set across the game",
+      "Player knocked at decision 28 with stock at 15, indicating a well-timed end",
+      "Opponent was a RandomAgent, removing strategic depth and flow from the experience",
+      "Game had clean, simple decision structure with no bookkeeping overhead"
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 3,
+      "mastery": 3,
+      "curiosity": 3,
+      "challenge_fit": 2,
+      "cognitive_challenge": 3,
+      "decision_challenge": 3,
+      "meaning": 2,
+      "immersion": 3,
+      "emotional_challenge": 1,
+      "progress_feedback": 3,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "The draw-discard-declare structure is clear and consistent across all 14 turns; Gin/Knock thresholds are well-defined in the ruleset.",
+      "autonomy": "Each turn offers a binary draw choice and a multi-card discard choice, but the strategic space is constrained by the need to build melds from a fixed hand of 10 cards.",
+      "mastery": "Player 0 progressively improved their hand over 14 turns toward Gin, showing a learnable optimization loop, but the RandomAgent opponent provided no adaptive resistance to test skill growth.",
+      "curiosity": "The hidden stock and opponent hand create some uncertainty about what cards remain available, but the RandomAgent's predictable discards reduce incentive to deeply probe game state.",
+      "challenge_fit": "The opponent is a RandomAgent, making the game trivially easy for any strategic player; Player 0 achieved Gin without meaningful opposition, suggesting poor challenge calibration for an efficiency-focused player.",
+      "cognitive_challenge": "Tracking meld potential across 10 cards and evaluating discard tradeoffs provides moderate mental effort, but the lack of opponent pressure reduces the need for deep planning.",
+      "decision_challenge": "Discard choices involve tradeoffs between meld potential and deadwood reduction, but with a random opponent there is no risk of undercut or strategic timing pressure.",
+      "meaning": "The session is a straightforward optimization puzzle against a non-strategic opponent; winning feels mechanical rather than earned or significant.",
+      "immersion": "The steady draw-discard rhythm and progressive hand improvement create a mild flow state, but the lack of tension or narrative arc limits deep absorption.",
+      "emotional_challenge": "No moral, social, or emotional pressure is present; the RandomAgent opponent creates no interpersonal dynamics or risk of embarrassing loss.",
+      "progress_feedback": "Hand composition changes are visible each turn and the path toward Gin is trackable, but there is no explicit progress meter or intermediate milestone feedback beyond card counting.",
+      "ease_of_control": "The action interface is simple (draw source + discard index), with clear legal action lists provided each turn; no bookkeeping or complex setup friction is evident in the session."
+    },
+    "limitations": [
+      "No wall-clock timing data available to assess actual pace or downtime experience",
+      "Cannot determine if the player experienced flow or found the repetition tedious without subjective reports",
+      "The RandomAgent opponent makes it impossible to assess how the game would feel against a competent opponent",
+      "No evidence of whether the player found the hand-tracking cognitive load fiddly or elegant",
+      "Only one partial game was played, so multi-game pacing and score-tracking friction cannot be evaluated"
+    ],
+    "sources": [
+      {
+        "label": "completed_persona",
+        "job_id": "55f34819c756454511fae891",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Efficiency Essentialist",
+        "instrument": "play_score",
+        "branch": "persona",
+        "system_sha256": "84ef314d7ad42374fdf12dd2dc2cd3fdff1d8eafb61fb7c4d19251f89874eccd",
+        "user_sha256": "681a52573fd9479cf98b3565fe86317d801d417c47f60b6eb8288ebdddf382c3",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/efficiency_essentialist/play_score/result.json",
+        "source_sha256": "26fb3f9e5353216417ece96212f8e15a583e47ca184bfe5c31000eeec2b5e74c",
+        "source_chain": [
+          {
+            "file": "blobs/26fb3f9e5353216417ece96212f8e15a583e47ca184bfe5c31000eeec2b5e74c.json",
+            "sha256": "26fb3f9e5353216417ece96212f8e15a583e47ca184bfe5c31000eeec2b5e74c",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/efficiency_essentialist/play_score/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      },
+      {
+        "label": "completed_persona",
+        "job_id": "86e68829c99efa3082b1803c",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Efficiency Essentialist",
+        "instrument": "experience12",
+        "branch": "persona",
+        "system_sha256": "0ea57f0784b668d200d8a627e372e5a555392e3b35826a24e6a7627071dda6e5",
+        "user_sha256": "c2151f5d037b22261b5381d8f49321bee4e20084875708547479615e250b4ce8",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/efficiency_essentialist/experience12/result.json",
+        "source_sha256": "2e9fa497fc1d3f2aac5eb32538ce481c506a2d491405afe101b4cfd88e5f6ae4",
+        "source_chain": [
+          {
+            "file": "blobs/2e9fa497fc1d3f2aac5eb32538ce481c506a2d491405afe101b4cfd88e5f6ae4.json",
+            "sha256": "2e9fa497fc1d3f2aac5eb32538ce481c506a2d491405afe101b4cfd88e5f6ae4",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/efficiency_essentialist/experience12/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali_existing",
+        "protocol": "completed_20260926_mixed_endpoints"
+      }
+    ]
+  },
+  {
+    "id": "personas-6",
+    "mode": "personas",
+    "name": "The Narrative Architect",
+    "model": "qwen3.8-max",
+    "persona": "The Narrative Architect",
+    "score": 2,
+    "reason": "Gin Rummy is a pure abstract card game with zero narrative, no growth mechanics, no thematic elements, and no cooperative or negotiation interaction. The Narrative Architect profile values immersion, story, epic journeys, and growth systems—none of which are present. The session is mechanically functional and ends in a win, but the experience is entirely devoid of the thematic and progressive elements this profile seeks. The decisions are purely mathematical card optimization, which the profile explicitly does not enjoy.",
+    "evidence": [
+      "Game is Gin Rummy, an abstract card game with no narrative or thematic framing",
+      "Player 0 drew Q of clubs from discard pile early, a purely tactical card-game decision",
+      "All 28 decisions are draw/discard choices with no story, progression, or flavor elements",
+      "Player 0 achieved gin (action 14) and won with payoff [1,0], but victory carries no narrative weight",
+      "No growth, leveling, empire-building, or tech-tree mechanics exist in the game",
+      "Opponent is a RandomAgent, eliminating any possibility of thematic negotiation or cooperation"
+    ],
+    "dimensions": {
+      "goals_rules": 3,
+      "autonomy": 3,
+      "mastery": 2,
+      "curiosity": 2,
+      "challenge_fit": 2,
+      "cognitive_challenge": 2,
+      "decision_challenge": 2,
+      "meaning": 1,
+      "immersion": 1,
+      "emotional_challenge": 1,
+      "progress_feedback": 3,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "Rules for drawing, discarding, melding, knocking, and gin are clearly specified and consistently enforced across 28 decisions, but goals are purely mechanical with no thematic framing.",
+      "autonomy": "Player chose between stock and discard draws, selected specific discards each turn, and decided when to declare gin, but all choices were mechanical optimization without thematic or narrative dimensions.",
+      "mastery": "Player progressively built toward a gin hand (Queens set, diamond run) over multiple turns, but there are no growth, leveling, or progression mechanics valued by this profile.",
+      "curiosity": "Hidden stock contents and opponent's hand provide some mechanical uncertainty, but no thematic mystery or narrative revelation is present.",
+      "challenge_fit": "Playing against a RandomAgent, the player achieved gin with minimal pressure; the opponent's random discards (e.g., 9♦ at decision 15) inadvertently helped the player's hand development.",
+      "cognitive_challenge": "Player tracked meld potential across turns (building Q-set and diamond run), but the random opponent required no adaptive strategy or deep planning.",
+      "decision_challenge": "Discard choices had mechanical consequences but low stakes against a random opponent; the player repeatedly drew and immediately discarded stock cards (decisions 20, 22, 24, 26) suggesting low decision tension.",
+      "meaning": "The session is a purely abstract card game with no narrative arc, thematic context, or sense of journey; winning via gin carries no story significance.",
+      "immersion": "Gin Rummy has no theme, setting, characters, or world; the entire session is abstract card manipulation with nothing to absorb into narratively.",
+      "emotional_challenge": "No moral dilemmas, social negotiations, or emotionally consequential decisions arose; the random opponent provided no interpersonal pressure.",
+      "progress_feedback": "Hand composition, discard pile history, stock count, and cumulative scores were all visible and updated each turn, providing clear mechanical progress tracking.",
+      "ease_of_control": "The action space was simple (draw source + discard index), and the player executed 28 decisions without apparent procedural friction or errors."
+    },
+    "limitations": [
+      "No subjective player feedback, emotional responses, or self-reports were recorded.",
+      "The opponent was a RandomAgent, so no meaningful social or competitive dynamic could emerge.",
+      "The gin declaration at decision 28 appears mechanically questionable given the visible hand (4♦, A♦, 2♣, 2♦ seem unmatched), but the engine accepted it; this ambiguity cannot be fully resolved from the log alone.",
+      "No wall-clock timing data is available to assess pacing or deliberation.",
+      "Only one partial game was played, limiting evidence about multi-hand progression or growth across rounds."
+    ],
+    "sources": [
+      {
+        "label": "completed_persona",
+        "job_id": "9f35b94e9331a0692e551393",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Narrative Architect",
+        "instrument": "play_score",
+        "branch": "persona",
+        "system_sha256": "84ef314d7ad42374fdf12dd2dc2cd3fdff1d8eafb61fb7c4d19251f89874eccd",
+        "user_sha256": "5c61acaefa77bb805b7012a287ddb48ff6ee0c4dff50a471d268175d0fc58f6a",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/narrative_architect/play_score/result.json",
+        "source_sha256": "8d76bbff4d018e0bda6ab41d5e01faf98acf3400f37056a29d806a0914fb223b",
+        "source_chain": [
+          {
+            "file": "blobs/8d76bbff4d018e0bda6ab41d5e01faf98acf3400f37056a29d806a0914fb223b.json",
+            "sha256": "8d76bbff4d018e0bda6ab41d5e01faf98acf3400f37056a29d806a0914fb223b",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/narrative_architect/play_score/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      },
+      {
+        "label": "completed_persona",
+        "job_id": "2a1753b9bce96f9d73471026",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Narrative Architect",
+        "instrument": "experience12",
+        "branch": "persona",
+        "system_sha256": "0ea57f0784b668d200d8a627e372e5a555392e3b35826a24e6a7627071dda6e5",
+        "user_sha256": "cf26049e7f8744312c7937081f850af21c2fd07cfad05f5810237b90c7e4c239",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/narrative_architect/experience12/result.json",
+        "source_sha256": "3e21769c75f841e6ba2be3444f53c1e57c3f4ac1e49a74f99d0efb77795042cc",
+        "source_chain": [
+          {
+            "file": "blobs/3e21769c75f841e6ba2be3444f53c1e57c3f4ac1e49a74f99d0efb77795042cc.json",
+            "sha256": "3e21769c75f841e6ba2be3444f53c1e57c3f4ac1e49a74f99d0efb77795042cc",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/narrative_architect/experience12/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali_existing",
+        "protocol": "completed_20260926_mixed_endpoints"
+      }
+    ]
+  },
+  {
+    "id": "personas-7",
+    "mode": "personas",
+    "name": "The Social Lubricator",
+    "model": "qwen3.8-max",
+    "persona": "The Social Lubricator",
+    "score": 2,
+    "reason": "Gin Rummy is a 2-player mechanical card game with zero social interaction mechanics—no bluffing, no negotiation, no party elements, no group dynamic. The Social Lubricator profile explicitly seeks human connection, laughter, and party-game energy. This session offers none of that: a repetitive draw-discard loop against a RandomAgent, with no opportunity for social engagement. While the player won (achieved gin), winning alone does not create the social experience this profile values. The game is relatively accessible but fundamentally the wrong genre for this persona.",
+    "evidence": [
+      "Game is 2-player Gin Rummy with no social interaction mechanics (no bluffing, negotiation, or party elements)",
+      "Opponent is a RandomAgent, eliminating any possibility of human connection",
+      "28 decisions of repetitive draw-discard cycles with no social decision points",
+      "Player achieved gin (action 14 at decision 28) and won, but the win is purely mechanical",
+      "No group dynamic possible in a 2-player format with an automated opponent",
+      "Stock depleted from 31 to 15 cards through purely mechanical play with no social moments"
+    ],
+    "dimensions": {
+      "goals_rules": 3,
+      "autonomy": 3,
+      "mastery": 3,
+      "curiosity": 2,
+      "challenge_fit": 2,
+      "cognitive_challenge": 2,
+      "decision_challenge": 2,
+      "meaning": 1,
+      "immersion": 1,
+      "emotional_challenge": 1,
+      "progress_feedback": 3,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "The game state clearly shows hand, discard pile, stock size, and phase; knock/gin thresholds are defined but undercut mechanics add moderate complexity.",
+      "autonomy": "Each turn offers a genuine draw-source choice and a multi-card discard selection, plus the strategic option to knock or continue playing toward Gin.",
+      "mastery": "Player 0 progressively built melds (Q-set, diamond run) over 28 decisions and ultimately declared Gin, showing a learnable improvement arc.",
+      "curiosity": "Hidden stock and opponent hand create some uncertainty, but the RandomAgent opponent provides no meaningful behavioral patterns to deduce.",
+      "challenge_fit": "The opponent is a RandomAgent, offering no adaptive pressure; Player 0 reached Gin without any knock threat or competitive tension.",
+      "cognitive_challenge": "Some planning is required to track melds and choose discards, but the random opponent removes the need for opponent modeling or defensive play.",
+      "decision_challenge": "Discard choices are present but low-stakes against a random opponent; the final Gin declaration was the only high-consequence decision.",
+      "meaning": "The session is a solitary mechanical exercise against a random agent with no social connection, shared narrative, or interpersonal stakes.",
+      "immersion": "No thematic framing, no social interaction, no narrative arc—just repeated draw-discard cycles with no absorbing context.",
+      "emotional_challenge": "No bluffing, no social reading, no moral dilemmas, no interpersonal tension; the RandomAgent provides zero emotional or social pressure.",
+      "progress_feedback": "Hand composition, discard pile history, and stock count are visible each turn; the Gin declaration provides a clear terminal resolution.",
+      "ease_of_control": "Actions are simple (choose draw source, pick a card index to discard); no complex bookkeeping or multi-step procedures required."
+    },
+    "limitations": [
+      "No evidence of social interaction, conversation, or shared experience since the opponent is a RandomAgent.",
+      "No wall-clock timing data to assess pacing or felt engagement duration.",
+      "No subjective player feedback, emotional reports, or post-game reflections were recorded.",
+      "Cannot assess whether the player found the mechanical loop tedious or satisfying without self-report.",
+      "The Social Lubricator profile's core needs (social connection, group dynamic, laughter) are structurally absent from a 2-player automated card game session."
+    ],
+    "sources": [
+      {
+        "label": "completed_persona",
+        "job_id": "13dbc273e20e2bc9f53e4969",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Social Lubricator",
+        "instrument": "play_score",
+        "branch": "persona",
+        "system_sha256": "84ef314d7ad42374fdf12dd2dc2cd3fdff1d8eafb61fb7c4d19251f89874eccd",
+        "user_sha256": "98b08e9c55c4659b81558b71b05f224bc4554e8698f15fc2296539352717ee62",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/social_lubricator/play_score/result.json",
+        "source_sha256": "75d7116077da1ce819a849650bd47286cfa162c580f226e2f0194322f553c539",
+        "source_chain": [
+          {
+            "file": "blobs/75d7116077da1ce819a849650bd47286cfa162c580f226e2f0194322f553c539.json",
+            "sha256": "75d7116077da1ce819a849650bd47286cfa162c580f226e2f0194322f553c539",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/social_lubricator/play_score/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      },
+      {
+        "label": "completed_persona",
+        "job_id": "e0c8b597eb0c80b75b862166",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Social Lubricator",
+        "instrument": "experience12",
+        "branch": "persona",
+        "system_sha256": "0ea57f0784b668d200d8a627e372e5a555392e3b35826a24e6a7627071dda6e5",
+        "user_sha256": "47fbaafe0a813666abda248de4a5f852910a2d3cca242cc100a6cc7d500c5fb3",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/social_lubricator/experience12/result.json",
+        "source_sha256": "5b24ff6ac14a0aa4d0b710614be7a73945da8c909cc0ed57068b958271b91866",
+        "source_chain": [
+          {
+            "file": "blobs/5b24ff6ac14a0aa4d0b710614be7a73945da8c909cc0ed57068b958271b91866.json",
+            "sha256": "5b24ff6ac14a0aa4d0b710614be7a73945da8c909cc0ed57068b958271b91866",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/social_lubricator/experience12/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali_existing",
+        "protocol": "completed_20260926_mixed_endpoints"
+      }
+    ]
+  },
+  {
+    "id": "personas-8",
+    "mode": "personas",
+    "name": "The System Purist",
+    "model": "qwen3.8-max",
+    "persona": "The System Purist",
+    "score": 3,
+    "reason": "Gin Rummy fundamentally conflicts with The System Purist's core values: the face-down stock draw introduces significant luck (zero tolerance), information is imperfect (opponent's hand and stock order hidden), and decisions are moderate rather than crunchy. The indirect blocking element (careful discarding) provides a minor positive, and there's no chaotic take-that. However, winning against a RandomAgent undermines the 'prove intellectual superiority' motivation. The first-player/dealer advantage concern is also relevant since Player 0 (dealer) won.",
+    "evidence": [
+      "Game is Gin Rummy with face-down stock draws, introducing pure randomness each turn",
+      "Player 0 drew from stock (hidden information) on most turns rather than discard pile",
+      "Opponent was RandomAgent, making any 'optimization' victory hollow for proving system mastery",
+      "Player 0 knocked at decision 28 with stock still at 15 cards, indicating a moderate-length game",
+      "Player 0 is dealer and won, consistent with known first-player advantage concerns",
+      "No perfect information available — opponent hand size only visible, not contents"
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 3,
+      "mastery": 3,
+      "curiosity": 3,
+      "challenge_fit": 2,
+      "cognitive_challenge": 3,
+      "decision_challenge": 3,
+      "meaning": 2,
+      "immersion": 3,
+      "emotional_challenge": 1,
+      "progress_feedback": 3,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "The rules clearly define Gin/Knock conditions, scoring, and action constraints; the observation state explicitly shows hand, discard pile, stock size, and legal actions at each step.",
+      "autonomy": "Each turn offers a draw choice (stock vs discard) and a discard choice among 11 cards, but the opponent being a RandomAgent removes meaningful strategic interaction and blocking opportunities.",
+      "mastery": "The player successfully built toward Gin over 14 turns, demonstrating hand optimization, but the RandomAgent opponent provides no adaptive resistance to test skill growth.",
+      "curiosity": "Hidden stock cards and opponent hand create some uncertainty to reason about, but the RandomAgent's predictable lack of strategy limits the depth of inference possible.",
+      "challenge_fit": "The RandomAgent opponent provides no meaningful resistance; the player achieved Gin without any competitive pressure, making the challenge trivially low for a System Purist seeking optimization against a worthy system.",
+      "cognitive_challenge": "The player tracked multiple potential melds (Q-set, diamond run) and made discard decisions that required evaluating hand potential, but the lack of opponent pressure reduced the depth of planning needed.",
+      "decision_challenge": "Discard choices required evaluating which cards to keep for meld potential, but with a RandomAgent opponent there was no risk of being undercut or blocked, reducing decision weight.",
+      "meaning": "Winning against a RandomAgent via Gin carries little felt significance; the outcome was largely determined by card luck rather than outmaneuvering an intelligent system.",
+      "immersion": "The turn-by-turn hand management and meld-building created a coherent progression arc from scattered cards to a complete Gin declaration.",
+      "emotional_challenge": "No emotional, moral, or social pressure is present; the opponent is a RandomAgent with no capacity for interaction, bluffing, or psychological play.",
+      "progress_feedback": "The observation clearly shows hand composition, discard pile history, and stock size at each step, allowing the player to track progress toward melds, though no explicit progress metric toward Gin is provided.",
+      "ease_of_control": "Actions are clearly enumerated with legal_action_ids, the interface distinguishes draw source and discard index cleanly, and the Gin/Knock declaration is a single explicit action when eligible."
+    },
+    "limitations": [
+      "No information about the player's internal reasoning, planning depth, or whether they felt the hidden information created meaningful uncertainty.",
+      "The RandomAgent opponent's behavior pattern is not detailed enough to assess whether the player recognized or exploited its predictability.",
+      "No evidence of whether the player experienced frustration with stock randomness or felt the luck element was problematic.",
+      "Wall-clock timing and pacing are absent, so absorption quality cannot be fully assessed.",
+      "Only one partial game is recorded, limiting assessment of mastery progression or strategic adaptation across hands."
+    ],
+    "sources": [
+      {
+        "label": "completed_persona",
+        "job_id": "c40029ddc0a983c1e8ded93a",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The System Purist",
+        "instrument": "play_score",
+        "branch": "persona",
+        "system_sha256": "84ef314d7ad42374fdf12dd2dc2cd3fdff1d8eafb61fb7c4d19251f89874eccd",
+        "user_sha256": "ba8b39c5b6ef845db7f05f8470e7efa769aee452de95e4377ffcfd2496bc77c1",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/system_purist/play_score/result.json",
+        "source_sha256": "1cf3048e82dac5c5147dfac7703bbe3e6d38cfa9b8f85eee025574348f69f311",
+        "source_chain": [
+          {
+            "file": "blobs/1cf3048e82dac5c5147dfac7703bbe3e6d38cfa9b8f85eee025574348f69f311.json",
+            "sha256": "1cf3048e82dac5c5147dfac7703bbe3e6d38cfa9b8f85eee025574348f69f311",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/system_purist/play_score/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      },
+      {
+        "label": "completed_persona",
+        "job_id": "8ec0e06338bf690297e4af6a",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The System Purist",
+        "instrument": "experience12",
+        "branch": "persona",
+        "system_sha256": "0ea57f0784b668d200d8a627e372e5a555392e3b35826a24e6a7627071dda6e5",
+        "user_sha256": "6d9e146635ed04cd5c0676243ff6d75009fa7bad9c7780ec412be4a1a1633fb5",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/system_purist/experience12/result.json",
+        "source_sha256": "af24ade53b420833b8187261fbaa98f2645be48ad227daa52d32f5a9e1652138",
+        "source_chain": [
+          {
+            "file": "blobs/af24ade53b420833b8187261fbaa98f2645be48ad227daa52d32f5a9e1652138.json",
+            "sha256": "af24ade53b420833b8187261fbaa98f2645be48ad227daa52d32f5a9e1652138",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/system_purist/experience12/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali_existing",
+        "protocol": "completed_20260926_mixed_endpoints"
+      }
+    ]
+  },
+  {
+    "id": "personas-9",
+    "mode": "personas",
+    "name": "The Thrill Seeker",
+    "model": "qwen3.8-max",
+    "persona": "The Thrill Seeker",
+    "score": 6,
+    "reason": "Gin Rummy provides moderate tension through card-drawing decisions and the knock/gin mechanic offers a push-your-luck element. Player 0 won (payoff 1-0), and the session shows active decision-making with draws from both stock and discard pile, building toward a gin. However, the game is relatively methodical—many turns are simple draw-from-stock/discard cycles without dramatic swings. The pacing is moderate rather than fast, there's no instant restart mechanism visible, and the opponent (RandomAgent) provides no meaningful schadenfreude or comeback drama. The final gin (decision 28) provides a satisfying climax but the overall experience lacks the high-stakes gambling tension and rapid emotional rollercoaster a Thrill Seeker craves.",
+    "evidence": [
+      "Decision 1: Drew from discard pile (Q clubs) showing early aggressive engagement",
+      "Decision 8: Drew 10 diamonds from discard, building toward melds",
+      "Decision 16: Drew 9 diamonds from discard, continuing active hand-building",
+      "Decisions 20-27: Repeated draw-from-stock/discard cycles with no dramatic shifts, creating a lull in tension",
+      "Decision 28: Achieved gin (action_id 14), winning the game with payoff 1-0"
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 4,
+      "mastery": 4,
+      "curiosity": 3,
+      "challenge_fit": 3,
+      "cognitive_challenge": 3,
+      "decision_challenge": 4,
+      "meaning": 3,
+      "immersion": 3,
+      "emotional_challenge": 3,
+      "progress_feedback": 3,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "The game state clearly showed hand contents, discard pile, stock size, and legal actions including knock/gin availability at each decision point.",
+      "autonomy": "Player 0 repeatedly chose between drawing from stock vs. discard, selecting which card to discard, and critically chose to delay knocking at decisions 18, 20, 22, 24, and 26 despite eligibility.",
+      "mastery": "Player 0 successfully built a four-Queen set and a diamond run over multiple turns, demonstrating hand-building skill culminating in a gin declaration.",
+      "curiosity": "The hidden stock contents and opponent's hand provided some uncertainty, but the RandomAgent opponent offered no strategic signals to interpret.",
+      "challenge_fit": "The RandomAgent opponent provided minimal strategic pressure; Player 0 had ample time to build toward gin without threat of being undercut or outpaced.",
+      "cognitive_challenge": "Hand management required tracking melds and discard choices, but the lack of opponent pressure reduced the need for defensive play or complex probability reasoning.",
+      "decision_challenge": "The repeated choice to forgo knocking (decisions 18-26) in pursuit of gin represented a meaningful risk-reward tradeoff with real scoring consequences.",
+      "meaning": "The push-for-gin strategy created a narrative arc of escalating commitment, but the RandomAgent opponent diminished the sense of outplaying a rival.",
+      "immersion": "The gradual stock depletion (31 to 15) and repeated knock-avoidance created building tension, though the automated opponent limited felt engagement.",
+      "emotional_challenge": "The decision to keep pushing for gin despite multiple knock opportunities created risk tension, but no social or moral pressure was present against a random opponent.",
+      "progress_feedback": "Hand composition was fully visible and knock/gin availability was signaled through legal action lists, but no explicit progress meter or score projection was shown during play.",
+      "ease_of_control": "Actions were straightforward draw-then-discard with clear legal action lists; the gin declaration at decision 28 was immediately available when the hand was complete."
+    },
+    "limitations": [
+      "No wall-clock timing data available to assess pacing or tension buildup speed",
+      "RandomAgent opponent provides no strategic feedback, making it impossible to assess schadenfreude or comeback dynamics",
+      "Only one partial game was recorded, insufficient to evaluate restart speed or multi-hand momentum",
+      "No subjective player feedback or self-report was collected",
+      "Cannot determine whether the player experienced the repeated knock-delay as thrilling tension or merely mechanical optimization"
+    ],
+    "sources": [
+      {
+        "label": "completed_persona",
+        "job_id": "6356080a0a0c2621e7451562",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Thrill Seeker",
+        "instrument": "play_score",
+        "branch": "persona",
+        "system_sha256": "84ef314d7ad42374fdf12dd2dc2cd3fdff1d8eafb61fb7c4d19251f89874eccd",
+        "user_sha256": "77be666d32d3e4716122bfc5e3e71d5ec58632d7c72717283ef1c0772d503b18",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/thrill_seeker/play_score/result.json",
+        "source_sha256": "3081c17e3e2ef856215596a18a7e8dc159313eda63e1607686e761e0ddbf97ad",
+        "source_chain": [
+          {
+            "file": "blobs/3081c17e3e2ef856215596a18a7e8dc159313eda63e1607686e761e0ddbf97ad.json",
+            "sha256": "3081c17e3e2ef856215596a18a7e8dc159313eda63e1607686e761e0ddbf97ad",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/thrill_seeker/play_score/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      },
+      {
+        "label": "completed_persona",
+        "job_id": "a551a4493e075fac2f4d14c4",
+        "sample": "d6ad92d40e09b0c8bbe6872b189a36189a8bb704543c0ca922c5e8feca4cd1fa",
+        "game": "gin_rummy__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Thrill Seeker",
+        "instrument": "experience12",
+        "branch": "persona",
+        "system_sha256": "0ea57f0784b668d200d8a627e372e5a555392e3b35826a24e6a7627071dda6e5",
+        "user_sha256": "06a57ceec43208ab8087fd56a57a0db5f5447a9f674acd8ab1ac61f388f7d448",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/thrill_seeker/experience12/result.json",
+        "source_sha256": "7e15c925d3dbec3152b7e7aa958d7fa796d4f2e5b016d9191f1528329c22db39",
+        "source_chain": [
+          {
+            "file": "blobs/7e15c925d3dbec3152b7e7aa958d7fa796d4f2e5b016d9191f1528329c22db39.json",
+            "sha256": "7e15c925d3dbec3152b7e7aa958d7fa796d4f2e5b016d9191f1528329c22db39",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/glm-5.3/gin_rummy__initial/persona/thrill_seeker/experience12/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali_existing",
+        "protocol": "completed_20260926_mixed_endpoints"
+      }
+    ]
+  }
+]

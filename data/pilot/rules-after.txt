@@ -1,0 +1,205 @@
+### 1. **Game State**
+
+#### **Common Information:**
+- **Stock Pile:** Face-down pile of undealt cards in the center of the table. The count of remaining cards is public knowledge, but their identities are hidden.
+- **Starter Pile:** Face-up pile in the center of the table. The top card is visible to all players and determines the current required suit or rank.
+- **Declared Suit:** If the most recently played card is an eight, a suit has been declared by the player who played it. This declared suit is public knowledge and governs what the next player must play.
+- **Current Turn Indicator:** Identifies which player is currently acting.
+- **Turn Order:** Fixed sequence starting from the dealer's left, proceeding clockwise (or in a consistent direction).
+- **Game Phase:** Indicates whether the game is active or has ended.
+
+#### **Player-Specific Information:**
+- **Public:**
+  - **Hand Size:** The number of cards remaining in each player's hand (observable by all players).
+  - **Play History:** All cards played to the starter pile are visible in sequence.
+- **Private:**
+  - **Player Hand:** The specific cards held by the player, visible only to that player.
+
+---
+
+### 2. **Card**
+
+#### **Attributes:**
+- **Rank:** One of {A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K}.
+- **Suit:** One of {Hearts, Diamonds, Clubs, Spades}.
+- **Point Value (for scoring):**
+  - 8 = 50 points
+  - K, Q, J, 10 = 10 points each
+  - A = 1 point
+  - 2, 3, 4, 5, 6, 7, 9 = their pip value (e.g., 7 = 7 points)
+
+#### **Special Properties:**
+- **Eights are Wild:** Any eight may be played on any turn regardless of the current top card. When played, the player declares a suit (not a rank), which becomes the active suit for the next player.
+
+#### **Card States:**
+- **Face-down:** Cards in the stock pile and in players' hands.
+- **Face-up:** Cards in the starter pile.
+
+---
+
+### 3. **Deck and Initial Dealing**
+
+#### **Deck Composition:**
+- A standard 52-card deck (13 ranks × 4 suits). No jokers.
+
+#### **Dealing Process:**
+1. The dealer deals **5 cards** to each player, one at a time, face down, beginning with the player to the dealer's left and proceeding in turn order.
+2. The remaining cards are placed face down in the center of the table to form the **stock pile**.
+3. The dealer turns up the top card of the stock and places it face up in a separate pile to form the **starter pile**.
+
+#### **Special Rule – Eight as Starter:**
+- If the turned starter card is an **eight**, it is **buried** (placed face down into the middle of the stock pile), and the next card from the stock is turned up instead.
+- This process repeats if the next card is also an eight, until a non-eight card is revealed as the starter.
+
+---
+
+### 4. **Legal Action Space**
+
+On a player's turn, exactly **one** of the following actions is taken:
+
+| # | Action | Description | Prerequisites |
+|---|--------|-------------|---------------|
+| 1 | **Play a Matching Card** | Place one card from hand face-up onto the starter pile. | The card must match the current top card of the starter pile in **suit** OR **rank** (denomination). If a declared suit is in effect (due to a previously played eight), the card must match the **declared suit** OR be an eight. The player must have such a card in hand. |
+| 2 | **Play an Eight** | Place an eight from hand face-up onto the starter pile and declare a suit. | The player must hold at least one eight. Eights may be played **at any time** on the player's turn, regardless of the current top card. The player must declare a suit (Hearts, Diamonds, Clubs, or Spades) but **never a rank**. |
+| 3 | **Draw from Stock (Gamble Draw)** | Draw cards one at a time from the top of the stock pile into hand, up to a maximum of **3 cards**. | The player is **unable or unwilling** to play a card from their current hand. A player **may** choose to draw even if a playable card exists in hand. Drawing proceeds one card at a time. After each draw, if the drawn card is playable, the player **must** immediately play it and their turn ends. If the drawn card is not playable, the player may choose to stop drawing (ending their turn with no play) or continue drawing, up to the 3-card maximum. If the stock is exhausted before 3 cards are drawn, drawing stops. |
+| 4 | **Pass** | The player takes no action and play moves to the next player. | The player has no playable card in hand **AND** the stock is exhausted, OR the player chose to stop drawing without finding a playable card, OR the player **busted** (see Bust Rule below). |
+
+#### **Bust Rule:**
+- If a player draws **3 cards** from the stock in a single turn and none of them is playable, the player **busts**.
+- Upon busting, the player must select the **highest-point-value card** from their entire hand (including the 3 just drawn) and place it **face-down at the bottom of the stock pile**. If multiple cards tie for highest value, the player chooses which to sacrifice.
+- The player's turn then ends immediately (they pass).
+- The bust is public knowledge: all players see that a bust occurred and that a card was buried, but the identity of the buried card remains hidden.
+
+#### **Clarifications:**
+- A player who draws a playable card from the stock **must** play it immediately; they may not continue drawing.
+- If a player draws 1 or 2 non-playable cards and chooses to stop, they simply pass (no bust penalty).
+- If a player draws multiple cards and plays one, all other drawn cards remain in their hand.
+- A player who passes does **not** discard any card (unless they busted).
+
+---
+
+### 5. **Round**
+
+#### **Sequence of Play:**
+1. The player to the **dealer's left** takes the first turn.
+2. Play proceeds in **turn order** (clockwise).
+3. On each turn, the current player performs exactly one action from the Legal Action Space (Section 4).
+4. After the action is resolved, the turn passes to the next player in order.
+
+#### **Turn Resolution Details:**
+
+- **If the player plays a matching card:** The card is placed face-up on the starter pile. The new top card determines the requirement for the next player (match by suit or rank).
+- **If the player plays an eight:** The eight is placed face-up on the starter pile. The player declares a suit. The next player must play a card of the declared suit or another eight.
+- **If the player draws:** Cards are drawn one at a time from the stock, up to a maximum of 3. If a playable card is drawn, the player must immediately play it (ending their turn). If a non-playable card is drawn, the player may stop (passing) or continue drawing. If 3 cards are drawn and none is playable, the player busts: they bury their highest-value card face-down at the bottom of the stock and their turn ends.
+- **If the player passes:** No card is played. The turn moves to the next player. The top card of the starter pile remains unchanged.
+
+#### **Game End Conditions:**
+
+| Condition | Outcome |
+|-----------|---------|
+| A player plays their **last card** | That player **wins** immediately. The game ends. |
+| The **stock is exhausted** and **all players pass consecutively** (a full cycle of passes) | The game ends. The player with the **fewest points** in their remaining hand wins. |
+| The **stock is exhausted** and no player can go out | Play continues with players passing until a full round of consecutive passes occurs, then the game ends as above. |
+
+#### **Corner Cases:**
+- **Deck Exhaustion:** Once the stock is empty, players who cannot play must pass. If every player passes in succession (one full round), the game ends and the winner is determined by lowest hand value.
+- **All Players Pass:** Triggers game end. Scoring is applied to determine the winner.
+- **Last Card is an Eight:** If a player's last card is an eight, they play it, declare a suit (though it has no mechanical effect since the game ends), and win.
+- **Starter Pile Growth:** The starter pile grows throughout the game but only the **top card** is relevant for matching.
+- **Bust with Stock Exhausted:** If the stock has fewer than 3 cards when a player begins drawing, they draw only the remaining cards. If none is playable, they bust normally (burying their highest-value card at the bottom of the now-empty stock area, effectively removing it from the game).
+- **Bust Card and Scoring:** A card buried via bust is removed from the game entirely and does not count toward any player's hand value at game end.
+
+---
+
+### 6. **Other Game Mechanics & Rules**
+
+#### **Wild Eights:**
+- All eights are **wild cards** and may be played at any time during a player's turn, regardless of the current top card or declared suit.
+- When an eight is played, the player **must declare a suit** (Hearts, Diamonds, Clubs, or Spades). A rank may **never** be declared.
+- The declared suit remains in effect until another card is played on top of the eight.
+
+#### **Starter Pile Eight Burial:**
+- During initial setup, if an eight is revealed as the starter, it is buried in the **middle** of the stock pile (not on top or bottom). The next card is then revealed.
+- This ensures the game never begins with an eight as the active card.
+
+#### **Gamble Draw and Bust:**
+- Drawing from the stock is a **push-your-luck gamble** with a hard cap of 3 cards per turn.
+- Each drawn card that is playable **must** be played immediately (the gamble pays off).
+- Each drawn card that is not playable increases the risk of busting.
+- **Busting** (drawing 3 non-playable cards) forces the player to sacrifice their most valuable card, creating a tangible penalty for over-committing to the draw.
+- A player may **stop early** after 1 or 2 non-playable draws to avoid the bust risk, but this means passing without playing.
+
+#### **Voluntary Drawing:**
+- A player **may** choose to draw from the stock even if they hold a playable card. This is a strategic gamble (seeking a better card at the risk of busting).
+
+#### **No Discarding:**
+- Unlike some shedding games, players do **not** discard to a separate pile. Cards are only played onto the starter pile, drawn from the stock, or buried via bust.
+
+#### **No Hand Limit:**
+- There is no maximum hand size. A player's hand grows if they draw without playing.
+
+---
+
+### 7. **Player Observation Information**
+
+#### **Visible to All Players:**
+- The **top card** of the starter pile (current active card).
+- The **declared suit**, if the top card is an eight.
+- The **number of cards** remaining in the stock pile.
+- The **number of cards** in each opponent's hand (hand size).
+- All **previously played cards** in the starter pile (visible as a face-up pile).
+- The **turn order** and whose turn it is.
+- All **actions taken** by other players (which card was played, whether they drew, how many cards they drew, whether they busted).
+- When a player **busts**, all players observe that a bust occurred and that a card was buried, but the identity of the buried card is hidden.
+
+#### **Hidden Information:**
+- The **identities of cards** in the stock pile.
+- The **specific cards** in opponents' hands.
+- The **order of cards** in the stock pile.
+- The **identity of cards buried** via bust.
+
+#### **Player's Own Knowledge:**
+- The full contents of their own hand.
+- The history of their own draws and plays.
+- Which card they buried if they busted.
+
+---
+
+### 8. **Payoffs**
+
+#### **When the Game Ends:**
+- The game ends when a player plays their last card (normal end) or when all players pass consecutively with an exhausted stock (exhaustion end).
+
+#### **Winning Condition:**
+- **Normal End:** The player who first empties their hand is the winner.
+- **Exhaustion End:** The player with the **lowest total point value** of remaining cards wins. In case of a tie, the tied players may share the win or a tiebreaker rule is applied (unspecified by source; recommended: split winnings equally).
+
+#### **Scoring (Point Values of Cards):**
+
+| Card | Point Value |
+|------|-------------|
+| 8 | 50 |
+| K, Q, J, 10 | 10 each |
+| A | 1 |
+| 9, 7, 6, 5, 4, 3, 2 | Pip value (e.g., 9 = 9, 7 = 7) |
+
+#### **Payoff Calculation:**
+- The **winner** collects points from each other player.
+- Each losing player pays the winner a number of points equal to the **total value of cards remaining in their hand**.
+- The winner's total payoff is the **sum** of all opponents' remaining hand values.
+- Cards buried via bust are **not** counted in any player's hand value.
+
+#### **Example:**
+- If Player A wins and Player B has {K, 3} remaining and Player C has {8, A} remaining:
+  - Player B pays: 10 + 3 = **13 points**
+  - Player C pays: 50 + 1 = **51 points**
+  - Player A's total payoff: 13 + 51 = **64 points**
+
+#### **Exhaustion End Scoring:**
+- If the game ends due to stock exhaustion and all players passing:
+  - Each player totals the point value of their remaining hand.
+  - The player with the **lowest total** wins.
+  - The winner collects from each other player the **difference** between that player's hand value and the winner's hand value (alternative: winner collects full hand values from all others; implementation may vary).
+  - **Recommended implementation:** Winner collects the full value of each opponent's remaining hand, same as normal end.
+
+<!-- END RULEBOOK -->

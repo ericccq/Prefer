@@ -1,0 +1,185 @@
+### 1. **Game State**
+
+#### **Common Information:**
+- **Stock Pile:** The remaining undealt cards placed face down on the table. The count of cards in the stock is public knowledge.
+- **Completed Books:** All books (four-of-a-kind sets) that have been formed during the game, displayed face up on the table in front of the player who completed them.
+- **Turn Information:** The current active player, the rank they have asked for, and the outcome of the ask (catch or go fish).
+- **Player Order:** The clockwise turn sequence starting from the player to the left of the dealer.
+- **Active Players:** The set of players still in the game (i.e., players who have not been eliminated).
+- **Books Won Count:** The total number of books completed across all players (game ends when this reaches 13).
+
+#### **Player-Specific Information:**
+- **Public:**
+  - **Books Won:** All completed books placed face up in front of the player.
+  - **Hand Size:** The number of cards currently held by the player (recommended as public information for fairness and game flow).
+  - **Elimination Status:** Whether the player is out of the game.
+- **Private:**
+  - **Player Hand:** The specific cards held by the player, visible only to them.
+
+---
+
+### 2. **Card**
+
+#### **Attributes:**
+- **Rank:** One of {A, K, Q, J, 10, 9, 8, 7, 6, 5, 4, 3, 2}.
+  - Ace is the highest rank; Two is the lowest rank.
+- **Suit:** One of {Hearts, Diamonds, Clubs, Spades}.
+  - Suits are irrelevant to gameplay; only rank matters for forming books and making asks.
+
+#### **Special Values:**
+- **Book:** A set of exactly four cards of the same rank (e.g., four Kings, four Aces). There are exactly 13 possible books in the game (one per rank).
+
+#### **Card States:**
+- **Face-down:** Cards in a player's hand and in the stock pile.
+- **Face-up:** Cards in completed books displayed on the table.
+
+---
+
+### 3. **Deck and Initial Dealing**
+
+#### **Deck Composition:**
+- A standard 52-card deck with 13 ranks across 4 suits.
+
+#### **Dealer Selection:**
+1. Any player deals one card face up to each player.
+2. The player receiving the lowest card becomes the dealer.
+3. In case of a tie for lowest card, the tied players draw again until a unique lowest card is determined.
+4. The selected cards are returned to the deck before the deal.
+
+#### **Dealing Process:**
+1. The dealer shuffles the deck.
+2. The player to the dealer's right cuts the deck.
+3. The dealer completes the cut and deals cards one at a time, face down, beginning with the player to the left, proceeding clockwise.
+
+#### **Hand Size by Player Count:**
+| Number of Players | Cards Dealt to Each Player | Cards Remaining in Stock |
+|-------------------|---------------------------|--------------------------|
+| 2                 | 7                         | 38                       |
+| 3                 | 7                         | 31                       |
+| 4                 | 5                         | 32                       |
+| 5                 | 5                         | 27                       |
+
+#### **Setup:**
+- After dealing, the remaining cards are placed face down in the center of the table to form the **stock pile**.
+
+---
+
+### 4. **Legal Action Space**
+
+#### **On a Player's Turn, They May Perform the Following Actions:**
+
+1. **Ask for a Rank:**
+   - The active player selects any opponent who is still in the game and asks them for a specific rank (from Ace down to Two).
+   - **Pre-requisite:** The asking player must hold at least one card of the requested rank in their hand at the time of asking.
+   - **Pre-requisite:** The addressed opponent must be an active player (not eliminated).
+
+2. **Catch (Successful Ask):**
+   - If the addressed opponent holds one or more cards of the requested rank, they must hand over **all** cards of that rank to the asking player.
+   - The asking player reveals the received cards for verification.
+   - **Outcome:** The asking player's turn continues. They may ask the same or a different opponent for the same or a different rank.
+
+3. **Go Fish (Unsuccessful Ask):**
+   - If the addressed opponent holds no cards of the requested rank, they declare "Go Fish!"
+   - The asking player draws the top card of the stock pile and adds it to their hand.
+   - **Outcome:** The asking player's turn ends. Play passes to the next player on the left.
+
+4. **Complete a Book:**
+   - If, at any point during their turn (after a catch or after drawing from the stock), a player holds all four cards of a single rank, they must immediately:
+     1. Show all four cards to all players for verification.
+     2. Place the book face up on the table in front of them.
+   - **Outcome:** The player's turn continues (they may ask again).
+
+5. **Re-enter with a Draw (Empty Hand):**
+   - If a player's hand is empty at the start of their turn and the stock pile is not empty:
+     - The player draws the top card from the stock pile.
+     - The player then asks any opponent for that rank (the rank of the drawn card).
+   - **Pre-requisite:** The player has zero cards in hand and the stock pile has at least one card.
+
+6. **Elimination:**
+   - If a player's hand is empty and the stock pile is also empty, the player is eliminated from the game.
+   - **Pre-requisite:** The player has zero cards in hand AND the stock pile has zero cards.
+   - **Outcome:** The player takes no further turns and cannot be asked for cards.
+
+---
+
+### 5. **Round**
+
+#### **Sequence of Play:**
+
+1. **Start of Game:** The player to the left of the dealer takes the first turn.
+2. **Turn Structure:** Each turn consists of the following steps in order:
+   - **Step 1 – Ask:** The active player asks a specific opponent for a specific rank (must hold at least one card of that rank).
+   - **Step 2a – Catch:** If the opponent has the requested cards, they hand them over. The active player checks for completed books (if a book is formed, it is displayed). The active player's turn **continues** (return to Step 1).
+   - **Step 2b – Go Fish:** If the opponent does not have the requested cards, the active player draws from the stock. The active player checks for completed books (if a book is formed, it is displayed). The active player's turn **ends**; play passes to the next player on the left.
+3. **Turn Continuation:** A player's turn continues indefinitely as long as they keep making catches. The turn only ends when the player fails to make a catch (goes fish).
+4. **Passing the Turn:** After a failed ask (go fish), the turn passes to the next active player on the left. Eliminated players are skipped.
+
+#### **Game End Conditions:**
+- **Primary Condition:** The game ends when all 13 books have been completed and placed on the table.
+- **Secondary Condition (Edge Case):** The game also ends if all players except one have been eliminated (the remaining player wins by default with whatever books they have).
+- **Deck Exhaustion Edge Case:** If the stock pile is exhausted, players with empty hands are eliminated. The game continues among remaining players until all books are won or only one player remains.
+
+#### **Corner Cases:**
+- **All Players Pass Continuously:** This cannot happen by design since every turn results in either a catch (turn continues) or a go fish (turn passes). There is no voluntary "pass" action.
+- **Stock Exhausted with Multiple Players Having Cards:** Play continues normally; players ask each other for cards. No drawing occurs.
+- **Stock Exhausted, One Player with Cards:** That player automatically wins (all remaining cards must form books among themselves, and all other players are eliminated).
+- **Last Card Drawn Completes a Book:** The book is displayed, and the game ends if all 13 books are now complete.
+
+---
+
+### 6. **Other Game Mechanics & Rules**
+
+- **Verification of Catches:** When a player receives cards from an opponent (a catch), the received cards must be shown face up to all players for verification before being added to the hand.
+- **Book Display:** Completed books are placed face up on the table in front of the player who completed them. They remain visible for the duration of the game.
+- **Mandatory Surrender:** If a player is asked for a rank they hold, they **must** surrender all cards of that rank. They cannot withhold any.
+- **Mandatory Ask Constraint:** A player may only ask for a rank of which they hold at least one card. Asking for a rank not in hand is an illegal move.
+- **No Voluntary Passing:** A player cannot choose to skip their turn or pass without asking.
+- **Elimination is Permanent:** Once a player is eliminated (no cards, no stock), they cannot re-enter the game.
+- **Similarity to Authors:** Go Fish is mechanically similar to the game Authors, which also involves collecting four-of-a-kind sets through asking.
+
+---
+
+### 7. **Player Observation Information**
+
+#### **Visible Information to Each Player:**
+- Their own hand (all cards they hold).
+- The number of cards remaining in the stock pile.
+- All completed books on the table and which player owns each book.
+- The catch cards revealed during any successful ask.
+- The identity of the player whose turn it is.
+- The rank being asked for and the opponent being asked.
+- Whether an ask resulted in a catch or a go fish.
+- Hand sizes of other players (recommended; see note below).
+
+#### **Hidden Information:**
+- The specific cards in opponents' hands.
+- The identity of the top card of the stock pile (until drawn).
+- The order of cards remaining in the stock pile.
+
+#### **Ambiguity Note:**
+- The source does not explicitly specify whether hand sizes are public information. For implementation purposes, it is **recommended** that hand sizes are public to allow players to make informed decisions about whom to ask.
+
+---
+
+### 8. **Payoffs**
+
+#### **Endgame Condition:**
+- The game ends when all 13 books have been won (i.e., all 52 cards have been organized into 13 four-of-a-kind sets).
+
+#### **Scoring:**
+- Each book is worth **1 point**.
+- A player's final score equals the number of books they have completed and placed on the table.
+
+#### **Winning Condition:**
+- The player with the **most books** at the end of the game is the winner.
+
+#### **Tie Resolution:**
+- If two or more players are tied for the most books, the game is considered a tie among those players.
+- (Optional variant: In a multi-game session, ties may be broken by total books across multiple rounds.)
+
+#### **Summary Table:**
+| Outcome | Score |
+|---------|-------|
+| Each book completed | +1 point |
+| Most books at game end | Winner |
+| Tied for most books | Shared win |

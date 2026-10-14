@@ -1,0 +1,205 @@
+### 1. **Game State**
+
+#### **Common Information:**
+- **Stock Pile:** Face-down pile of undealt cards in the center of the table. The count of remaining cards is public knowledge, but their identities are hidden.
+- **Starter Pile:** Face-up pile in the center of the table. The top card is visible to all players and determines the current required suit or rank.
+- **Declared Suit:** If the most recently played card is an eight, a suit has been declared by the player who played it. This declared suit is public knowledge and governs what the next player must play.
+- **Current Turn Indicator:** Identifies which player is currently acting.
+- **Turn Order:** Fixed sequence starting from the dealer's left, proceeding clockwise (or in a consistent direction).
+- **Game Phase:** Indicates whether the game is active or has ended.
+
+#### **Player-Specific Information:**
+- **Public:**
+  - **Hand Size:** The number of cards remaining in each player's hand (observable by all players).
+  - **Play History:** All cards played to the starter pile are visible in sequence.
+- **Private:**
+  - **Player Hand:** The specific cards held by the player, visible only to that player.
+  - **Signature Suit:** The suit secretly chosen by the player at the start of the game (see Section 6). This choice is never revealed until game end.
+
+---
+
+### 2. **Card**
+
+#### **Attributes:**
+- **Rank:** One of {A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K}.
+- **Suit:** One of {Hearts, Diamonds, Clubs, Spades}.
+- **Point Value (for scoring):**
+  - 8 = 50 points
+  - K, Q, J, 10 = 10 points each
+  - A = 1 point
+  - 2, 3, 4, 5, 6, 7, 9 = their pip value (e.g., 7 = 7 points)
+
+#### **Special Properties:**
+- **Eights are Wild:** Any eight may be played on any turn regardless of the current top card. When played, the player declares a suit (not a rank), which becomes the active suit for the next player.
+
+#### **Card States:**
+- **Face-down:** Cards in the stock pile and in players' hands.
+- **Face-up:** Cards in the starter pile.
+
+---
+
+### 3. **Deck and Initial Dealing**
+
+#### **Deck Composition:**
+- A standard 52-card deck (13 ranks × 4 suits). No jokers.
+
+#### **Dealing Process:**
+1. The dealer deals **5 cards** to each player, one at a time, face down, beginning with the player to the dealer's left and proceeding in turn order.
+2. The remaining cards are placed face down in the center of the table to form the **stock pile**.
+3. The dealer turns up the top card of the stock and places it face up in a separate pile to form the **starter pile**.
+4. **Signature Suit Selection:** After receiving their hand and before the first turn begins, each player secretly selects one suit (Hearts, Diamonds, Clubs, or Spades) as their **Signature Suit**. This choice is recorded privately (e.g., noted on paper or remembered) and is not revealed to other players.
+
+#### **Special Rule – Eight as Starter:**
+- If the turned starter card is an **eight**, it is **buried** (placed face down into the middle of the stock pile), and the next card from the stock is turned up instead.
+- This process repeats if the next card is also an eight, until a non-eight card is revealed as the starter.
+
+---
+
+### 4. **Legal Action Space**
+
+On a player's turn, exactly **one** of the following actions is taken:
+
+| # | Action | Description | Prerequisites |
+|---|--------|-------------|---------------|
+| 1 | **Play a Matching Card** | Place one card from hand face-up onto the starter pile. | The card must match the current top card of the starter pile in **suit** OR **rank** (denomination). If a declared suit is in effect (due to a previously played eight), the card must match the **declared suit** OR be an eight. The player must have such a card in hand. |
+| 2 | **Play an Eight** | Place an eight from hand face-up onto the starter pile and declare a suit. | The player must hold at least one eight. Eights may be played **at any time** on the player's turn, regardless of the current top card. The player must declare a suit (Hearts, Diamonds, Clubs, or Spades) but **never a rank**. |
+| 3 | **Draw from Stock** | Draw one card from the top of the stock pile into hand. Repeat until a playable card is drawn or the stock is exhausted. | The player is **unable or unwilling** to play a card from their current hand. Note: A player **may** choose to draw even if a playable card exists in hand. Drawing continues one card at a time until either (a) a playable card is obtained and the player chooses to stop and play it, or (b) the stock is exhausted. |
+| 4 | **Pass** | The player takes no action and play moves to the next player. | The player has no playable card in hand **AND** the stock is exhausted. |
+
+#### **Clarifications:**
+- A player who draws a playable card from the stock **may** choose to play it immediately or continue drawing (strategic choice).
+- If a player draws multiple cards and eventually plays one, all other drawn cards remain in their hand.
+- A player who passes does **not** discard any card.
+
+---
+
+### 5. **Round**
+
+#### **Sequence of Play:**
+1. The player to the **dealer's left** takes the first turn.
+2. Play proceeds in **turn order** (clockwise).
+3. On each turn, the current player performs exactly one action from the Legal Action Space (Section 4).
+4. After the action is resolved, the turn passes to the next player in order.
+
+#### **Turn Resolution Details:**
+
+- **If the player plays a matching card:** The card is placed face-up on the starter pile. The new top card determines the requirement for the next player (match by suit or rank).
+- **If the player plays an eight:** The eight is placed face-up on the starter pile. The player declares a suit. The next player must play a card of the declared suit or another eight.
+- **If the player draws:** Cards are drawn one at a time from the stock. If a playable card is drawn, the player may stop drawing and play it (ending their turn), or continue drawing. If the stock is exhausted without finding a playable card, the player must pass.
+- **If the player passes:** No card is played. The turn moves to the next player. The top card of the starter pile remains unchanged.
+
+#### **Game End Conditions:**
+
+| Condition | Outcome |
+|-----------|----------|
+| A player plays their **last card** | That player **wins** immediately. The game ends. |
+| The **stock is exhausted** and **all players pass consecutively** (a full cycle of passes) | The game ends. The player with the **fewest points** in their remaining hand wins. |
+| The **stock is exhausted** and no player can go out | Play continues with players passing until a full round of consecutive passes occurs, then the game ends as above. |
+
+#### **Corner Cases:**
+- **Deck Exhaustion:** Once the stock is empty, players who cannot play must pass. If every player passes in succession (one full round), the game ends and the winner is determined by lowest hand value.
+- **All Players Pass:** Triggers game end. Scoring is applied to determine the winner.
+- **Last Card is an Eight:** If a player's last card is an eight, they play it, declare a suit (though it has no mechanical effect since the game ends), and win.
+- **Starter Pile Growth:** The starter pile grows throughout the game but only the **top card** is relevant for matching.
+
+---
+
+### 6. **Other Game Mechanics & Rules**
+
+#### **Wild Eights:**
+- All eights are **wild cards** and may be played at any time during a player's turn, regardless of the current top card or declared suit.
+- When an eight is played, the player **must declare a suit** (Hearts, Diamonds, Clubs, or Spades). A rank may **never** be declared.
+- The declared suit remains in effect until another card is played on top of the eight.
+
+#### **Starter Pile Eight Burial:**
+- During initial setup, if an eight is revealed as the starter, it is buried in the **middle** of the stock pile (not on top or bottom). The next card is then revealed.
+- This ensures the game never begins with an eight as the active card.
+
+#### **Voluntary Drawing:**
+- A player **may** choose to draw from the stock even if they hold a playable card. This is a strategic option (e.g., to avoid revealing information or to seek a better card).
+
+#### **No Discarding:**
+- Unlike some shedding games, players do **not** discard to a separate pile. Cards are only played onto the starter pile or drawn from the stock.
+
+#### **No Hand Limit:**
+- There is no maximum hand size. A player's hand grows if they draw without playing.
+
+#### **Signature Suit:**
+- At the start of the game (after dealing, before the first turn), each player secretly selects one suit as their **Signature Suit**.
+- The Signature Suit is private information and is not revealed until the game ends.
+- **Signature Fulfillment:** A player's Signature Suit is considered **fulfilled** if, at the moment the game ends, that player holds **zero cards** of their Signature Suit in their hand. This means every card of that suit they ever held was played to the starter pile during the game.
+- **Fulfillment Bonus:** If the game winner has fulfilled their Signature Suit, their collected payoff is **doubled** (see Section 8).
+- **No mid-game effect:** The Signature Suit does not alter any legal action, turn structure, or matching rule during play. It is purely a scoring condition evaluated at game end.
+- **Revelation:** At game end, each player reveals their Signature Suit. Only the winner's fulfillment status affects scoring.
+
+---
+
+### 7. **Player Observation Information**
+
+#### **Visible to All Players:**
+- The **top card** of the starter pile (current active card).
+- The **declared suit**, if the top card is an eight.
+- The **number of cards** remaining in the stock pile.
+- The **number of cards** in each opponent's hand (hand size).
+- All **previously played cards** in the starter pile (visible as a face-up pile).
+- The **turn order** and whose turn it is.
+- All **actions taken** by other players (which card was played, whether they drew, how many cards they drew).
+
+#### **Hidden Information:**
+- The **identities of cards** in the stock pile.
+- The **specific cards** in opponents' hands.
+- The **order of cards** in the stock pile.
+- Each player's **Signature Suit** (revealed only at game end).
+
+#### **Player's Own Knowledge:**
+- The full contents of their own hand.
+- The history of their own draws and plays.
+- Their own Signature Suit.
+
+---
+
+### 8. **Payoffs**
+
+#### **When the Game Ends:**
+- The game ends when a player plays their last card (normal end) or when all players pass consecutively with an exhausted stock (exhaustion end).
+
+#### **Winning Condition:**
+- **Normal End:** The player who first empties their hand is the winner.
+- **Exhaustion End:** The player with the **lowest total point value** of remaining cards wins. In case of a tie, the tied players may share the win or a tiebreaker rule is applied (unspecified by source; recommended: split winnings equally).
+
+#### **Scoring (Point Values of Cards):**
+
+| Card | Point Value |
+|------|-------------|
+| 8 | 50 |
+| K, Q, J, 10 | 10 each |
+| A | 1 |
+| 9, 7, 6, 5, 4, 3, 2 | Pip value (e.g., 9 = 9, 7 = 7) |
+
+#### **Payoff Calculation:**
+- The **winner** collects points from each other player.
+- Each losing player pays the winner a number of points equal to the **total value of cards remaining in their hand**.
+- The winner's base payoff is the **sum** of all opponents' remaining hand values.
+
+#### **Signature Suit Bonus:**
+- After calculating the base payoff, the winner reveals their Signature Suit.
+- If the winner holds **zero cards** of their Signature Suit (i.e., they played every card of that suit they ever held during the game), their total payoff is **doubled**.
+- If the winner holds one or more cards of their Signature Suit, no bonus is applied.
+- In an **exhaustion end**, the same rule applies: if the winner (lowest hand value) has zero cards of their Signature Suit remaining, their collected payoff is doubled.
+
+#### **Example:**
+- If Player A wins and Player B has {K, 3} remaining and Player C has {8, A} remaining:
+  - Player B pays: 10 + 3 = **13 points**
+  - Player C pays: 50 + 1 = **51 points**
+  - Player A's base payoff: 13 + 51 = **64 points**
+  - If Player A's Signature Suit is fulfilled: 64 × 2 = **128 points**
+  - If Player A's Signature Suit is not fulfilled: **64 points** (no change)
+
+#### **Exhaustion End Scoring:**
+- If the game ends due to stock exhaustion and all players passing:
+  - Each player totals the point value of their remaining hand.
+  - The player with the **lowest total** wins.
+  - The winner collects from each other player the **difference** between that player's hand value and the winner's hand value (alternative: winner collects full hand values from all others; implementation may vary).
+  - **Recommended implementation:** Winner collects the full value of each opponent's remaining hand, same as normal end.
+  - The Signature Suit doubling rule applies identically.
+<!-- END RULEBOOK -->

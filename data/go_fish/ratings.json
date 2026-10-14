@@ -1,0 +1,1197 @@
+[
+  {
+    "id": "models-0",
+    "mode": "models",
+    "name": "glm-5.3",
+    "model": "glm-5.3",
+    "persona": null,
+    "score": 3,
+    "reason": "Player 0 repeatedly made failed asks requests (decisions 12-14 with no state changes), lost nearly all cards, was eliminated, and finished last with the lowest payoff, indicating a mostly frustrating, constrained session.",
+    "evidence": [
+      "Decisions 12-14 show the same selected action (ask player 2 for rank 3) with zero state changes, implying repeated failed asks.",
+      "By decision 15 the player's hand was reduced to a single Q and only two legal actions remained, showing severe constraint.",
+      "Terminal payoff of 1.0 for Player 0 was the lowest among all four players.",
+      "Opponents accumulated books (10, 5, 9, 8, 6, K, 3) while the focal player completed none."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 3,
+      "mastery": 2,
+      "curiosity": 2,
+      "challenge_fit": 2,
+      "cognitive_challenge": 2,
+      "decision_challenge": 2,
+      "meaning": 2,
+      "immersion": 2,
+      "emotional_challenge": 1,
+      "progress_feedback": 3,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "Legal action lists consistently reflected the ask-a-held-rank rule, and the player's choices were always legal, indicating rules were clear.",
+      "autonomy": "The player chose among multiple opponents and ranks each turn (e.g., switching from asking player 1 for K to player 3 for 2), though viable options were often similar.",
+      "mastery": "The player repeatedly asked player 3 for rank 3 across decisions 11-14 with no state change each time, showing no adaptation from failed asks.",
+      "curiosity": "Little exploration of inference from revealed catches or hand sizes; the player mostly repeated the same failing ask rather than probing new information.",
+      "challenge_fit": "Against RandomAgent opponents the player finished with 1 book versus the winner's 5, suggesting difficulty was poorly matched to the player's demonstrated skill.",
+      "cognitive_challenge": "Reasoning was limited to picking a held rank and an opponent; the repeated identical failing asks indicate minimal planning or tracking of opponent books.",
+      "decision_challenge": "Most decisions had low consequence since any held rank was nearly equivalent; the repeated no-change decisions show choices barely mattered.",
+      "meaning": "The terminal payoff of 1.0 versus opponents' 5/3/4 and the mechanical repetition give little evidence of felt significance beyond legal moves.",
+      "immersion": "The record shows sustained turn-taking but no evidence of deep engagement with the evolving game state, e.g., ignoring that player 3 completed the 3s book.",
+      "emotional_challenge": "No morally or socially consequential choices exist in Go Fish, and none arose in this session.",
+      "progress_feedback": "State updates clearly showed catches, books, hand sizes, and eliminations, giving timely feedback on outcomes.",
+      "ease_of_control": "Every selected action was legal and immediately executed with clean state deltas, indicating low procedural friction."
+    },
+    "limitations": [
+      "No opponent private observations, reasoning, or subjective reports were recorded, so immersion, meaning, and emotional experience are inferred only from action patterns.",
+      "Decisions 10, 13, and 14 show empty change lists; the exact outcome (go fish vs. catch) is inferred but not explicitly logged.",
+      "Opponents were RandomAgent, so challenge_fit and decision_challenge reflect a weak strategic environment rather than skilled opposition."
+    ],
+    "sources": [
+      {
+        "label": "recovery",
+        "job_id": "glm-5.3/0a1f99c7a759147f61b605b8/play_score",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "glm-5.3",
+        "judge_persona": null,
+        "instrument": "play_score",
+        "branch": "neutral_external",
+        "system_sha256": "7418cd97230da7e59e0fe266395507e17a4211e11f2a095f148a9e60a1c4b285",
+        "user_sha256": "be99cdb61f8ef2bc85d9acbf1eb07fb9618ab22ee195c14d375e89de870f3af6",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/glm-5.3/0a1f99c7a759147f61b605b8/play_score/result.json",
+        "source_sha256": "817b92e78f4a159bef24952a035ea688807d26281e5ee1f79a27a407f6258edf",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "glm-5.3",
+        "original_response": {
+          "status": "ok",
+          "play_experience_score": 3,
+          "reasoning": "Player 0 repeatedly made failed asks requests (decisions 12-14 with no state changes), lost nearly all cards, was eliminated, and finished last with the lowest payoff, indicating a mostly frustrating, constrained session.",
+          "trajectory_evidence": [
+            "Decisions 12-14 show the same selected action (ask player 2 for rank 3) with zero state changes, implying repeated failed asks.",
+            "By decision 15 the player's hand was reduced to a single Q and only two legal actions remained, showing severe constraint.",
+            "Terminal payoff of 1.0 for Player 0 was the lowest among all four players.",
+            "Opponents accumulated books (10, 5, 9, 8, 6, K, 3) while the focal player completed none."
+          ],
+          "confidence": 4
+        }
+      },
+      {
+        "label": "recovery",
+        "job_id": "glm-5.3/e807e5f505cf60c6a45f8b13/experience12",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "glm-5.3",
+        "judge_persona": null,
+        "instrument": "experience12",
+        "branch": "neutral_external",
+        "system_sha256": "84e1adbc981e57ab8d0175fe7beb8943106a106886af29912397747382c2d2a0",
+        "user_sha256": "2d319be2d8bc55a5dc6f93fd1b04780f274aaee174dadc73f96c78703e28ec7a",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/glm-5.3/e807e5f505cf60c6a45f8b13/experience12/result.json",
+        "source_sha256": "149a826974c7e6162b710f88c2e0750bc65fa2e81fddb147a487c97d666c0aad",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "glm-5.3",
+        "original_response": {
+          "experience_vector": {
+            "goals_rules": 4,
+            "autonomy": 3,
+            "mastery": 2,
+            "curiosity": 2,
+            "challenge_fit": 2,
+            "cognitive_challenge": 2,
+            "decision_challenge": 2,
+            "meaning": 2,
+            "immersion": 2,
+            "emotional_challenge": 1,
+            "progress_feedback": 3,
+            "ease_of_control": 4
+          },
+          "evidence": {
+            "goals_rules": "Legal action lists consistently reflected the ask-a-held-rank rule, and the player's choices were always legal, indicating rules were clear.",
+            "autonomy": "The player chose among multiple opponents and ranks each turn (e.g., switching from asking player 1 for K to player 3 for 2), though viable options were often similar.",
+            "mastery": "The player repeatedly asked player 3 for rank 3 across decisions 11-14 with no state change each time, showing no adaptation from failed asks.",
+            "curiosity": "Little exploration of inference from revealed catches or hand sizes; the player mostly repeated the same failing ask rather than probing new information.",
+            "challenge_fit": "Against RandomAgent opponents the player finished with 1 book versus the winner's 5, suggesting difficulty was poorly matched to the player's demonstrated skill.",
+            "cognitive_challenge": "Reasoning was limited to picking a held rank and an opponent; the repeated identical failing asks indicate minimal planning or tracking of opponent books.",
+            "decision_challenge": "Most decisions had low consequence since any held rank was nearly equivalent; the repeated no-change decisions show choices barely mattered.",
+            "meaning": "The terminal payoff of 1.0 versus opponents' 5/3/4 and the mechanical repetition give little evidence of felt significance beyond legal moves.",
+            "immersion": "The record shows sustained turn-taking but no evidence of deep engagement with the evolving game state, e.g., ignoring that player 3 completed the 3s book.",
+            "emotional_challenge": "No morally or socially consequential choices exist in Go Fish, and none arose in this session.",
+            "progress_feedback": "State updates clearly showed catches, books, hand sizes, and eliminations, giving timely feedback on outcomes.",
+            "ease_of_control": "Every selected action was legal and immediately executed with clean state deltas, indicating low procedural friction."
+          },
+          "limitations": [
+            "No opponent private observations, reasoning, or subjective reports were recorded, so immersion, meaning, and emotional experience are inferred only from action patterns.",
+            "Decisions 10, 13, and 14 show empty change lists; the exact outcome (go fish vs. catch) is inferred but not explicitly logged.",
+            "Opponents were RandomAgent, so challenge_fit and decision_challenge reflect a weak strategic environment rather than skilled opposition."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "models-1",
+    "mode": "models",
+    "name": "deepseek-v4.1-flash",
+    "model": "deepseek-v4.1-flash",
+    "persona": null,
+    "score": 7,
+    "reason": "The focal player built a coherent sequence of successful asks, completing multiple books (10, then 5/9/8/6, then K and 3) and ending with the highest terminal payoff (5.0). The record shows clear progress, accumulating books, and a favorable outcome, though the sparse state changes and lack of subjective feedback limit evidence for an unusually strong experience.",
+    "evidence": [
+      "Decision 1: chose ask player 1 for rank K (action 4) from a hand containing K, J, 2, 4, 5.",
+      "Decision 2: asked player 1 for 6 and received a 6 of spades, increasing hand size to 6.",
+      "Decision 6: completed a book of 10s, gaining first book and reducing hand size.",
+      "Decision 12: completed a book of 5,9,8,6, bringing total books to 8.",
+      "Decision 15: completed books of K and 3, ending with 10 total books and hand size 1.",
+      "Terminal payoffs: focal player received 5.0, the highest among all players."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 3,
+      "mastery": 3,
+      "curiosity": 3,
+      "challenge_fit": 3,
+      "cognitive_challenge": 3,
+      "decision_challenge": 3,
+      "meaning": 2,
+      "immersion": 2,
+      "emotional_challenge": 1,
+      "progress_feedback": 4,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "The rulebook and legal action list clearly define asking, catching, going fish, and book completion, and the focal player's legal actions were consistently constrained to ranks held in hand.",
+      "autonomy": "At each decision the focal player could choose among multiple opponents and ranks, but the mandatory ask constraint and lack of voluntary pass limited meaningful alternatives.",
+      "mastery": "The focal player repeatedly asked for ranks they held and accumulated books, but no feedback or learning signal beyond immediate catch/go-fish outcomes was recorded.",
+      "curiosity": "The focal player could infer opponents' hands from public hand sizes and revealed catches, but the record shows no explicit exploration or hypothesis-testing behavior.",
+      "challenge_fit": "The focal player finished with 1 book while opponents scored 5, 3, and 4, suggesting the difficulty was not well matched to this player's performance.",
+      "cognitive_challenge": "Decisions required tracking public hand sizes, revealed cards, and book counts, but the random opponent behavior reduced the need for deep planning.",
+      "decision_challenge": "Choosing which opponent and rank to ask involved weighing known cards and hand sizes, but consequences were often immediate and low-stakes.",
+      "meaning": "The session ended with the focal player losing decisively, and no narrative or personal significance beyond the score was recorded.",
+      "immersion": "The record consists of discrete state updates and action selections with no evidence of sustained absorption or thematic involvement.",
+      "emotional_challenge": "No emotional, moral, or social pressure is evident in the automated play record.",
+      "progress_feedback": "After each ask, the record shows immediate catch or go-fish outcomes, updated hand sizes, and book displays, providing clear and timely feedback.",
+      "ease_of_control": "The focal player's selected actions were always among the legal action IDs, and the interface required only choosing from a provided list, with no procedural friction recorded."
+    },
+    "limitations": [
+      "No wall-clock timing, subjective feelings, or model reasoning were logged.",
+      "Opponent private hands and intermediate opponent actions are not fully visible.",
+      "The record is an exact delta encoding and may omit some contextual details.",
+      "No evidence of human conversation, emotion, or thinking time is present."
+    ],
+    "sources": [
+      {
+        "label": "recovery",
+        "job_id": "deepseek-v4.1-flash/0a1f99c7a759147f61b605b8/play_score",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "deepseek-v4.1-flash",
+        "judge_persona": null,
+        "instrument": "play_score",
+        "branch": "neutral_external",
+        "system_sha256": "7418cd97230da7e59e0fe266395507e17a4211e11f2a095f148a9e60a1c4b285",
+        "user_sha256": "be99cdb61f8ef2bc85d9acbf1eb07fb9618ab22ee195c14d375e89de870f3af6",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/deepseek-v4.1-flash/0a1f99c7a759147f61b605b8/play_score/result.json",
+        "source_sha256": "e230420a7efc16421732b10c9d557323c23330d20cd39a7813da93df248a2b63",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "deepseek-v4.1-flash",
+        "original_response": {
+          "status": "ok",
+          "play_experience_score": 7,
+          "reasoning": "The focal player built a coherent sequence of successful asks, completing multiple books (10, then 5/9/8/6, then K and 3) and ending with the highest terminal payoff (5.0). The record shows clear progress, accumulating books, and a favorable outcome, though the sparse state changes and lack of subjective feedback limit evidence for an unusually strong experience.",
+          "trajectory_evidence": [
+            "Decision 1: chose ask player 1 for rank K (action 4) from a hand containing K, J, 2, 4, 5.",
+            "Decision 2: asked player 1 for 6 and received a 6 of spades, increasing hand size to 6.",
+            "Decision 6: completed a book of 10s, gaining first book and reducing hand size.",
+            "Decision 12: completed a book of 5,9,8,6, bringing total books to 8.",
+            "Decision 15: completed books of K and 3, ending with 10 total books and hand size 1.",
+            "Terminal payoffs: focal player received 5.0, the highest among all players."
+          ],
+          "confidence": 4
+        }
+      },
+      {
+        "label": "recovery",
+        "job_id": "deepseek-v4.1-flash/e807e5f505cf60c6a45f8b13/experience12",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "deepseek-v4.1-flash",
+        "judge_persona": null,
+        "instrument": "experience12",
+        "branch": "neutral_external",
+        "system_sha256": "84e1adbc981e57ab8d0175fe7beb8943106a106886af29912397747382c2d2a0",
+        "user_sha256": "2d319be2d8bc55a5dc6f93fd1b04780f274aaee174dadc73f96c78703e28ec7a",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/deepseek-v4.1-flash/e807e5f505cf60c6a45f8b13/experience12/result.json",
+        "source_sha256": "dca27a3ca67b1a83c8535b0a867a85707f79bf742bdb57f85f8a43c1b20e1007",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "deepseek-v4.1-flash",
+        "original_response": {
+          "experience_vector": {
+            "goals_rules": 4,
+            "autonomy": 3,
+            "mastery": 3,
+            "curiosity": 3,
+            "challenge_fit": 3,
+            "cognitive_challenge": 3,
+            "decision_challenge": 3,
+            "meaning": 2,
+            "immersion": 2,
+            "emotional_challenge": 1,
+            "progress_feedback": 4,
+            "ease_of_control": 4
+          },
+          "evidence": {
+            "goals_rules": "The rulebook and legal action list clearly define asking, catching, going fish, and book completion, and the focal player's legal actions were consistently constrained to ranks held in hand.",
+            "autonomy": "At each decision the focal player could choose among multiple opponents and ranks, but the mandatory ask constraint and lack of voluntary pass limited meaningful alternatives.",
+            "mastery": "The focal player repeatedly asked for ranks they held and accumulated books, but no feedback or learning signal beyond immediate catch/go-fish outcomes was recorded.",
+            "curiosity": "The focal player could infer opponents' hands from public hand sizes and revealed catches, but the record shows no explicit exploration or hypothesis-testing behavior.",
+            "challenge_fit": "The focal player finished with 1 book while opponents scored 5, 3, and 4, suggesting the difficulty was not well matched to this player's performance.",
+            "cognitive_challenge": "Decisions required tracking public hand sizes, revealed cards, and book counts, but the random opponent behavior reduced the need for deep planning.",
+            "decision_challenge": "Choosing which opponent and rank to ask involved weighing known cards and hand sizes, but consequences were often immediate and low-stakes.",
+            "meaning": "The session ended with the focal player losing decisively, and no narrative or personal significance beyond the score was recorded.",
+            "immersion": "The record consists of discrete state updates and action selections with no evidence of sustained absorption or thematic involvement.",
+            "emotional_challenge": "No emotional, moral, or social pressure is evident in the automated play record.",
+            "progress_feedback": "After each ask, the record shows immediate catch or go-fish outcomes, updated hand sizes, and book displays, providing clear and timely feedback.",
+            "ease_of_control": "The focal player's selected actions were always among the legal action IDs, and the interface required only choosing from a provided list, with no procedural friction recorded."
+          },
+          "limitations": [
+            "No wall-clock timing, subjective feelings, or model reasoning were logged.",
+            "Opponent private hands and intermediate opponent actions are not fully visible.",
+            "The record is an exact delta encoding and may omit some contextual details.",
+            "No evidence of human conversation, emotion, or thinking time is present."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "models-2",
+    "mode": "models",
+    "name": "kimi-k2.7-code",
+    "model": "kimi-k2.7-code",
+    "persona": null,
+    "score": 4,
+    "reason": "Player 0 remained active and made decisions throughout the session, but the trajectory shows repeated unsuccessful requests for the same ranks, no completed books, and a last-place terminal payoff. This suggests a weak or frustrating experience rather than a satisfying one, though the game was functional and the player was not disengaged.",
+    "evidence": [
+      "Player 0's first action asks Player 1 for a King, a rank held in hand.",
+      "Player 0 repeatedly asks Player 2 for ranks 6 and 3 across multiple turns with no visible success.",
+      "Opponents accumulate multiple books while Player 0 records none.",
+      "Player 0 finishes with the lowest terminal payoff of 1.0 among four players.",
+      "Player 0's hand is reduced to a single card by the final decision, showing continued participation."
+    ],
+    "dimensions": {
+      "goals_rules": 5,
+      "autonomy": 4,
+      "mastery": 3,
+      "curiosity": 3,
+      "challenge_fit": 3,
+      "cognitive_challenge": 4,
+      "decision_challenge": 4,
+      "meaning": 2,
+      "immersion": 3,
+      "emotional_challenge": 1,
+      "progress_feedback": 5,
+      "ease_of_control": 5
+    },
+    "dimension_evidence": {
+      "goals_rules": "Each decision included a legal_action_ids list, and the state showed deck size, hand, hand sizes, completed books, total books, and elimination status, making the objective and legal moves clear.",
+      "autonomy": "Player 0 repeatedly chose among multiple ask actions targeting different opponents and ranks, such as asking Player 1 for Kings at decision 1 and Player 2 for sixes at decision 4.",
+      "mastery": "Catches and Go Fish outcomes were visible after each ask, allowing the player to observe which ranks opponents held, though only one session was recorded.",
+      "curiosity": "Hidden opponent hands and the unknown stock pile created incentives to ask in order to reveal cards, as when Player 0 asked Player 3 for 2s at decision 3 and later asked for 3s and Queens.",
+      "challenge_fit": "Player 0 completed only one book and finished last with a payoff of 1.0, while opponents completed three to five books, suggesting the match outcome did not favor the focal player.",
+      "cognitive_challenge": "Player 0 had to remember ranks held, track revealed cards, and choose target-rank combinations across fifteen decisions, with turn continuation on catches adding planning depth.",
+      "decision_challenge": "Each ask determined whether the turn continued on a catch or ended on a Go Fish, and the legal action set regularly contained many opponent-rank combinations.",
+      "meaning": "The game is an abstract card-matching task with no narrative or personal stakes beyond the final score, and no recorded choices indicate expressive or identity-relevant play.",
+      "immersion": "Turns continued after successful catches and ended after Go Fish draws, producing a rhythm of action and feedback, but no thematic or sensory immersion data is available.",
+      "emotional_challenge": "The session shows no social negotiation, moral dilemmas, or displayed emotional stakes; decisions are simple rank requests with no interpersonal risk.",
+      "progress_feedback": "The state updated after every decision with deck size, hand size, completed books, total books, and elimination status, and terminal payoffs were recorded.",
+      "ease_of_control": "Legal actions were presented as preformatted ask options with target player and rank, so Player 0 could express an intention without interface or bookkeeping friction."
+    },
+    "limitations": [
+      "No opponent private observations, model reasoning, wall-clock timing, or subjective reports were logged.",
+      "Opponents used RandomAgent, so strategic adaptation by opponents cannot be assessed.",
+      "Only one short session was recorded, limiting generalization about learning or challenge fit."
+    ],
+    "sources": [
+      {
+        "label": "recovery",
+        "job_id": "kimi-k2.7-code/0a1f99c7a759147f61b605b8/play_score",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "kimi-k2.7-code",
+        "judge_persona": null,
+        "instrument": "play_score",
+        "branch": "neutral_external",
+        "system_sha256": "7418cd97230da7e59e0fe266395507e17a4211e11f2a095f148a9e60a1c4b285",
+        "user_sha256": "be99cdb61f8ef2bc85d9acbf1eb07fb9618ab22ee195c14d375e89de870f3af6",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/kimi-k2.7-code/0a1f99c7a759147f61b605b8/play_score/result.json",
+        "source_sha256": "a78996f2d68f6c0d63048d46888eb70dc2868c8b14516d23107ad5d24dc0f791",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "kimi-k2.7-code",
+        "original_response": {
+          "status": "ok",
+          "play_experience_score": 4,
+          "reasoning": "Player 0 remained active and made decisions throughout the session, but the trajectory shows repeated unsuccessful requests for the same ranks, no completed books, and a last-place terminal payoff. This suggests a weak or frustrating experience rather than a satisfying one, though the game was functional and the player was not disengaged.",
+          "trajectory_evidence": [
+            "Player 0's first action asks Player 1 for a King, a rank held in hand.",
+            "Player 0 repeatedly asks Player 2 for ranks 6 and 3 across multiple turns with no visible success.",
+            "Opponents accumulate multiple books while Player 0 records none.",
+            "Player 0 finishes with the lowest terminal payoff of 1.0 among four players.",
+            "Player 0's hand is reduced to a single card by the final decision, showing continued participation."
+          ],
+          "confidence": 4
+        }
+      },
+      {
+        "label": "recovery",
+        "job_id": "kimi-k2.7-code/e807e5f505cf60c6a45f8b13/experience12",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "kimi-k2.7-code",
+        "judge_persona": null,
+        "instrument": "experience12",
+        "branch": "neutral_external",
+        "system_sha256": "84e1adbc981e57ab8d0175fe7beb8943106a106886af29912397747382c2d2a0",
+        "user_sha256": "2d319be2d8bc55a5dc6f93fd1b04780f274aaee174dadc73f96c78703e28ec7a",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/kimi-k2.7-code/e807e5f505cf60c6a45f8b13/experience12/result.json",
+        "source_sha256": "0e30265c62396057bdbeff60105c878ef9b2c592f73a1a910b230094d06e4339",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "kimi-k2.7-code",
+        "original_response": {
+          "experience_vector": {
+            "goals_rules": 5,
+            "autonomy": 4,
+            "mastery": 3,
+            "curiosity": 3,
+            "challenge_fit": 3,
+            "cognitive_challenge": 4,
+            "decision_challenge": 4,
+            "meaning": 2,
+            "immersion": 3,
+            "emotional_challenge": 1,
+            "progress_feedback": 5,
+            "ease_of_control": 5
+          },
+          "evidence": {
+            "goals_rules": "Each decision included a legal_action_ids list, and the state showed deck size, hand, hand sizes, completed books, total books, and elimination status, making the objective and legal moves clear.",
+            "autonomy": "Player 0 repeatedly chose among multiple ask actions targeting different opponents and ranks, such as asking Player 1 for Kings at decision 1 and Player 2 for sixes at decision 4.",
+            "mastery": "Catches and Go Fish outcomes were visible after each ask, allowing the player to observe which ranks opponents held, though only one session was recorded.",
+            "curiosity": "Hidden opponent hands and the unknown stock pile created incentives to ask in order to reveal cards, as when Player 0 asked Player 3 for 2s at decision 3 and later asked for 3s and Queens.",
+            "challenge_fit": "Player 0 completed only one book and finished last with a payoff of 1.0, while opponents completed three to five books, suggesting the match outcome did not favor the focal player.",
+            "cognitive_challenge": "Player 0 had to remember ranks held, track revealed cards, and choose target-rank combinations across fifteen decisions, with turn continuation on catches adding planning depth.",
+            "decision_challenge": "Each ask determined whether the turn continued on a catch or ended on a Go Fish, and the legal action set regularly contained many opponent-rank combinations.",
+            "meaning": "The game is an abstract card-matching task with no narrative or personal stakes beyond the final score, and no recorded choices indicate expressive or identity-relevant play.",
+            "immersion": "Turns continued after successful catches and ended after Go Fish draws, producing a rhythm of action and feedback, but no thematic or sensory immersion data is available.",
+            "emotional_challenge": "The session shows no social negotiation, moral dilemmas, or displayed emotional stakes; decisions are simple rank requests with no interpersonal risk.",
+            "progress_feedback": "The state updated after every decision with deck size, hand size, completed books, total books, and elimination status, and terminal payoffs were recorded.",
+            "ease_of_control": "Legal actions were presented as preformatted ask options with target player and rank, so Player 0 could express an intention without interface or bookkeeping friction."
+          },
+          "limitations": [
+            "No opponent private observations, model reasoning, wall-clock timing, or subjective reports were logged.",
+            "Opponents used RandomAgent, so strategic adaptation by opponents cannot be assessed.",
+            "Only one short session was recorded, limiting generalization about learning or challenge fit."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "models-3",
+    "mode": "models",
+    "name": "MiniMax-M2.5",
+    "model": "MiniMax-M2.5",
+    "persona": null,
+    "score": 3,
+    "reason": "Player 0 consistently made ineffective decisions by repeatedly asking for cards they already held (asking for K when holding K♦, asking for 6 when holding two 6s, asking for 3 when holding 3♣). This suggests poor hand tracking or random selection, resulting in last place (1.0 payoff vs opponents 5.0, 4.0, 3.0). The game mechanics functioned correctly, but the focal player's choices were frustratingly suboptimal throughout.",
+    "evidence": [
+      "Decision 1: Asked player 1 for K when holding K♦ in hand",
+      "Decision 4: Asked player 3 for 6 when already holding 6♠ and 6♦",
+      "Decision 7: Asked player 1 for 6 when holding two 6s",
+      "Decision 9: Asked player 3 for 3 when holding 3♣",
+      "Final payoff 1.0 vs opponent payoffs 5.0, 4.0, 3.0 - last place"
+    ],
+    "dimensions": {
+      "goals_rules": 5,
+      "autonomy": 3,
+      "mastery": 2,
+      "curiosity": 4,
+      "challenge_fit": 4,
+      "cognitive_challenge": 3,
+      "decision_challenge": 4,
+      "meaning": 4,
+      "immersion": 4,
+      "emotional_challenge": 2,
+      "progress_feedback": 5,
+      "ease_of_control": 2
+    },
+    "dimension_evidence": {
+      "goals_rules": "Go Fish rules are standard and well-understood; player knew the objective of collecting books (4-of-a-kind).",
+      "autonomy": "Player could choose which opponent and rank to ask, but later decisions show possible constraint when asking eliminated player 1 three consecutive times.",
+      "mastery": "Player repeatedly asked eliminated player 1 for rank 3 in decisions 12-14 despite player 1 having hand_size 0 and eliminated=true, suggesting confusion about game state or suboptimal strategy.",
+      "curiosity": "Player explored different ranks and opponents throughout early game, asking about 2,4,5,J,K,6,3,7,Q across different players.",
+      "challenge_fit": "4-player game with appropriate hand sizes (5 cards each) and stock (32 cards); difficulty seemed matched to player skill level.",
+      "cognitive_challenge": "Player had to track asked ranks, opponent hand sizes, and book completion; moderate mental effort required.",
+      "decision_challenge": "Player chose which opponent to ask and which rank to request from multiple legal options; decisions had consequences for card acquisition.",
+      "meaning": "Player accumulated books and competed for most books; the game outcome (1 book vs 5/4/3) gave personal stakes.",
+      "immersion": "Player remained engaged through 15 decisions, making continuous choices about asks; absorption evident in sustained play.",
+      "emotional_challenge": "Low emotional pressure; no morally complex decisions or high-stakes moments recorded; game proceeded without dramatic tension.",
+      "progress_feedback": "Clear feedback on hand sizes, completed books, deck size, and elimination status; player always knew current game state.",
+      "ease_of_control": "Major issue: player selected action 19 (ask player 1 for 3) three times after player 1 was eliminated, suggesting interface allowed invalid actions or unclear elimination feedback."
+    },
+    "limitations": [
+      "Private opponent hand contents not visible to verify strategic reasoning",
+      "No record of player emotional state or subjective experience",
+      "Cannot confirm if player understood elimination mechanics or if legal actions were incorrectly generated",
+      "Wall-clock thinking time and deliberation process not recorded"
+    ],
+    "sources": [
+      {
+        "label": "recovery",
+        "job_id": "MiniMax-M2.5/0a1f99c7a759147f61b605b8/play_score",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "MiniMax-M2.5",
+        "judge_persona": null,
+        "instrument": "play_score",
+        "branch": "neutral_external",
+        "system_sha256": "7418cd97230da7e59e0fe266395507e17a4211e11f2a095f148a9e60a1c4b285",
+        "user_sha256": "be99cdb61f8ef2bc85d9acbf1eb07fb9618ab22ee195c14d375e89de870f3af6",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/MiniMax-M2.5/0a1f99c7a759147f61b605b8/play_score/result.json",
+        "source_sha256": "20f4b629b74e7ff9689c13d1667af894288bd2da91d4329c143e2b19b1635d24",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "MiniMax-M2.5",
+        "original_response": {
+          "status": "ok",
+          "play_experience_score": 3,
+          "reasoning": "Player 0 consistently made ineffective decisions by repeatedly asking for cards they already held (asking for K when holding K♦, asking for 6 when holding two 6s, asking for 3 when holding 3♣). This suggests poor hand tracking or random selection, resulting in last place (1.0 payoff vs opponents 5.0, 4.0, 3.0). The game mechanics functioned correctly, but the focal player's choices were frustratingly suboptimal throughout.",
+          "trajectory_evidence": [
+            "Decision 1: Asked player 1 for K when holding K♦ in hand",
+            "Decision 4: Asked player 3 for 6 when already holding 6♠ and 6♦",
+            "Decision 7: Asked player 1 for 6 when holding two 6s",
+            "Decision 9: Asked player 3 for 3 when holding 3♣",
+            "Final payoff 1.0 vs opponent payoffs 5.0, 4.0, 3.0 - last place"
+          ],
+          "confidence": 5
+        }
+      },
+      {
+        "label": "recovery",
+        "job_id": "MiniMax-M2.5/e807e5f505cf60c6a45f8b13/experience12",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "MiniMax-M2.5",
+        "judge_persona": null,
+        "instrument": "experience12",
+        "branch": "neutral_external",
+        "system_sha256": "84e1adbc981e57ab8d0175fe7beb8943106a106886af29912397747382c2d2a0",
+        "user_sha256": "2d319be2d8bc55a5dc6f93fd1b04780f274aaee174dadc73f96c78703e28ec7a",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/MiniMax-M2.5/e807e5f505cf60c6a45f8b13/experience12/result.json",
+        "source_sha256": "42f15cbd6226d7b7972d56e47e0c9b2fd876129004c924777ca2e5291b328f40",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "MiniMax-M2.5",
+        "original_response": {
+          "experience_vector": {
+            "goals_rules": 5,
+            "autonomy": 3,
+            "mastery": 2,
+            "curiosity": 4,
+            "challenge_fit": 4,
+            "cognitive_challenge": 3,
+            "decision_challenge": 4,
+            "meaning": 4,
+            "immersion": 4,
+            "emotional_challenge": 2,
+            "progress_feedback": 5,
+            "ease_of_control": 2
+          },
+          "evidence": {
+            "goals_rules": "Go Fish rules are standard and well-understood; player knew the objective of collecting books (4-of-a-kind).",
+            "autonomy": "Player could choose which opponent and rank to ask, but later decisions show possible constraint when asking eliminated player 1 three consecutive times.",
+            "mastery": "Player repeatedly asked eliminated player 1 for rank 3 in decisions 12-14 despite player 1 having hand_size 0 and eliminated=true, suggesting confusion about game state or suboptimal strategy.",
+            "curiosity": "Player explored different ranks and opponents throughout early game, asking about 2,4,5,J,K,6,3,7,Q across different players.",
+            "challenge_fit": "4-player game with appropriate hand sizes (5 cards each) and stock (32 cards); difficulty seemed matched to player skill level.",
+            "cognitive_challenge": "Player had to track asked ranks, opponent hand sizes, and book completion; moderate mental effort required.",
+            "decision_challenge": "Player chose which opponent to ask and which rank to request from multiple legal options; decisions had consequences for card acquisition.",
+            "meaning": "Player accumulated books and competed for most books; the game outcome (1 book vs 5/4/3) gave personal stakes.",
+            "immersion": "Player remained engaged through 15 decisions, making continuous choices about asks; absorption evident in sustained play.",
+            "emotional_challenge": "Low emotional pressure; no morally complex decisions or high-stakes moments recorded; game proceeded without dramatic tension.",
+            "progress_feedback": "Clear feedback on hand sizes, completed books, deck size, and elimination status; player always knew current game state.",
+            "ease_of_control": "Major issue: player selected action 19 (ask player 1 for 3) three times after player 1 was eliminated, suggesting interface allowed invalid actions or unclear elimination feedback."
+          },
+          "limitations": [
+            "Private opponent hand contents not visible to verify strategic reasoning",
+            "No record of player emotional state or subjective experience",
+            "Cannot confirm if player understood elimination mechanics or if legal actions were incorrectly generated",
+            "Wall-clock thinking time and deliberation process not recorded"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "models-4",
+    "mode": "models",
+    "name": "qwen/qwen3.8-max-0902@openrouter/alibaba/low",
+    "model": "qwen/qwen3.8-max-0902@openrouter/alibaba/low",
+    "persona": null,
+    "score": 3,
+    "reason": "Player 0 exhibited highly repetitive and unproductive play, asking for rank '6' from Player 3 five consecutive times and rank '3' from Player 2 six times without ever completing a book. The session ended with Player 0 holding a single card (Q♣) and receiving the lowest terminal payoff (1.0). The experience appears constrained and frustrating, dominated by futile repeated requests against RandomAgent opponents who accumulated books while Player 0 accumulated none.",
+    "evidence": [
+      "Decision 1: Asked Player 1 for K, a reasonable opening move given holding K♦.",
+      "Decisions 4-5, 7, 9-10: Repeatedly asked Player 3 for rank '6' five times without success, never adapting strategy.",
+      "Decisions 6, 8, 11-14: Repeatedly asked Player 2 for rank '3' six times without success.",
+      "Decision 11: Player 3 completed three books (J, 7, 4) while Player 0 still had zero books.",
+      "Decision 12: Player 1 completed four books (5, 9, 8, 6) and was eliminated; Player 0 still had zero books.",
+      "Decision 15: Player 0 held only Q♣ with zero completed books; terminal payoff was 1.0, the lowest of all four players."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 3,
+      "mastery": 2,
+      "curiosity": 2,
+      "challenge_fit": 2,
+      "cognitive_challenge": 2,
+      "decision_challenge": 2,
+      "meaning": 1,
+      "immersion": 2,
+      "emotional_challenge": 1,
+      "progress_feedback": 4,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "Standard Go Fish rules with clear legal action enumeration (ask target + rank) and visible book/deck state made objectives comprehensible throughout.",
+      "autonomy": "Player chose among multiple target-rank combinations each turn (e.g., decision 1 offered 15 legal actions across 3 opponents and 5 ranks), but options were constrained by the must-hold-rank rule.",
+      "mastery": "Player repeatedly asked player 2 for rank 3 (decisions 11-14) while player 3 held the remaining 3s and eventually completed that book, showing limited learning from observable information.",
+      "curiosity": "Hidden opponent hands create mild uncertainty, but with RandomAgent opponents there is little to deduce; no evidence of exploratory or information-seeking play.",
+      "challenge_fit": "The game is heavily luck-based and opponents are random, providing minimal strategic challenge; Player 0 finished last (1 book vs 5, 3, 4) without evidence of being stretched.",
+      "cognitive_challenge": "Decisions reduced to selecting a rank already in hand and a target; no evidence of memory-based deduction or multi-step planning beyond the immediate ask.",
+      "decision_challenge": "Consequences of choices are mild (catch extends turn, go fish draws one card); no high-stakes trade-offs visible in the record.",
+      "meaning": "Player 0 ended with 1 book (last place) in a simple children's card game against random agents; no evidence of personal significance or narrative resonance.",
+      "immersion": "Mechanical repetition of the same ask (player 2, rank 3) across four consecutive decisions suggests routine execution rather than absorbed engagement.",
+      "emotional_challenge": "No moral, social, or emotional pressure present; opponents are random agents and the game carries no interpersonal stakes.",
+      "progress_feedback": "Deck size, hand contents, completed books, and eliminations were all updated and visible at each decision point, giving clear status information.",
+      "ease_of_control": "Legal actions were explicitly listed each turn; selecting a target and rank from the catalog appears frictionless with no procedural errors observed."
+    },
+    "limitations": [
+      "No subjective reports, think-aloud data, or player self-assessment available.",
+      "Opponent behavior is fully random, making it impossible to assess adaptive or social dimensions of play.",
+      "Wall-clock timing and any hesitation patterns are unrecorded, limiting inference about cognitive effort or engagement.",
+      "The reason for repeated identical asks (decisions 12-14) is ambiguous—could reflect a strategy, a bug, or disengagement."
+    ],
+    "sources": [
+      {
+        "label": "openrouter",
+        "job_id": "0a1f99c7a759147f61b605b8/play_score",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "qwen/qwen3.8-max-0902@openrouter/alibaba/low",
+        "judge_persona": null,
+        "instrument": "play_score",
+        "branch": "neutral_external",
+        "system_sha256": "7418cd97230da7e59e0fe266395507e17a4211e11f2a095f148a9e60a1c4b285",
+        "user_sha256": "be99cdb61f8ef2bc85d9acbf1eb07fb9618ab22ee195c14d375e89de870f3af6",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/openrouter_recovery_20260924_v1/STATE.json#0a1f99c7a759147f61b605b8/play_score",
+        "source_sha256": "93726e8f8854460e3a4d2f535a29d0dd7cf6f6706cc5b19ce7303cc4a22be6a8",
+        "protocol": "neutral49.openrouter-authorized-recovery.v1",
+        "actual_model": [
+          "qwen/qwen3.8-max-0902"
+        ],
+        "original_response": {
+          "status": "ok",
+          "play_experience_score": 3,
+          "reasoning": "Player 0 exhibited highly repetitive and unproductive play, asking for rank '6' from Player 3 five consecutive times and rank '3' from Player 2 six times without ever completing a book. The session ended with Player 0 holding a single card (Q♣) and receiving the lowest terminal payoff (1.0). The experience appears constrained and frustrating, dominated by futile repeated requests against RandomAgent opponents who accumulated books while Player 0 accumulated none.",
+          "trajectory_evidence": [
+            "Decision 1: Asked Player 1 for K, a reasonable opening move given holding K♦.",
+            "Decisions 4-5, 7, 9-10: Repeatedly asked Player 3 for rank '6' five times without success, never adapting strategy.",
+            "Decisions 6, 8, 11-14: Repeatedly asked Player 2 for rank '3' six times without success.",
+            "Decision 11: Player 3 completed three books (J, 7, 4) while Player 0 still had zero books.",
+            "Decision 12: Player 1 completed four books (5, 9, 8, 6) and was eliminated; Player 0 still had zero books.",
+            "Decision 15: Player 0 held only Q♣ with zero completed books; terminal payoff was 1.0, the lowest of all four players."
+          ],
+          "confidence": 4
+        }
+      },
+      {
+        "label": "openrouter",
+        "job_id": "e807e5f505cf60c6a45f8b13/experience12",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "qwen/qwen3.8-max-0902@openrouter/alibaba/low",
+        "judge_persona": null,
+        "instrument": "experience12",
+        "branch": "neutral_external",
+        "system_sha256": "84e1adbc981e57ab8d0175fe7beb8943106a106886af29912397747382c2d2a0",
+        "user_sha256": "2d319be2d8bc55a5dc6f93fd1b04780f274aaee174dadc73f96c78703e28ec7a",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/openrouter_recovery_20260924_v1/STATE.json#e807e5f505cf60c6a45f8b13/experience12",
+        "source_sha256": "3a886a28100c29cbcb5af40d6f49cd2f27b77bd04d0d39e7a5a537a13ef12c52",
+        "protocol": "neutral49.openrouter-authorized-recovery.v1",
+        "actual_model": [
+          "qwen/qwen3.8-max-0902"
+        ],
+        "original_response": {
+          "experience_vector": {
+            "goals_rules": 4,
+            "autonomy": 3,
+            "mastery": 2,
+            "curiosity": 2,
+            "challenge_fit": 2,
+            "cognitive_challenge": 2,
+            "decision_challenge": 2,
+            "meaning": 1,
+            "immersion": 2,
+            "emotional_challenge": 1,
+            "progress_feedback": 4,
+            "ease_of_control": 4
+          },
+          "evidence": {
+            "goals_rules": "Standard Go Fish rules with clear legal action enumeration (ask target + rank) and visible book/deck state made objectives comprehensible throughout.",
+            "autonomy": "Player chose among multiple target-rank combinations each turn (e.g., decision 1 offered 15 legal actions across 3 opponents and 5 ranks), but options were constrained by the must-hold-rank rule.",
+            "mastery": "Player repeatedly asked player 2 for rank 3 (decisions 11-14) while player 3 held the remaining 3s and eventually completed that book, showing limited learning from observable information.",
+            "curiosity": "Hidden opponent hands create mild uncertainty, but with RandomAgent opponents there is little to deduce; no evidence of exploratory or information-seeking play.",
+            "challenge_fit": "The game is heavily luck-based and opponents are random, providing minimal strategic challenge; Player 0 finished last (1 book vs 5, 3, 4) without evidence of being stretched.",
+            "cognitive_challenge": "Decisions reduced to selecting a rank already in hand and a target; no evidence of memory-based deduction or multi-step planning beyond the immediate ask.",
+            "decision_challenge": "Consequences of choices are mild (catch extends turn, go fish draws one card); no high-stakes trade-offs visible in the record.",
+            "meaning": "Player 0 ended with 1 book (last place) in a simple children's card game against random agents; no evidence of personal significance or narrative resonance.",
+            "immersion": "Mechanical repetition of the same ask (player 2, rank 3) across four consecutive decisions suggests routine execution rather than absorbed engagement.",
+            "emotional_challenge": "No moral, social, or emotional pressure present; opponents are random agents and the game carries no interpersonal stakes.",
+            "progress_feedback": "Deck size, hand contents, completed books, and eliminations were all updated and visible at each decision point, giving clear status information.",
+            "ease_of_control": "Legal actions were explicitly listed each turn; selecting a target and rank from the catalog appears frictionless with no procedural errors observed."
+          },
+          "limitations": [
+            "No subjective reports, think-aloud data, or player self-assessment available.",
+            "Opponent behavior is fully random, making it impossible to assess adaptive or social dimensions of play.",
+            "Wall-clock timing and any hesitation patterns are unrecorded, limiting inference about cognitive effort or engagement.",
+            "The reason for repeated identical asks (decisions 12-14) is ambiguous—could reflect a strategy, a bug, or disengagement."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "personas-5",
+    "mode": "personas",
+    "name": "The Efficiency Essentialist",
+    "model": "qwen3.8-max",
+    "persona": "The Efficiency Essentialist",
+    "score": 2,
+    "reason": "Go Fish offers simple rules (one positive for this profile) but almost zero strategic depth, violating the Efficiency Essentialist's core desire for 'simple rules, deep strategy.' The session shows repetitive, low-agency decisions (asking for the same rank multiple times, e.g., asking player 3 for '6' four times across decisions 4-10), no meaningful optimization opportunities, and a decisive loss (payoff 1.0 vs. opponents' 3-5). The game is essentially luck-driven with no flow state achievable, making the Fun/Time ratio very poor.",
+    "evidence": [
+      "Player 0 asked player 3 for rank '6' repeatedly across decisions 4, 5, 7, 9, and 10 with no strategic variation",
+      "Player 0 never completed a single book throughout the entire game",
+      "Terminal payoff of 1.0 was the lowest of all four players (opponents scored 5, 3, 4)",
+      "Decisions 13 and 14 show no state changes, indicating stalled turns with zero progress",
+      "The legal action set is purely 'ask player X for rank Y' with no meaningful differentiation between choices"
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 2,
+      "mastery": 2,
+      "curiosity": 2,
+      "challenge_fit": 2,
+      "cognitive_challenge": 2,
+      "decision_challenge": 2,
+      "meaning": 1,
+      "immersion": 2,
+      "emotional_challenge": 1,
+      "progress_feedback": 3,
+      "ease_of_control": 3
+    },
+    "dimension_evidence": {
+      "goals_rules": "Rules are extremely simple: ask for a rank you hold, collect four-of-a-kind sets; the goal of most books is immediately clear.",
+      "autonomy": "Player 0's choices are heavily constrained by the must-hold-rank prerequisite and limited hand contents; at decision 15 only two legal actions remained (ask player 2 or 3 for Q).",
+      "mastery": "The game offers minimal skill differentiation against RandomAgent opponents; Player 0's memory-based strategy yielded only 1 book versus 5 for the winner, with no clear improvement path visible.",
+      "curiosity": "Hidden information (opponent hands) provides some deduction opportunity, but RandomAgent opponents make pattern inference unrewarding.",
+      "challenge_fit": "Against RandomAgents, the game provides almost no meaningful challenge; Player 0 lost decisively (1 vs 5 books) without evidence of strategic failure.",
+      "cognitive_challenge": "The primary cognitive demand is remembering which ranks opponents have shown; with RandomAgents this memory exercise has low strategic payoff.",
+      "decision_challenge": "Most decisions involve choosing among a small set of rank-target combinations with no clear basis for preferring one over another against random opponents.",
+      "meaning": "Player 0 was eliminated with only 1 book while opponents accumulated 5, 3, and 4; the session shows no moment of personal significance or dramatic tension.",
+      "immersion": "The repetitive ask-go-fish cycle with growing hand sizes (up to 15 cards) and long opponent turns likely breaks flow rather than sustaining absorption.",
+      "emotional_challenge": "No morally or socially consequential decisions exist; elimination is mechanical and unavoidable, not emotionally weighted.",
+      "progress_feedback": "Books are displayed face-up and hand sizes are public, giving clear status information; however, the slow accumulation (only 10 books by decision 15) provides limited sense of momentum.",
+      "ease_of_control": "Actions are simple (choose target and rank), but the growing legal action list (up to 18 options) and need to track hand contents introduce mild friction."
+    },
+    "limitations": [
+      "No wall-clock timing data available to assess actual downtime between turns",
+      "Cannot determine if Player 0 experienced flow or boredom without subjective reports",
+      "RandomAgent opponents eliminate any social or strategic interaction that might elevate the experience",
+      "No evidence of house-ruling or pacing adjustments that the Efficiency Essentialist might attempt",
+      "Cannot assess whether the player found the simple rules elegant or merely shallow"
+    ],
+    "sources": [
+      {
+        "label": "completed_persona",
+        "job_id": "9f6243112b4a6c2cfd1e938d",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Efficiency Essentialist",
+        "instrument": "play_score",
+        "branch": "persona",
+        "system_sha256": "84ef314d7ad42374fdf12dd2dc2cd3fdff1d8eafb61fb7c4d19251f89874eccd",
+        "user_sha256": "322c3c25c6477e692d8be0d294cbbe94d6979dc69bf8f00b280691e4c30a46a7",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona_on_qwen_score_localproxy_20260925_v3/results/e19b51d2a3c23e3ba28d53ea/result.json",
+        "source_sha256": "c2027f7779422dc2fd5c48170ab3b54c568fe2bce416355e4924f786d4370598",
+        "source_chain": [
+          {
+            "file": "blobs/c2027f7779422dc2fd5c48170ab3b54c568fe2bce416355e4924f786d4370598.json",
+            "sha256": "c2027f7779422dc2fd5c48170ab3b54c568fe2bce416355e4924f786d4370598",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona_on_qwen_score_localproxy_20260925_v3/results/e19b51d2a3c23e3ba28d53ea/result.json"
+          }
+        ],
+        "actual_models": [
+          "qwen3.8-max"
+        ],
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      },
+      {
+        "label": "completed_persona",
+        "job_id": "436cadc961a66902781640f3",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Efficiency Essentialist",
+        "instrument": "experience12",
+        "branch": "persona",
+        "system_sha256": "0ea57f0784b668d200d8a627e372e5a555392e3b35826a24e6a7627071dda6e5",
+        "user_sha256": "64798a67244147f73d0a2b3b0072bcd199077d7bcf0df83ec79b858095ba2853",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona12_completion_dual_20260925_v1/results/9130bf0266669f3050964d5f/result.json",
+        "source_sha256": "f0f6f2a48000a2cd95f736fb3dde0f1ec824843053f122a96e22d0559638475a",
+        "source_chain": [
+          {
+            "file": "blobs/f0f6f2a48000a2cd95f736fb3dde0f1ec824843053f122a96e22d0559638475a.json",
+            "sha256": "f0f6f2a48000a2cd95f736fb3dde0f1ec824843053f122a96e22d0559638475a",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona12_completion_dual_20260925_v1/results/9130bf0266669f3050964d5f/result.json"
+          }
+        ],
+        "actual_models": [
+          "qwen3.8-max"
+        ],
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      }
+    ]
+  },
+  {
+    "id": "personas-6",
+    "mode": "personas",
+    "name": "The Narrative Architect",
+    "model": "qwen3.8-max",
+    "persona": "The Narrative Architect",
+    "score": 1,
+    "reason": "This is Go Fish, a children's card game with zero narrative, thematic depth, growth mechanics, or meaningful interaction. The Narrative Architect profile seeks immersion, epic journeys, growth systems, and thematic negotiation—none of which exist here. The game offers only rote 'ask for a rank' actions against RandomAgents, no story arc, no progression, and no consequential decisions. Player 0 finished last (payoff 1.0) and was eliminated, compounding the emptiness. The experience is fundamentally antithetical to every value this profile holds.",
+    "evidence": [
+      "Game is Go Fish: actions are exclusively 'ask [player] for [rank]' with no thematic framing.",
+      "No growth mechanics, no tech trees, no empire building—only collecting books of four identical ranks.",
+      "Opponents are RandomAgents, eliminating any possibility of meaningful negotiation or thematic interaction.",
+      "Player 0 was eliminated with only 1 book while opponents accumulated 5, 3, and 4 books respectively.",
+      "Terminal payoff of 1.0 (last place) with no narrative resolution or story payoff.",
+      "Decisions 10, 13, and 14 show empty change sets, indicating forced draws with no meaningful choice."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 2,
+      "mastery": 1,
+      "curiosity": 1,
+      "challenge_fit": 1,
+      "cognitive_challenge": 1,
+      "decision_challenge": 2,
+      "meaning": 1,
+      "immersion": 1,
+      "emotional_challenge": 1,
+      "progress_feedback": 3,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "The objective (collect four-of-a-kind books) and turn structure (ask, catch or go fish) are immediately transparent from the first decision state.",
+      "autonomy": "Player 0 chose among 15-18 legal actions each turn but was constrained to only ranks already held, and opponents were RandomAgents offering no negotiation or trade.",
+      "mastery": "No growth mechanics, leveling, or skill progression exist; Player 0's repeated asks for rank 6 (decisions 4, 5, 7, 9, 10) show no strategic evolution across the session.",
+      "curiosity": "Game state is nearly fully observable (hand sizes, books, deck count); no hidden mechanics or emergent systems to explore.",
+      "challenge_fit": "A profile seeking epic journeys, empire building, and thematic depth encountered a children's memory game with no narrative arc, ending in a lopsided 1-5-3-4 loss.",
+      "cognitive_challenge": "The only reasoning required is remembering which ranks opponents might hold; no planning, resource management, or multi-step strategy was evident.",
+      "decision_challenge": "Choices among targets and ranks existed but had minimal strategic consequence, as shown by Player 0 repeatedly asking Player 2 for rank 6 with no adaptive shift.",
+      "meaning": "No narrative, story, or thematic significance was present; the session was purely mechanical card collection ending in a decisive loss with no dramatic arc.",
+      "immersion": "Go Fish provides no world, setting, or narrative frame; the session log shows only rank/suit data and book completions with zero thematic content.",
+      "emotional_challenge": "No moral dilemmas, social negotiations, or emotionally consequential pressures appeared; forced surrender of cards is purely mechanical.",
+      "progress_feedback": "Books appearing face-up (Player 1's 10s at decision 6, Player 3's J/7/4 at decision 11), deck count decreasing from 32 to 0, and hand size changes provided clear status updates.",
+      "ease_of_control": "Each decision required only selecting a target player and rank from a short list; no bookkeeping, complex sequencing, or interface friction was evident."
+    },
+    "limitations": [
+      "No subjective player feedback, emotional responses, or engagement ratings were recorded.",
+      "Opponents were RandomAgents, so no meaningful social interaction, negotiation, or thematic exchange could occur.",
+      "Wall-clock timing and pacing information is absent, preventing assessment of flow or tension.",
+      "The session contains no narrative framing, flavor text, or thematic elements to evaluate beyond raw mechanics.",
+      "It is unclear whether the player had any prior familiarity with Go Fish that might affect mastery or curiosity assessments."
+    ],
+    "sources": [
+      {
+        "label": "completed_persona",
+        "job_id": "8f21d6c24e80a78d15b33e25",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Narrative Architect",
+        "instrument": "play_score",
+        "branch": "persona",
+        "system_sha256": "84ef314d7ad42374fdf12dd2dc2cd3fdff1d8eafb61fb7c4d19251f89874eccd",
+        "user_sha256": "bfc0a9fe6ea340a6afa1673b4ce30d1e35802cb40f8d182fa069ccb1a9946d8e",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona_on_qwen_score_localproxy_20260925_v3/results/c9d874cfd779014c570fc9c8/result.json",
+        "source_sha256": "ab51990805b0a41edfda33d9af0988b02998b0f568ffdd9ea000f3d89f9db3cb",
+        "source_chain": [
+          {
+            "file": "blobs/ab51990805b0a41edfda33d9af0988b02998b0f568ffdd9ea000f3d89f9db3cb.json",
+            "sha256": "ab51990805b0a41edfda33d9af0988b02998b0f568ffdd9ea000f3d89f9db3cb",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona_on_qwen_score_localproxy_20260925_v3/results/c9d874cfd779014c570fc9c8/result.json"
+          }
+        ],
+        "actual_models": [
+          "qwen3.8-max"
+        ],
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      },
+      {
+        "label": "completed_persona",
+        "job_id": "8148d5077f0b73a6f8c2b47b",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Narrative Architect",
+        "instrument": "experience12",
+        "branch": "persona",
+        "system_sha256": "0ea57f0784b668d200d8a627e372e5a555392e3b35826a24e6a7627071dda6e5",
+        "user_sha256": "f9b17726ca7e5021e46acf4bb838968bee7285902d46ce6fd7314e76163763b1",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona12_completion_dual_20260925_v1/results/86dfd403142c9d2cb66c6ca2/result.json",
+        "source_sha256": "35defdcef6459b2b55cb48ad436c70d53c57b3fc48719829faf515c61bcda029",
+        "source_chain": [
+          {
+            "file": "blobs/35defdcef6459b2b55cb48ad436c70d53c57b3fc48719829faf515c61bcda029.json",
+            "sha256": "35defdcef6459b2b55cb48ad436c70d53c57b3fc48719829faf515c61bcda029",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona12_completion_dual_20260925_v1/results/86dfd403142c9d2cb66c6ca2/result.json"
+          }
+        ],
+        "actual_models": [
+          "qwen3.8-max"
+        ],
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      }
+    ]
+  },
+  {
+    "id": "personas-7",
+    "mode": "personas",
+    "name": "The Social Lubricator",
+    "model": "qwen3.8-max",
+    "persona": "The Social Lubricator",
+    "score": 3,
+    "reason": "Go Fish is structurally a simple, accessible social game that could appeal to the Social Lubricator, but this session is played entirely against RandomAgents, eliminating all human connection, bluffing, laughter, and group dynamic that define this profile's core motivation. The experience is mechanically functional but socially empty—precisely what this profile would find hollow.",
+    "evidence": [
+      "Game is Go Fish, a simple easy-to-teach card game with direct player-to-player asking mechanics",
+      "All three opponents are RandomAgent, removing any possibility of human social interaction",
+      "Player 0's decisions are purely mechanical rank/player selections with no social dimension",
+      "Player 0 finished with only 1 book vs opponents' 5, 3, and 4 books—a lopsided loss",
+      "No evidence of bluffing, negotiation, or any emergent social dynamics in the session",
+      "The game's inherent social potential (asking specific players for cards) is rendered meaningless by random opponents"
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 3,
+      "mastery": 2,
+      "curiosity": 2,
+      "challenge_fit": 2,
+      "cognitive_challenge": 2,
+      "decision_challenge": 2,
+      "meaning": 1,
+      "immersion": 1,
+      "emotional_challenge": 1,
+      "progress_feedback": 4,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "Go Fish rules are universally known and the session state clearly shows hand, deck size, books, and turn structure at every decision point.",
+      "autonomy": "Player 0 chose among 15-24 legal actions per turn (target opponent × held rank), but the must-hold-rank constraint and small hand limited genuinely distinct strategic options.",
+      "mastery": "Player 0 finished last with 1 book against RandomAgents; no evidence of improving strategy across the 15 decisions, and the game's low skill ceiling offers little room for growth.",
+      "curiosity": "Some uncertainty existed about opponent hands and stock draws, but the mechanical nature of RandomAgent opponents and the simple deduction space provided minimal incentive to explore.",
+      "challenge_fit": "The game posed almost no difficulty; Player 0 repeatedly asked for ranks already known to be absent (e.g., asking for 6 multiple times after go-fish results), suggesting the challenge was below even casual engagement.",
+      "cognitive_challenge": "Decisions reduced to selecting a target and rank from a small hand; no evidence of memory-based deduction or planning across turns.",
+      "decision_challenge": "Failed asks simply resulted in drawing from stock with no penalty; the consequence of poor choices was negligible, as seen in repeated unsuccessful asks for the same rank.",
+      "meaning": "Player 0 finished with 1 book (last place) in a purely mechanical session against bots; no narrative arc, personal stakes, or social significance emerged.",
+      "immersion": "All three opponents were RandomAgents with no social presence; the session was a sequence of mechanical ask/draw cycles with no felt involvement beyond executing legal moves.",
+      "emotional_challenge": "No social pressure, moral dilemma, or interpersonal tension arose; opponents were automated and unresponsive, eliminating any emotional or social stakes.",
+      "progress_feedback": "Book completions, hand size changes, and deck depletion were clearly communicated at each decision; Player 1's elimination and multiple book completions were visible events.",
+      "ease_of_control": "The action space was a simple target-rank selection from a visible legal list; no bookkeeping, complex sequencing, or interface friction was evident."
+    },
+    "limitations": [
+      "No evidence of social interaction, conversation, or group dynamics since all opponents were automated RandomAgents.",
+      "No subjective player feedback, emotional responses, or post-game reflections were recorded.",
+      "Cannot assess whether the Social Lubricator's core need for human connection was frustrated or simply absent from the session design.",
+      "No wall-clock timing data to assess pacing or engagement duration.",
+      "Player 0's strategy (or lack thereof) cannot be distinguished from random play given the low skill ceiling."
+    ],
+    "sources": [
+      {
+        "label": "completed_persona",
+        "job_id": "84705a99bf9537463bcab9fe",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Social Lubricator",
+        "instrument": "play_score",
+        "branch": "persona",
+        "system_sha256": "84ef314d7ad42374fdf12dd2dc2cd3fdff1d8eafb61fb7c4d19251f89874eccd",
+        "user_sha256": "4580ad176614ad8df1fbac6caf1e031f3f67ea35b05bdc1bb93bad65be6c4046",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona_on_qwen_score_localproxy_20260925_v3/results/ffdabc8e713036411a530b98/result.json",
+        "source_sha256": "2f345a25534680b44f33f67b2f9e56810f98c71ece366e6f92f3515835e641cc",
+        "source_chain": [
+          {
+            "file": "blobs/2f345a25534680b44f33f67b2f9e56810f98c71ece366e6f92f3515835e641cc.json",
+            "sha256": "2f345a25534680b44f33f67b2f9e56810f98c71ece366e6f92f3515835e641cc",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona_on_qwen_score_localproxy_20260925_v3/results/ffdabc8e713036411a530b98/result.json"
+          }
+        ],
+        "actual_models": [
+          "qwen3.8-max"
+        ],
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      },
+      {
+        "label": "completed_persona",
+        "job_id": "43286c0f540667ce96881550",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Social Lubricator",
+        "instrument": "experience12",
+        "branch": "persona",
+        "system_sha256": "0ea57f0784b668d200d8a627e372e5a555392e3b35826a24e6a7627071dda6e5",
+        "user_sha256": "155eaed5c2f82f43e7a26b7386a3ea531c09e3841f7ff97b6413810172015f70",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona12_completion_dual_20260925_v1/results/137b77db49a18f2527273542/result.json",
+        "source_sha256": "4e36816f3b6f4541fdc7e847307390cd7c8586b65cb6457b9e85d49a0e74aae4",
+        "source_chain": [
+          {
+            "file": "blobs/4e36816f3b6f4541fdc7e847307390cd7c8586b65cb6457b9e85d49a0e74aae4.json",
+            "sha256": "4e36816f3b6f4541fdc7e847307390cd7c8586b65cb6457b9e85d49a0e74aae4",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona12_completion_dual_20260925_v1/results/137b77db49a18f2527273542/result.json"
+          }
+        ],
+        "actual_models": [
+          "qwen3.8-max"
+        ],
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      }
+    ]
+  },
+  {
+    "id": "personas-8",
+    "mode": "personas",
+    "name": "The System Purist",
+    "model": "qwen3.8-max",
+    "persona": "The System Purist",
+    "score": 2,
+    "reason": "Go Fish is fundamentally opposed to The System Purist's preferences: it is heavily luck-driven (random draws from a shuffled deck), features imperfect information (opponents' hands are hidden), and offers only shallow decision depth (pick a rank and target). The session compounds this with repetitive unsuccessful asks (asking Player 2 for '6' four times, for '3' five times) and a last-place finish (1 book vs. 5, 3, 4). There is no meaningful optimization, no perfect information, and no crunchy strategic depth—everything the profile despises.",
+    "evidence": [
+      "Decision 1: Player asks Player 1 for K and succeeds, but this is the only early success in a luck-dependent ask.",
+      "Decisions 4-5: Player asks Player 2 for '6' twice; first succeeds, second fails and forces a random draw.",
+      "Decisions 7-10: Player repeatedly asks Player 2 for '6' with no success, illustrating futile repetition under hidden information.",
+      "Decisions 11-14: Player asks Player 2 for '3' four consecutive times with zero success, showing the game's lack of meaningful agency.",
+      "Terminal payoff: Player 0 finishes last with 1 book (score 1.0) while Player 1 wins with 5 books, confirming a poor outcome.",
+      "Game structure: Go Fish relies on random card draws and hidden hands, directly contradicting the profile's demand for perfect information and zero luck."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 2,
+      "mastery": 1,
+      "curiosity": 2,
+      "challenge_fit": 1,
+      "cognitive_challenge": 1,
+      "decision_challenge": 2,
+      "meaning": 1,
+      "immersion": 2,
+      "emotional_challenge": 1,
+      "progress_feedback": 3,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "Rules are simple and clear: ask for ranks you hold, collect four-of-a-kind books, most books wins; all 15 decisions had unambiguous legal action lists.",
+      "autonomy": "Legal actions were constrained to only ranks already in hand (e.g., decision 15 offered only ask Player 2 for Q or ask Player 3 for Q), severely limiting meaningful choice.",
+      "mastery": "Player 0 scored 1 book versus opponents' 5, 3, and 4; no evidence of improving strategy across decisions since outcomes depended on random draws and opponent hands.",
+      "curiosity": "Hidden opponent hands and unknown stock order provide some deduction opportunity, but the random draw mechanic undermines systematic inference.",
+      "challenge_fit": "The System Purist seeks optimization and perfect information; Go Fish's core mechanic is random drawing from a face-down stock, making skill-based optimization nearly impossible.",
+      "cognitive_challenge": "Decisions reduced to choosing which opponent to ask for a rank already held, with no reliable information to differentiate targets beyond hand size.",
+      "decision_challenge": "With limited legal actions (e.g., decision 15 had only 2 options) and no reliable way to predict success, choices carried little consequential weight.",
+      "meaning": "Player 0 finished last with 1 book; the outcome appeared determined by luck of draws rather than any meaningful strategic arc.",
+      "immersion": "The repetitive ask-go fish cycle with minimal state change between decisions (e.g., decisions 10, 13, 14 had no visible state changes) provides little narrative tension.",
+      "emotional_challenge": "No moral, social, or emotionally consequential pressure present; elimination of Player 1 occurred without any decision burden on Player 0.",
+      "progress_feedback": "Book completions, hand sizes, and deck count were visible after each decision, providing clear status updates (e.g., decision 11 showed 3 books completed by Player 3).",
+      "ease_of_control": "Actions were simple ask-for-rank selections from a clearly enumerated legal list; no bookkeeping or procedural friction observed."
+    },
+    "limitations": [
+      "No evidence of the player's subjective frustration or engagement level during play.",
+      "Cannot determine whether the player attempted any card-counting or deduction strategy from the action log alone.",
+      "Opponent actions between focal decisions are only visible through state changes, not as explicit choices.",
+      "No timing data available to assess deliberation or hesitation.",
+      "The RandomAgent opponents may have made the game feel even less strategic than a human game would, but this cannot be confirmed from the focal player's perspective."
+    ],
+    "sources": [
+      {
+        "label": "completed_persona",
+        "job_id": "aa65cd5d4bbf8f0f9a35831e",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The System Purist",
+        "instrument": "play_score",
+        "branch": "persona",
+        "system_sha256": "84ef314d7ad42374fdf12dd2dc2cd3fdff1d8eafb61fb7c4d19251f89874eccd",
+        "user_sha256": "999d86c08df8d27f0fabac24161b253686895dbc8bdcbe3269f9d634d9c611c8",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona_on_qwen_score_localproxy_20260925_v3/results/d7de9521c243b044f8b14cb1/result.json",
+        "source_sha256": "b94f86b63a647c99cbad598c6f602e67709ad65e031af99dded6e512f909e13a",
+        "source_chain": [
+          {
+            "file": "blobs/b94f86b63a647c99cbad598c6f602e67709ad65e031af99dded6e512f909e13a.json",
+            "sha256": "b94f86b63a647c99cbad598c6f602e67709ad65e031af99dded6e512f909e13a",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona_on_qwen_score_localproxy_20260925_v3/results/d7de9521c243b044f8b14cb1/result.json"
+          }
+        ],
+        "actual_models": [
+          "qwen3.8-max"
+        ],
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      },
+      {
+        "label": "completed_persona",
+        "job_id": "f2e9da1a29ec74d175ffc9c9",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The System Purist",
+        "instrument": "experience12",
+        "branch": "persona",
+        "system_sha256": "0ea57f0784b668d200d8a627e372e5a555392e3b35826a24e6a7627071dda6e5",
+        "user_sha256": "6229b0ad5ef353d4fc2dbd4a9d81708ca94cfa7642ba1cc120bf6ab16e1744e8",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona12_completion_dual_20260925_v1/results/fa7d1194f273103e4bf97d90/result.json",
+        "source_sha256": "952c5623a7f96e04102aa409c7a4297033fefc83fe1326ab3c514c8b2dcdbfa5",
+        "source_chain": [
+          {
+            "file": "blobs/952c5623a7f96e04102aa409c7a4297033fefc83fe1326ab3c514c8b2dcdbfa5.json",
+            "sha256": "952c5623a7f96e04102aa409c7a4297033fefc83fe1326ab3c514c8b2dcdbfa5",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona12_completion_dual_20260925_v1/results/fa7d1194f273103e4bf97d90/result.json"
+          }
+        ],
+        "actual_models": [
+          "qwen3.8-max"
+        ],
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      }
+    ]
+  },
+  {
+    "id": "personas-9",
+    "mode": "personas",
+    "name": "The Thrill Seeker",
+    "model": "qwen3.8-max",
+    "persona": "The Thrill Seeker",
+    "score": 2,
+    "reason": "This Go Fish-style session offers almost nothing a Thrill Seeker values. There is no push-your-luck mechanic, no gambling element, and no meaningful risk/reward tradeoff in any decision. The player repeatedly asks the same opponent for the same card (e.g., asking Player 2 for '6' four times, for '3' four times), creating a monotonous loop. Multiple decisions (10, 13, 14) show zero state change, indicating stalled turns. The one potential schadenfreude moment (Player 1 elimination) is undercut by Player 0 finishing dead last with the lowest payoff (1.0). There is no dramatic comeback, no tension escalation, and no high-stakes climax—just a slow grind to last place.",
+    "evidence": [
+      "Player 0 repeatedly asks Player 2 for rank '6' across decisions 4, 5, 7, 9, and 10 with no book completed.",
+      "Player 0 repeatedly asks Player 2 for rank '3' across decisions 6, 8, 11, 12, 13, and 14 with no progress.",
+      "Decisions 10, 13, and 14 show zero state changes, indicating completely stalled turns.",
+      "Player 1 is eliminated at decision 12, but Player 0 gains no benefit and continues to stagnate.",
+      "Terminal payoff places Player 0 last (1.0) with no comeback arc or dramatic finish."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 2,
+      "mastery": 2,
+      "curiosity": 2,
+      "challenge_fit": 2,
+      "cognitive_challenge": 2,
+      "decision_challenge": 2,
+      "meaning": 1,
+      "immersion": 2,
+      "emotional_challenge": 1,
+      "progress_feedback": 3,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "Rules are straightforward: ask for ranks you hold, collect four-of-a-kind books, most books wins — clearly communicated through visible state.",
+      "autonomy": "Player must hold the requested rank and can only ask active opponents; legal actions are heavily constrained by hand contents, leaving few meaningful strategic choices.",
+      "mastery": "No evidence of learning curve or skill development; the game offers minimal depth for improvement since outcomes depend largely on card distribution and opponent hands.",
+      "curiosity": "Hidden information exists (opponent hands, stock order) but the simple ask-or-draw mechanic provides little incentive to deduce or explore.",
+      "challenge_fit": "For a Thrill Seeker seeking high-stakes tension, the game's low-variance, deterministic endgame and lack of risk mechanics represent a poor fit.",
+      "cognitive_challenge": "Decisions reduce to choosing which opponent to ask for a rank already held; memory of previous asks is the only reasoning demand, and no evidence of deep planning appears.",
+      "decision_challenge": "With limited legal actions (often 9-18 options, many functionally equivalent), consequences of individual choices are low-impact and rarely pivotal.",
+      "meaning": "Player 0 finishes last (1 book vs. 5, 3, 4 for opponents) with no comeback, no dramatic moment, and no personal stakes beyond book count.",
+      "immersion": "The mechanical ask-draw loop with no narrative, no tension escalation, and no dramatic swings provides little sustained absorption.",
+      "emotional_challenge": "No moral, social, or emotional pressure is present; the game is purely mechanical with no bluffing, negotiation, or interpersonal tension.",
+      "progress_feedback": "Books are displayed face-up, deck size is visible, and hand sizes are public — feedback on game state is clear and timely.",
+      "ease_of_control": "Actions are simple (select opponent and rank from a list), no complex bookkeeping or interface friction is evident in the recorded session."
+    },
+    "limitations": [
+      "No wall-clock timing data to assess pacing or tension buildup",
+      "No subjective emotional responses logged from the player",
+      "Cannot determine if the player experienced any schadenfreude when Player 1 was eliminated since no reaction data exists",
+      "The RandomAgent opponents may have reduced strategic depth further, making it unclear if human opponents would change the experience",
+      "No evidence of restart speed or session flow beyond this single game"
+    ],
+    "sources": [
+      {
+        "label": "completed_persona",
+        "job_id": "bb8da868be24ac18b6a11f6d",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Thrill Seeker",
+        "instrument": "play_score",
+        "branch": "persona",
+        "system_sha256": "84ef314d7ad42374fdf12dd2dc2cd3fdff1d8eafb61fb7c4d19251f89874eccd",
+        "user_sha256": "b04e5e5feb7b7d1b7c19060dda2979d80e1073bc2a53083ca8e047cfe7b3d7b7",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona_on_qwen_score_localproxy_20260925_v3/results/fa2194697260108611400864/result.json",
+        "source_sha256": "32a14d954b4a21ebca3624383fa50b3eef822582d4ac0993bd134ab0f9cb345c",
+        "source_chain": [
+          {
+            "file": "blobs/32a14d954b4a21ebca3624383fa50b3eef822582d4ac0993bd134ab0f9cb345c.json",
+            "sha256": "32a14d954b4a21ebca3624383fa50b3eef822582d4ac0993bd134ab0f9cb345c",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona_on_qwen_score_localproxy_20260925_v3/results/fa2194697260108611400864/result.json"
+          }
+        ],
+        "actual_models": [
+          "qwen3.8-max"
+        ],
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      },
+      {
+        "label": "completed_persona",
+        "job_id": "e678dd40fa5ee84051203b89",
+        "sample": "0747f1d135bd8e419e6bf81fb573e8d3bd9c2e48b6757969b0b162f3dea62773",
+        "game": "go_fish__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Thrill Seeker",
+        "instrument": "experience12",
+        "branch": "persona",
+        "system_sha256": "0ea57f0784b668d200d8a627e372e5a555392e3b35826a24e6a7627071dda6e5",
+        "user_sha256": "6dbf1d5e8fe758fc69a580ba5e7ec6c506f3195d7faf91840850cedc1a357963",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona12_completion_dual_20260925_v1/results/3256d032c8fea25839469e8c/result.json",
+        "source_sha256": "413ed4cf9443d2d4f77b9d0dc0b83759be3bf854422d42c33228c85a7e72aa6e",
+        "source_chain": [
+          {
+            "file": "blobs/413ed4cf9443d2d4f77b9d0dc0b83759be3bf854422d42c33228c85a7e72aa6e.json",
+            "sha256": "413ed4cf9443d2d4f77b9d0dc0b83759be3bf854422d42c33228c85a7e72aa6e",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/persona12_completion_dual_20260925_v1/results/3256d032c8fea25839469e8c/result.json"
+          }
+        ],
+        "actual_models": [
+          "qwen3.8-max"
+        ],
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      }
+    ]
+  }
+]

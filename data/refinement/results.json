@@ -1,0 +1,107 @@
+{
+  "review_date": "2026-10-13",
+  "game": "crazy_eights",
+  "scope": "Read existing rulebooks and archived persona-agent evaluations; no new experiment.",
+  "scales": {
+    "experience_dimensions": "1-5",
+    "overall_preference": "1-10"
+  },
+  "rows": [
+    {
+      "persona": "The Efficiency Essentialist",
+      "persona_slug": "efficiency",
+      "task_id": "crazy_eights__ppsg_efficiency_r1_v1",
+      "phase": "main_sequential_selection",
+      "rulebook": "E:\\codex-playground\\prefer-project-page\\sources\\persona-variants\\rulebooks\\crazy_eights__ppsg_efficiency_r1_v1.md",
+      "target_dimension": "meaning",
+      "target_before": 2.0,
+      "target_after": 3.0,
+      "preference_before": 5.0,
+      "preference_after": 6.0,
+      "preference_delta": 1.0,
+      "predicted_preference_delta": 0.791567111889191,
+      "preference_evaluated_after_selection": true
+    },
+    {
+      "persona": "The Narrative Architect",
+      "persona_slug": "narrative",
+      "task_id": "crazy_eights__ppsg_narrative_r2_v1",
+      "phase": "main_sequential_selection",
+      "rulebook": "E:\\codex-playground\\prefer-project-page\\sources\\persona-variants\\rulebooks\\crazy_eights__ppsg_narrative_r2_v1.md",
+      "target_dimension": "progress_feedback",
+      "target_before": 3.0,
+      "target_after": 4.0,
+      "preference_before": 2.0,
+      "preference_after": 2.0,
+      "preference_delta": 0.0,
+      "predicted_preference_delta": 0.31742700022114473,
+      "preference_evaluated_after_selection": true
+    },
+    {
+      "persona": "The Social Lubricator",
+      "persona_slug": "social",
+      "task_id": "crazy_eights__ppsg_social_r2_v1",
+      "phase": "main_sequential_selection",
+      "rulebook": "E:\\codex-playground\\prefer-project-page\\sources\\persona-variants\\rulebooks\\crazy_eights__ppsg_social_r2_v1.md",
+      "target_dimension": "emotional_challenge",
+      "target_before": 1.0,
+      "target_after": 2.0,
+      "preference_before": 3.0,
+      "preference_after": 3.0,
+      "preference_delta": 0.0,
+      "predicted_preference_delta": 0.30729106846365656,
+      "preference_evaluated_after_selection": true
+    },
+    {
+      "persona": "The System Purist",
+      "persona_slug": "system",
+      "task_id": "crazy_eights__feedback52_system_v1",
+      "phase": "systematic_feedback",
+      "rulebook": "E:\\codex-playground\\prefer-project-page\\sources\\persona-variants\\rulebooks\\crazy_eights__feedback52_system_v1.md",
+      "target_dimension": "meaning",
+      "target_before": 2.0,
+      "target_after": 3.0,
+      "preference_before": 2.0,
+      "preference_after": 3.0,
+      "preference_delta": 1.0,
+      "predicted_preference_delta": 0.0490259999221761,
+      "preference_evaluated_after_selection": true
+    },
+    {
+      "persona": "The Thrill Seeker",
+      "persona_slug": "thrill",
+      "task_id": "crazy_eights__ppsg_thrill_challenge_fit_feedback_v1",
+      "phase": "dedicated_pilot",
+      "target_dimension": "challenge_fit",
+      "target_before": 2.0,
+      "target_after": 3.0,
+      "preference_before": 2.0,
+      "preference_after": 6.0,
+      "preference_delta": 4.0,
+      "predicted_preference_delta": 3.276065036835199,
+      "preference_evaluated_after_selection": true
+    }
+  ],
+  "source_files": {
+    "iteration": "E:\\codex-playground\\research\\prefer-overleaf-sync-20260926\\source\\analysis\\refinement_sources\\iteration.json",
+    "feedback_summary": "E:\\codex-playground\\research\\prefer-overleaf-sync-20260926\\source\\figure_data\\feedback_cells.csv",
+    "system_feedback": "E:\\codex-playground\\prefer-project-page\\sources\\persona-variants\\system-feedback\\result.json",
+    "pilot": "E:\\codex-playground\\research\\prefer-overleaf-sync-20260926\\source\\analysis\\refinement_sources\\case.json",
+    "rulebook_manifest": "E:\\codex-playground\\prefer-project-page\\sources\\persona-variants\\manifest.json"
+  },
+  "demo_assessment": {
+    "recommended_addition": "system feedback Suit Dedication",
+    "reason": "Public committed suit and per-play dedication count provide visible choices and score feedback; recorded meaning and preference both improve by 1.",
+    "efficiency_note": "Under the Signature Suit rulebook, a normal winner has emptied their entire hand, so zero cards of the chosen suit and the doubled payout are guaranteed. The private objective therefore offers a weak behavioral contrast in normal finishes."
+  },
+  "efficiency_clarification": {
+    "date": "2026-10-13",
+    "revision": "shared_random_suit_v2",
+    "status": "awaiting_new_play_evaluation",
+    "rulebook": "efficiency-rules.txt",
+    "author_instruction": "开局随机一个公共花色；所有人手中和抽到的该花色自动进入放置区计个人分，不占出牌操作；8不能指定到该花色。赢家另加双倍原版胜利收益。",
+    "historical_scores_apply_to": "efficiency-archived-rules.txt",
+    "new_rule_target_scores": null,
+    "new_rule_preference_scores": null
+  }
+}

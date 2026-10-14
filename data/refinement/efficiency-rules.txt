@@ -1,0 +1,60 @@
+# Crazy Eights — Shared Random Set-aside
+Author-clarified efficiency rules, revision shared_random_suit_v2, 2026-10-13.
+
+## 1. Game State
+Four players have private hands. The stock is hidden; its size is public.
+The starter pile, active suit, hand sizes, shared random set-aside suit, and
+each player's set-aside area and accumulated points are public. Set-aside
+cards stay outside the hand and stock.
+
+## 2. Cards
+Use a standard 52-card deck without jokers. Eights are wild when played from
+a hand. Card values: eight 50; K/Q/J/10 10; ace 1; others their pip value.
+
+## 3. Setup
+Deal five cards to each player in round-robin order. Reveal a non-eight starter;
+bury any starter eight in the middle of the stock and reveal the next card.
+Randomly select exactly one of the four suits for the entire table. All four
+players share this set-aside suit; no player chooses a personal suit.
+Immediately move every hand card of this suit into its owner's face-up
+set-aside area, including eights. Add each card's normal point value to that
+owner's set-aside points. This is automatic setup, not a player action or turn.
+These cards do not change the starter or declare a suit. The shared suit stays
+fixed. The seeded browser demo makes the random suit reproducible for a deal.
+
+## 4. Legal Actions
+Play one card matching the active suit or the starter's rank. An eight may be
+played regardless of the match; declare one of the OTHER THREE suits. The
+shared set-aside suit is forbidden for suit declaration. You may draw one card,
+even with a playable card. A playable draw may be kept; drawing may continue.
+Any drawn card of the shared random suit goes directly into its owner's area,
+including eights. It does not enter your hand, change the starter, declare a
+suit, or end your turn; add its normal card value to the owner's set-aside
+points. No extra action is required to place or score it. Pass only with an
+empty stock and no playable hand card.
+
+## 5. Turn Resolution
+Playing a hand card ends your turn. Drawing keeps the turn with you. A draw
+of the shared random suit is revealed and moved directly to your set-aside area.
+Other draws enter your private hand. Turns proceed through Players 0,1,2,3.
+
+## 6. Set-aside Area
+Set-aside cards never return to the stock or hand and cannot be played. They
+do not count toward hand size or remaining-hand value; they do contribute
+their normal card values to their owner's separate set-aside score. If setup empties any
+hands, those players share an immediate win. Emptying your remaining hand
+during play wins immediately.
+
+## 7. Information
+Your hand and ordinary stock draws are private. Set-aside cards are public.
+Opponent hands stay hidden. Revealing a set-aside card exposes that card only.
+
+## 8. Payoffs
+With an empty stock, a full cycle of passes ends the game; the lowest remaining
+hand value wins. Tied winners share the win. Each loser pays their remaining
+hand value, and winners split the total. Each winner's collected payoff is
+then doubled. Add each player's set-aside points to their own game payoff,
+including losing players. The winner's set-aside score is not doubled: their
+final score is set-aside points plus twice the original collected payoff.
+Losers' final scores are their set-aside points minus their hand-value payment.
+The extra winner bonus does not increase the losers' individual payments.

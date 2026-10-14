@@ -1,0 +1,1185 @@
+[
+  {
+    "id": "models-0",
+    "mode": "models",
+    "name": "glm-5.3",
+    "model": "glm-5.3",
+    "persona": null,
+    "score": 7,
+    "reason": "The player made coherent, suit-following decisions, drew when out of suit, and won decisively (payoff 110 vs opponents' negatives), indicating a smooth, successful session with no recorded frustration or constraint; but no subjective data limits assessment.",
+    "evidence": [
+      "Decision 1: played the 10 of spades matching the current suit, a natural opening move.",
+      "Decision 3: with no clubs in hand, chose to draw rather than misplay, then decision 4 played the drawn 2 of diamonds when legal.",
+      "Decisions 5-7: consistently played on-suit diamonds, reducing hand from 3 to 1 card.",
+      "Terminal payoff: Player 0 scored 110 while opponents scored -28, -9, -73, a clear win."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 3,
+      "mastery": 3,
+      "curiosity": 2,
+      "challenge_fit": 2,
+      "cognitive_challenge": 2,
+      "decision_challenge": 2,
+      "meaning": 2,
+      "immersion": 3,
+      "emotional_challenge": 1,
+      "progress_feedback": 4,
+      "ease_of_control": 5
+    },
+    "dimension_evidence": {
+      "goals_rules": "Clear rules and legal action lists were provided each turn, and the player consistently made legal moves matching suit/rank or drawing when required.",
+      "autonomy": "The player had multiple legal options at several decisions (e.g., decision 5 with three playable cards) but often faced only one or two choices.",
+      "mastery": "The player successfully shed cards from 5 down to 1 and won with a payoff of 110, showing effective play, though opponents were random agents offering little adaptive test.",
+      "curiosity": "Little hidden information was probed; the player followed straightforward matching plays with no evident exploration of mechanics beyond required play.",
+      "challenge_fit": "Opponents were RandomAgents and the player won decisively, indicating difficulty well below the player's apparent capability.",
+      "cognitive_challenge": "Most decisions reduced to picking a playable card; only suit-choice and hold-vs-play tradeoffs (e.g., keeping the 3 of hearts) required light planning.",
+      "decision_challenge": "Choices among legal actions were mostly low-stakes; the final play of the last card (decision 7) was the only clearly consequential one.",
+      "meaning": "The session was a routine card-shedding win with no narrative, stakes, or personal resonance beyond the legal outcome.",
+      "immersion": "The player stayed engaged across seven decisions tracking suit changes and hand counts, but the abstract state offered limited felt involvement.",
+      "emotional_challenge": "No moral, social, or emotionally consequential situations arose in the recorded play.",
+      "progress_feedback": "Hand sizes, played cards, target card, and deck counts updated each turn, and terminal payoffs clearly signaled the win.",
+      "ease_of_control": "Every selected action was legal and immediately resolved via simple play/draw actions with no procedural friction."
+    },
+    "limitations": [
+      "No opponent private observations, model reasoning, or subjective feelings were logged, so experienced qualities are inferred from actions only.",
+      "Opponents were RandomAgents, limiting inference about challenge and mastery against capable opposition.",
+      "No wall-clock timing or conversational context is available to assess engagement depth."
+    ],
+    "sources": [
+      {
+        "label": "recovery",
+        "job_id": "glm-5.3/ba37591685aa14c71ce75bc0/play_score",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "glm-5.3",
+        "judge_persona": null,
+        "instrument": "play_score",
+        "branch": "neutral_external",
+        "system_sha256": "7418cd97230da7e59e0fe266395507e17a4211e11f2a095f148a9e60a1c4b285",
+        "user_sha256": "06cf98af8d7aa3393c38b0b1f7c02a5e1e2e5cecf3058a5f21712ae0cc254621",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/glm-5.3/ba37591685aa14c71ce75bc0/play_score/result.json",
+        "source_sha256": "a6c05a7bb323f34cf83b50d93e9b7aa34ee4a86b79e25e2424151804b1314842",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "glm-5.3",
+        "original_response": {
+          "status": "ok",
+          "play_experience_score": 7,
+          "reasoning": "The player made coherent, suit-following decisions, drew when out of suit, and won decisively (payoff 110 vs opponents' negatives), indicating a smooth, successful session with no recorded frustration or constraint; but no subjective data limits assessment.",
+          "trajectory_evidence": [
+            "Decision 1: played the 10 of spades matching the current suit, a natural opening move.",
+            "Decision 3: with no clubs in hand, chose to draw rather than misplay, then decision 4 played the drawn 2 of diamonds when legal.",
+            "Decisions 5-7: consistently played on-suit diamonds, reducing hand from 3 to 1 card.",
+            "Terminal payoff: Player 0 scored 110 while opponents scored -28, -9, -73, a clear win."
+          ],
+          "confidence": 4
+        }
+      },
+      {
+        "label": "recovery",
+        "job_id": "glm-5.3/ac85d1ff63060c275cab0e4a/experience12",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "glm-5.3",
+        "judge_persona": null,
+        "instrument": "experience12",
+        "branch": "neutral_external",
+        "system_sha256": "84e1adbc981e57ab8d0175fe7beb8943106a106886af29912397747382c2d2a0",
+        "user_sha256": "0adf9f31f480cd2a22d89c9a6cfdbce5902901936a19fb2c2036b681682291b4",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/glm-5.3/ac85d1ff63060c275cab0e4a/experience12/result.json",
+        "source_sha256": "a0366d8d4b89396609a3799207ecf26b0cf6f749bff9c57950798e20182cfa9e",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "glm-5.3",
+        "original_response": {
+          "experience_vector": {
+            "goals_rules": 4,
+            "autonomy": 3,
+            "mastery": 3,
+            "curiosity": 2,
+            "challenge_fit": 2,
+            "cognitive_challenge": 2,
+            "decision_challenge": 2,
+            "meaning": 2,
+            "immersion": 3,
+            "emotional_challenge": 1,
+            "progress_feedback": 4,
+            "ease_of_control": 5
+          },
+          "evidence": {
+            "goals_rules": "Clear rules and legal action lists were provided each turn, and the player consistently made legal moves matching suit/rank or drawing when required.",
+            "autonomy": "The player had multiple legal options at several decisions (e.g., decision 5 with three playable cards) but often faced only one or two choices.",
+            "mastery": "The player successfully shed cards from 5 down to 1 and won with a payoff of 110, showing effective play, though opponents were random agents offering little adaptive test.",
+            "curiosity": "Little hidden information was probed; the player followed straightforward matching plays with no evident exploration of mechanics beyond required play.",
+            "challenge_fit": "Opponents were RandomAgents and the player won decisively, indicating difficulty well below the player's apparent capability.",
+            "cognitive_challenge": "Most decisions reduced to picking a playable card; only suit-choice and hold-vs-play tradeoffs (e.g., keeping the 3 of hearts) required light planning.",
+            "decision_challenge": "Choices among legal actions were mostly low-stakes; the final play of the last card (decision 7) was the only clearly consequential one.",
+            "meaning": "The session was a routine card-shedding win with no narrative, stakes, or personal resonance beyond the legal outcome.",
+            "immersion": "The player stayed engaged across seven decisions tracking suit changes and hand counts, but the abstract state offered limited felt involvement.",
+            "emotional_challenge": "No moral, social, or emotionally consequential situations arose in the recorded play.",
+            "progress_feedback": "Hand sizes, played cards, target card, and deck counts updated each turn, and terminal payoffs clearly signaled the win.",
+            "ease_of_control": "Every selected action was legal and immediately resolved via simple play/draw actions with no procedural friction."
+          },
+          "limitations": [
+            "No opponent private observations, model reasoning, or subjective feelings were logged, so experienced qualities are inferred from actions only.",
+            "Opponents were RandomAgents, limiting inference about challenge and mastery against capable opposition.",
+            "No wall-clock timing or conversational context is available to assess engagement depth."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "models-1",
+    "mode": "models",
+    "name": "deepseek-v4.1-flash",
+    "model": "deepseek-v4.1-flash",
+    "persona": null,
+    "score": 5,
+    "reason": "The record shows a complete, coherent card game session with clear legal choices and a decisive win for the focal player, but the evidence is mostly mechanical: no subjective feedback, no opponent reasoning, and no indication of tension or meaningful strategic resistance. The experience is therefore ordinary/weakly evidenced rather than clearly good or poor.",
+    "evidence": [
+      "Decision 1: focal player chose to play the 5 of spades from a 5-card hand, matching the initial target card.",
+      "Decision 3: after drawing, the focal player played the 2 of spades, changing the current suit to spades.",
+      "Decision 5: focal player played the 5 of diamonds, continuing a run of diamond plays.",
+      "Decision 6: focal player played the 3 of hearts, reducing their hand to two cards.",
+      "Decision 7: focal player played the 3 of hearts as their final card, ending the game.",
+      "Terminal payoffs show Player 0 at 110 while opponents scored -28, -9, and -73."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 3,
+      "mastery": 3,
+      "curiosity": 2,
+      "challenge_fit": 3,
+      "cognitive_challenge": 3,
+      "decision_challenge": 3,
+      "meaning": 2,
+      "immersion": 2,
+      "emotional_challenge": 1,
+      "progress_feedback": 4,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "The rules clearly define legal actions and win conditions, and the focal player's legal action list matched the rulebook throughout.",
+      "autonomy": "The focal player had meaningful choices such as playing a card or drawing at decision 1, and later choosing among multiple playable cards at decision 5.",
+      "mastery": "The player improved from drawing at decision 3 to playing a card at decision 4, and later won the game, showing some opportunity to learn and succeed.",
+      "curiosity": "The player drew from the stock at decision 3, but no evidence shows deliberate exploration of hidden information or mechanics beyond immediate play.",
+      "challenge_fit": "The player faced opponents with varying hand sizes and won with a large payoff, suggesting the difficulty was not overwhelming but not trivial.",
+      "cognitive_challenge": "The player had to track the current suit, hand contents, and legal actions, as seen when choosing among multiple playable cards at decision 5.",
+      "decision_challenge": "At decision 5, the player chose among three legal actions (play 3, play 4, or draw), requiring evaluation of consequences.",
+      "meaning": "The game ended with a win and a large payoff, but no evidence indicates personal resonance or significance beyond completing the game.",
+      "immersion": "The player's actions were consistent and goal-directed, but no evidence of sustained absorption or felt involvement is recorded.",
+      "emotional_challenge": "No evidence of emotional, moral, or social pressure; the game was played against random agents with no recorded interpersonal stakes.",
+      "progress_feedback": "The player's hand size decreased from 5 to 1, and the game ended with a win, providing clear feedback on progress.",
+      "ease_of_control": "The player consistently selected legal actions from the provided list without apparent procedural friction."
+    },
+    "limitations": [
+      "No subjective feelings, reasoning, or emotional responses were recorded.",
+      "Opponent actions are only visible through state changes at the next focal decision, limiting inference about their strategies.",
+      "The session record is a delta encoding and may omit some intermediate observations.",
+      "No wall-clock times or thinking durations are available."
+    ],
+    "sources": [
+      {
+        "label": "recovery",
+        "job_id": "deepseek-v4.1-flash/ba37591685aa14c71ce75bc0/play_score",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "deepseek-v4.1-flash",
+        "judge_persona": null,
+        "instrument": "play_score",
+        "branch": "neutral_external",
+        "system_sha256": "7418cd97230da7e59e0fe266395507e17a4211e11f2a095f148a9e60a1c4b285",
+        "user_sha256": "06cf98af8d7aa3393c38b0b1f7c02a5e1e2e5cecf3058a5f21712ae0cc254621",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/deepseek-v4.1-flash/ba37591685aa14c71ce75bc0/play_score/result.json",
+        "source_sha256": "c365c093aa5928950fe35614d36173e2f2267d8fe9bd7794147370d9e698d6ad",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "deepseek-v4.1-flash",
+        "original_response": {
+          "status": "ok",
+          "play_experience_score": 5,
+          "reasoning": "The record shows a complete, coherent card game session with clear legal choices and a decisive win for the focal player, but the evidence is mostly mechanical: no subjective feedback, no opponent reasoning, and no indication of tension or meaningful strategic resistance. The experience is therefore ordinary/weakly evidenced rather than clearly good or poor.",
+          "trajectory_evidence": [
+            "Decision 1: focal player chose to play the 5 of spades from a 5-card hand, matching the initial target card.",
+            "Decision 3: after drawing, the focal player played the 2 of spades, changing the current suit to spades.",
+            "Decision 5: focal player played the 5 of diamonds, continuing a run of diamond plays.",
+            "Decision 6: focal player played the 3 of hearts, reducing their hand to two cards.",
+            "Decision 7: focal player played the 3 of hearts as their final card, ending the game.",
+            "Terminal payoffs show Player 0 at 110 while opponents scored -28, -9, and -73."
+          ],
+          "confidence": 3
+        }
+      },
+      {
+        "label": "recovery",
+        "job_id": "deepseek-v4.1-flash/ac85d1ff63060c275cab0e4a/experience12",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "deepseek-v4.1-flash",
+        "judge_persona": null,
+        "instrument": "experience12",
+        "branch": "neutral_external",
+        "system_sha256": "84e1adbc981e57ab8d0175fe7beb8943106a106886af29912397747382c2d2a0",
+        "user_sha256": "0adf9f31f480cd2a22d89c9a6cfdbce5902901936a19fb2c2036b681682291b4",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/deepseek-v4.1-flash/ac85d1ff63060c275cab0e4a/experience12/result.json",
+        "source_sha256": "c34fc8fc79464ffe1e0053f0b3ac60519ab6f04db9ce7251d8890fa4320f38ea",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "deepseek-v4.1-flash",
+        "original_response": {
+          "experience_vector": {
+            "goals_rules": 4,
+            "autonomy": 3,
+            "mastery": 3,
+            "curiosity": 2,
+            "challenge_fit": 3,
+            "cognitive_challenge": 3,
+            "decision_challenge": 3,
+            "meaning": 2,
+            "immersion": 2,
+            "emotional_challenge": 1,
+            "progress_feedback": 4,
+            "ease_of_control": 4
+          },
+          "evidence": {
+            "goals_rules": "The rules clearly define legal actions and win conditions, and the focal player's legal action list matched the rulebook throughout.",
+            "autonomy": "The focal player had meaningful choices such as playing a card or drawing at decision 1, and later choosing among multiple playable cards at decision 5.",
+            "mastery": "The player improved from drawing at decision 3 to playing a card at decision 4, and later won the game, showing some opportunity to learn and succeed.",
+            "curiosity": "The player drew from the stock at decision 3, but no evidence shows deliberate exploration of hidden information or mechanics beyond immediate play.",
+            "challenge_fit": "The player faced opponents with varying hand sizes and won with a large payoff, suggesting the difficulty was not overwhelming but not trivial.",
+            "cognitive_challenge": "The player had to track the current suit, hand contents, and legal actions, as seen when choosing among multiple playable cards at decision 5.",
+            "decision_challenge": "At decision 5, the player chose among three legal actions (play 3, play 4, or draw), requiring evaluation of consequences.",
+            "meaning": "The game ended with a win and a large payoff, but no evidence indicates personal resonance or significance beyond completing the game.",
+            "immersion": "The player's actions were consistent and goal-directed, but no evidence of sustained absorption or felt involvement is recorded.",
+            "emotional_challenge": "No evidence of emotional, moral, or social pressure; the game was played against random agents with no recorded interpersonal stakes.",
+            "progress_feedback": "The player's hand size decreased from 5 to 1, and the game ended with a win, providing clear feedback on progress.",
+            "ease_of_control": "The player consistently selected legal actions from the provided list without apparent procedural friction."
+          },
+          "limitations": [
+            "No subjective feelings, reasoning, or emotional responses were recorded.",
+            "Opponent actions are only visible through state changes at the next focal decision, limiting inference about their strategies.",
+            "The session record is a delta encoding and may omit some intermediate observations.",
+            "No wall-clock times or thinking durations are available."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "models-2",
+    "mode": "models",
+    "name": "kimi-k2.7-code",
+    "model": "kimi-k2.7-code",
+    "persona": null,
+    "score": 5,
+    "reason": "The visible record shows a smooth, error-free trajectory in which Player 0 made only legal, sensible plays, went out first, and earned a payoff of 110, but the session lacks subjective feedback and the random-opponent context limits inference about the quality of the experience.",
+    "evidence": [
+      "Player 0 opened by matching the 5♠ target with 10♠.",
+      "Player 0 played A♣ when the active suit changed to clubs.",
+      "Player 0 drew when no card matched the 2♠ target, then played the newly drawn 2♦.",
+      "Player 0 reduced its hand by playing Q♦ and 4♦ on diamond targets.",
+      "Player 0 played its final card 3♥ to match the rank of the 3♦ target and go out.",
+      "Player 0's terminal payoff was 110, far above the three random opponents."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 3,
+      "mastery": 3,
+      "curiosity": 2,
+      "challenge_fit": 2,
+      "cognitive_challenge": 2,
+      "decision_challenge": 2,
+      "meaning": 2,
+      "immersion": 2,
+      "emotional_challenge": 1,
+      "progress_feedback": 4,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "The observation provided a visible target card, current suit, hand contents, and legal_action_ids, and Player 0 consistently selected moves that advanced toward emptying the hand.",
+      "autonomy": "Player 0 had multiple legal options on several turns, such as playing a matching card versus drawing on decisions 1, 2, 4, 5, and 6, though some turns offered only one legal move.",
+      "mastery": "Player 0 made seven consecutive legal plays or draws and ultimately shed all cards to win the round, demonstrating competent play within this single session.",
+      "curiosity": "Player 0 never took an exploratory or non-obligatory action, such as voluntarily drawing or testing alternative plays; all moves were either forced or straightforward.",
+      "challenge_fit": "Player 0 won without being blocked for more than one draw, suggesting the random opponents posed little resistance during this session.",
+      "cognitive_challenge": "Decisions mainly required checking whether any hand card matched the target by suit or rank, with only occasional minor choices such as playing the Q♦ versus the 4♦.",
+      "decision_challenge": "Legal choices were usually either forced or had an obvious best option, and the randomness of opponent actions reduced the scope for strategic prediction.",
+      "meaning": "No personal, narrative, or moral stakes are recorded; significance appears limited to the objective point payoff awarded at the end of the game.",
+      "immersion": "The log contains no indicators of sustained absorption or involvement beyond the sequence of legal selections and resulting state updates.",
+      "emotional_challenge": "No emotional, social, or morally consequential pressure is visible or inferable from the automated action record.",
+      "progress_feedback": "After each selection the state updated target card, current suit, hand size, deck size, and played-card history, and terminal payoffs were recorded at the end.",
+      "ease_of_control": "Player 0 always chose an action present in legal_action_ids, with no invalid or failed move recorded."
+    },
+    "limitations": [
+      "No data on how rules and goals were presented to the player beyond the legal action list and delta observations.",
+      "Opponent hands and opponent decision logic remain hidden.",
+      "Only one session is recorded, so learning, improvement, and longer-term engagement cannot be assessed.",
+      "No subjective reports, timing, interface, audio-visual, or emotional state data were logged.",
+      "Player 0 never played an eight, so the wild-card suit-declaration mechanic cannot be evaluated from this record."
+    ],
+    "sources": [
+      {
+        "label": "recovery",
+        "job_id": "kimi-k2.7-code/ba37591685aa14c71ce75bc0/play_score",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "kimi-k2.7-code",
+        "judge_persona": null,
+        "instrument": "play_score",
+        "branch": "neutral_external",
+        "system_sha256": "7418cd97230da7e59e0fe266395507e17a4211e11f2a095f148a9e60a1c4b285",
+        "user_sha256": "06cf98af8d7aa3393c38b0b1f7c02a5e1e2e5cecf3058a5f21712ae0cc254621",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/kimi-k2.7-code/ba37591685aa14c71ce75bc0/play_score/result.json",
+        "source_sha256": "2522ddc87cb7d74f7e576c9fc77cedc0b272e482f780a5331f42374d078a5e97",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "kimi-k2.7-code",
+        "original_response": {
+          "status": "ok",
+          "play_experience_score": 5,
+          "reasoning": "The visible record shows a smooth, error-free trajectory in which Player 0 made only legal, sensible plays, went out first, and earned a payoff of 110, but the session lacks subjective feedback and the random-opponent context limits inference about the quality of the experience.",
+          "trajectory_evidence": [
+            "Player 0 opened by matching the 5♠ target with 10♠.",
+            "Player 0 played A♣ when the active suit changed to clubs.",
+            "Player 0 drew when no card matched the 2♠ target, then played the newly drawn 2♦.",
+            "Player 0 reduced its hand by playing Q♦ and 4♦ on diamond targets.",
+            "Player 0 played its final card 3♥ to match the rank of the 3♦ target and go out.",
+            "Player 0's terminal payoff was 110, far above the three random opponents."
+          ],
+          "confidence": 3
+        }
+      },
+      {
+        "label": "recovery",
+        "job_id": "kimi-k2.7-code/ac85d1ff63060c275cab0e4a/experience12",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "kimi-k2.7-code",
+        "judge_persona": null,
+        "instrument": "experience12",
+        "branch": "neutral_external",
+        "system_sha256": "84e1adbc981e57ab8d0175fe7beb8943106a106886af29912397747382c2d2a0",
+        "user_sha256": "0adf9f31f480cd2a22d89c9a6cfdbce5902901936a19fb2c2036b681682291b4",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/kimi-k2.7-code/ac85d1ff63060c275cab0e4a/experience12/result.json",
+        "source_sha256": "cba99406b836a4e835aebb0bf7abd985c2dd3835698ca75c7c7fb1c0c2bae935",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "kimi-k2.7-code",
+        "original_response": {
+          "experience_vector": {
+            "goals_rules": 4,
+            "autonomy": 3,
+            "mastery": 3,
+            "curiosity": 2,
+            "challenge_fit": 2,
+            "cognitive_challenge": 2,
+            "decision_challenge": 2,
+            "meaning": 2,
+            "immersion": 2,
+            "emotional_challenge": 1,
+            "progress_feedback": 4,
+            "ease_of_control": 4
+          },
+          "evidence": {
+            "goals_rules": "The observation provided a visible target card, current suit, hand contents, and legal_action_ids, and Player 0 consistently selected moves that advanced toward emptying the hand.",
+            "autonomy": "Player 0 had multiple legal options on several turns, such as playing a matching card versus drawing on decisions 1, 2, 4, 5, and 6, though some turns offered only one legal move.",
+            "mastery": "Player 0 made seven consecutive legal plays or draws and ultimately shed all cards to win the round, demonstrating competent play within this single session.",
+            "curiosity": "Player 0 never took an exploratory or non-obligatory action, such as voluntarily drawing or testing alternative plays; all moves were either forced or straightforward.",
+            "challenge_fit": "Player 0 won without being blocked for more than one draw, suggesting the random opponents posed little resistance during this session.",
+            "cognitive_challenge": "Decisions mainly required checking whether any hand card matched the target by suit or rank, with only occasional minor choices such as playing the Q♦ versus the 4♦.",
+            "decision_challenge": "Legal choices were usually either forced or had an obvious best option, and the randomness of opponent actions reduced the scope for strategic prediction.",
+            "meaning": "No personal, narrative, or moral stakes are recorded; significance appears limited to the objective point payoff awarded at the end of the game.",
+            "immersion": "The log contains no indicators of sustained absorption or involvement beyond the sequence of legal selections and resulting state updates.",
+            "emotional_challenge": "No emotional, social, or morally consequential pressure is visible or inferable from the automated action record.",
+            "progress_feedback": "After each selection the state updated target card, current suit, hand size, deck size, and played-card history, and terminal payoffs were recorded at the end.",
+            "ease_of_control": "Player 0 always chose an action present in legal_action_ids, with no invalid or failed move recorded."
+          },
+          "limitations": [
+            "No data on how rules and goals were presented to the player beyond the legal action list and delta observations.",
+            "Opponent hands and opponent decision logic remain hidden.",
+            "Only one session is recorded, so learning, improvement, and longer-term engagement cannot be assessed.",
+            "No subjective reports, timing, interface, audio-visual, or emotional state data were logged.",
+            "Player 0 never played an eight, so the wild-card suit-declaration mechanic cannot be evaluated from this record."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "models-3",
+    "mode": "models",
+    "name": "MiniMax-M2.5",
+    "model": "MiniMax-M2.5",
+    "persona": null,
+    "score": 7,
+    "reason": "The player demonstrated consistent rule-following throughout, making valid plays that followed suit or drew when unable to follow. The game progressed logically through all 7 decisions with appropriate responses to changing game state. The player won decisively (110 payoff), but the experience quality rests on the coherent, valid gameplay rather than the winning outcome itself. No errors, confusion, or invalid moves are visible in the record.",
+    "evidence": [
+      "Decision 1: Played valid spade (10♠) to follow initial 5♠",
+      "Decision 3: Drew when unable to follow suit (no spades in hand)",
+      "Decision 4: Played 2♦ to establish new suit after drawing",
+      "Decision 5: Played Q♦ to follow diamonds suit",
+      "Decision 6: Played 4♦ to follow diamonds",
+      "Decision 7: Drew when holding only hearts (incompatible with diamonds suit)"
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 3,
+      "mastery": 3,
+      "curiosity": 3,
+      "challenge_fit": 3,
+      "cognitive_challenge": 3,
+      "decision_challenge": 3,
+      "meaning": 3,
+      "immersion": 3,
+      "emotional_challenge": 2,
+      "progress_feedback": 4,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "The rules are clearly visible: match suit or rank to the target card, eights are wild and allow suit declaration, goal is to empty hand or have lowest points.",
+      "autonomy": "Player had meaningful choices between playing matching cards or drawing; could choose which card to play when multiple options existed (e.g., decision 4-5).",
+      "mastery": "Player successfully executed strategic plays: declaring suits when playing eights, matching target cards appropriately, drawing when no play was available.",
+      "curiosity": "Player drew cards to seek playable options when hand had no matches, revealing information about deck contents.",
+      "challenge_fit": "Game progressed through multiple rounds with hand sizes fluctuating (5→4→3→4→3→2→1), showing appropriate difficulty balance.",
+      "cognitive_challenge": "Player had to track current suit, target card rank/suit, opponent hand sizes, and deck size to make valid plays.",
+      "decision_challenge": "Player faced meaningful choices: which of multiple matching cards to play, when to draw vs play, and suit declarations with eights.",
+      "meaning": "Player pursued the goal of emptying hand to win, with final payoff reflecting successful outcome (110 points).",
+      "immersion": "Player engaged through multiple turns, responding to changing game state (suit changes from spades to clubs to spades to diamonds).",
+      "emotional_challenge": "Low emotional pressure - game play was mechanical with no morally complex decisions or high-stakes moments recorded.",
+      "progress_feedback": "Clear feedback: hand size decreased from 5 to 1 over 6 plays, target card and suit updated after each action, deck size tracked publicly.",
+      "ease_of_control": "All selected actions were legal; player successfully played matching cards and drew without procedural friction."
+    },
+    "limitations": [
+      "No evidence of player emotional state, hesitation, or subjective experience",
+      "No information about strategic reasoning or evaluation of options",
+      "Cannot observe opponent private cards or their decision-making",
+      "Missing details about wait times or any interruptions",
+      "No record of player understanding or confusion about rules"
+    ],
+    "sources": [
+      {
+        "label": "recovery",
+        "job_id": "MiniMax-M2.5/ba37591685aa14c71ce75bc0/play_score",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "MiniMax-M2.5",
+        "judge_persona": null,
+        "instrument": "play_score",
+        "branch": "neutral_external",
+        "system_sha256": "7418cd97230da7e59e0fe266395507e17a4211e11f2a095f148a9e60a1c4b285",
+        "user_sha256": "06cf98af8d7aa3393c38b0b1f7c02a5e1e2e5cecf3058a5f21712ae0cc254621",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/MiniMax-M2.5/ba37591685aa14c71ce75bc0/play_score/result.json",
+        "source_sha256": "57117bd5b30a78c5c34e895e803e1846698cda53de3e05e080efebd157febf30",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "MiniMax-M2.5",
+        "original_response": {
+          "status": "ok",
+          "play_experience_score": 7,
+          "reasoning": "The player demonstrated consistent rule-following throughout, making valid plays that followed suit or drew when unable to follow. The game progressed logically through all 7 decisions with appropriate responses to changing game state. The player won decisively (110 payoff), but the experience quality rests on the coherent, valid gameplay rather than the winning outcome itself. No errors, confusion, or invalid moves are visible in the record.",
+          "trajectory_evidence": [
+            "Decision 1: Played valid spade (10♠) to follow initial 5♠",
+            "Decision 3: Drew when unable to follow suit (no spades in hand)",
+            "Decision 4: Played 2♦ to establish new suit after drawing",
+            "Decision 5: Played Q♦ to follow diamonds suit",
+            "Decision 6: Played 4♦ to follow diamonds",
+            "Decision 7: Drew when holding only hearts (incompatible with diamonds suit)"
+          ],
+          "confidence": 5
+        }
+      },
+      {
+        "label": "recovery",
+        "job_id": "MiniMax-M2.5/ac85d1ff63060c275cab0e4a/experience12",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "MiniMax-M2.5",
+        "judge_persona": null,
+        "instrument": "experience12",
+        "branch": "neutral_external",
+        "system_sha256": "84e1adbc981e57ab8d0175fe7beb8943106a106886af29912397747382c2d2a0",
+        "user_sha256": "0adf9f31f480cd2a22d89c9a6cfdbce5902901936a19fb2c2036b681682291b4",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/recovery_20260924_v1/results/MiniMax-M2.5/ac85d1ff63060c275cab0e4a/experience12/result.json",
+        "source_sha256": "930c842d0f710c41713387f6d018cd9aac3b501f4de58bc77f47b1672882d4d8",
+        "protocol": "neutral49.authorized-recovery.20260924.v1",
+        "actual_model": "MiniMax-M2.5",
+        "original_response": {
+          "experience_vector": {
+            "goals_rules": 4,
+            "autonomy": 3,
+            "mastery": 3,
+            "curiosity": 3,
+            "challenge_fit": 3,
+            "cognitive_challenge": 3,
+            "decision_challenge": 3,
+            "meaning": 3,
+            "immersion": 3,
+            "emotional_challenge": 2,
+            "progress_feedback": 4,
+            "ease_of_control": 4
+          },
+          "evidence": {
+            "goals_rules": "The rules are clearly visible: match suit or rank to the target card, eights are wild and allow suit declaration, goal is to empty hand or have lowest points.",
+            "autonomy": "Player had meaningful choices between playing matching cards or drawing; could choose which card to play when multiple options existed (e.g., decision 4-5).",
+            "mastery": "Player successfully executed strategic plays: declaring suits when playing eights, matching target cards appropriately, drawing when no play was available.",
+            "curiosity": "Player drew cards to seek playable options when hand had no matches, revealing information about deck contents.",
+            "challenge_fit": "Game progressed through multiple rounds with hand sizes fluctuating (5→4→3→4→3→2→1), showing appropriate difficulty balance.",
+            "cognitive_challenge": "Player had to track current suit, target card rank/suit, opponent hand sizes, and deck size to make valid plays.",
+            "decision_challenge": "Player faced meaningful choices: which of multiple matching cards to play, when to draw vs play, and suit declarations with eights.",
+            "meaning": "Player pursued the goal of emptying hand to win, with final payoff reflecting successful outcome (110 points).",
+            "immersion": "Player engaged through multiple turns, responding to changing game state (suit changes from spades to clubs to spades to diamonds).",
+            "emotional_challenge": "Low emotional pressure - game play was mechanical with no morally complex decisions or high-stakes moments recorded.",
+            "progress_feedback": "Clear feedback: hand size decreased from 5 to 1 over 6 plays, target card and suit updated after each action, deck size tracked publicly.",
+            "ease_of_control": "All selected actions were legal; player successfully played matching cards and drew without procedural friction."
+          },
+          "limitations": [
+            "No evidence of player emotional state, hesitation, or subjective experience",
+            "No information about strategic reasoning or evaluation of options",
+            "Cannot observe opponent private cards or their decision-making",
+            "Missing details about wait times or any interruptions",
+            "No record of player understanding or confusion about rules"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "models-4",
+    "mode": "models",
+    "name": "qwen/qwen3.8-max-0902@openrouter/alibaba/low",
+    "model": "qwen/qwen3.8-max-0902@openrouter/alibaba/low",
+    "persona": null,
+    "score": 5,
+    "reason": "Player 0 won cleanly against RandomAgent opponents in a short 7-decision session, always playing a valid card when available and drawing only when forced. The payoff (+110) confirms a decisive win. However, the opposition was trivial (random), decisions were largely forced or obvious, and there is no evidence of meaningful challenge, tension, or interesting strategic depth. The experience is functional and mildly positive but unremarkable.",
+    "evidence": [
+      "Decision 1: correctly played 10♠ matching the spades suit.",
+      "Decision 3: drew when no legal play was available (only legal action was draw).",
+      "Decision 5: chose Q♦ over 4♦ when both were legal, reducing hand to 2 cards.",
+      "Decision 7: played final card 3♥ (matching rank 3) to empty hand and win.",
+      "Terminal payoff of +110 for Player 0 confirms a decisive win against random opponents."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 2,
+      "mastery": 2,
+      "curiosity": 2,
+      "challenge_fit": 2,
+      "cognitive_challenge": 2,
+      "decision_challenge": 2,
+      "meaning": 2,
+      "immersion": 2,
+      "emotional_challenge": 1,
+      "progress_feedback": 4,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "The target card, hand contents, and legal actions were clearly presented each turn; the shed-all-cards win condition was unambiguous and achieved on decision 7.",
+      "autonomy": "Most turns offered only 1-2 legal actions (e.g., decision 3 forced a draw; decision 7 forced the last play); only decision 5 presented three options.",
+      "mastery": "The session lasted only 7 focal turns against RandomAgent opponents, providing minimal opportunity to develop or exercise strategic skill.",
+      "curiosity": "Hidden stock and opponent hands existed but the simple match-suit-or-rank mechanic offered little incentive to explore deeper game-state implications.",
+      "challenge_fit": "Player won comfortably against RandomAgent opponents, reducing hand from 5 to 0 without ever being stuck for more than one draw; difficulty was low relative to any competent player.",
+      "cognitive_challenge": "Decisions were largely mechanical (play the only matching card or draw); no multi-step planning or inference about opponents was required.",
+      "decision_challenge": "When multiple plays were available (decision 5: Q♦ vs 4♦ vs draw), the consequences were trivial and no option was clearly superior in a meaningful strategic sense.",
+      "meaning": "The session was a short, mechanically straightforward win with a numerical payoff of 110; no narrative, social, or personal stakes were evident.",
+      "immersion": "The session comprised 7 rapid decisions with no thematic framing or tension-building moments; absorption was minimal.",
+      "emotional_challenge": "No moral dilemmas, social pressure, or emotionally consequential choices appeared in any decision.",
+      "progress_feedback": "Hand size visibly decreased each turn (5→4→3→4→3→2→1→0), target card and played-card history updated clearly, and terminal payoff was explicit.",
+      "ease_of_control": "Legal actions were enumerated each turn and the player selected among them without any apparent procedural friction or confusion across all 7 decisions."
+    },
+    "limitations": [
+      "No subjective player reports, think-aloud data, or post-game ratings were recorded.",
+      "Opponent behavior was purely random, limiting evidence about strategic depth or social dynamics.",
+      "The session was very short (7 focal decisions), constraining evidence for mastery, curiosity, and immersion.",
+      "No timing data available to infer deliberation or engagement.",
+      "Cannot assess whether the player found the experience boring or satisfying beyond observable behavior."
+    ],
+    "sources": [
+      {
+        "label": "openrouter",
+        "job_id": "ba37591685aa14c71ce75bc0/play_score",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "qwen/qwen3.8-max-0902@openrouter/alibaba/low",
+        "judge_persona": null,
+        "instrument": "play_score",
+        "branch": "neutral_external",
+        "system_sha256": "7418cd97230da7e59e0fe266395507e17a4211e11f2a095f148a9e60a1c4b285",
+        "user_sha256": "06cf98af8d7aa3393c38b0b1f7c02a5e1e2e5cecf3058a5f21712ae0cc254621",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/openrouter_recovery_20260924_v1/STATE.json#ba37591685aa14c71ce75bc0/play_score",
+        "source_sha256": "bba91c9ee90a7012c70fa03de79110c139f40509593296726f1ffe1770314a13",
+        "protocol": "neutral49.openrouter-authorized-recovery.v1",
+        "actual_model": [
+          "qwen/qwen3.8-max-0902"
+        ],
+        "original_response": {
+          "status": "ok",
+          "play_experience_score": 5,
+          "reasoning": "Player 0 won cleanly against RandomAgent opponents in a short 7-decision session, always playing a valid card when available and drawing only when forced. The payoff (+110) confirms a decisive win. However, the opposition was trivial (random), decisions were largely forced or obvious, and there is no evidence of meaningful challenge, tension, or interesting strategic depth. The experience is functional and mildly positive but unremarkable.",
+          "trajectory_evidence": [
+            "Decision 1: correctly played 10♠ matching the spades suit.",
+            "Decision 3: drew when no legal play was available (only legal action was draw).",
+            "Decision 5: chose Q♦ over 4♦ when both were legal, reducing hand to 2 cards.",
+            "Decision 7: played final card 3♥ (matching rank 3) to empty hand and win.",
+            "Terminal payoff of +110 for Player 0 confirms a decisive win against random opponents."
+          ],
+          "confidence": 4
+        }
+      },
+      {
+        "label": "openrouter",
+        "job_id": "ac85d1ff63060c275cab0e4a/experience12",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "qwen/qwen3.8-max-0902@openrouter/alibaba/low",
+        "judge_persona": null,
+        "instrument": "experience12",
+        "branch": "neutral_external",
+        "system_sha256": "84e1adbc981e57ab8d0175fe7beb8943106a106886af29912397747382c2d2a0",
+        "user_sha256": "0adf9f31f480cd2a22d89c9a6cfdbce5902901936a19fb2c2036b681682291b4",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/openrouter_recovery_20260924_v1/STATE.json#ac85d1ff63060c275cab0e4a/experience12",
+        "source_sha256": "4156f118bd1bd7d0a5126bfccc958841ef47e7ef07fe88b5ac91c4889676f769",
+        "protocol": "neutral49.openrouter-authorized-recovery.v1",
+        "actual_model": [
+          "qwen/qwen3.8-max-0902"
+        ],
+        "original_response": {
+          "experience_vector": {
+            "goals_rules": 4,
+            "autonomy": 2,
+            "mastery": 2,
+            "curiosity": 2,
+            "challenge_fit": 2,
+            "cognitive_challenge": 2,
+            "decision_challenge": 2,
+            "meaning": 2,
+            "immersion": 2,
+            "emotional_challenge": 1,
+            "progress_feedback": 4,
+            "ease_of_control": 4
+          },
+          "evidence": {
+            "goals_rules": "The target card, hand contents, and legal actions were clearly presented each turn; the shed-all-cards win condition was unambiguous and achieved on decision 7.",
+            "autonomy": "Most turns offered only 1-2 legal actions (e.g., decision 3 forced a draw; decision 7 forced the last play); only decision 5 presented three options.",
+            "mastery": "The session lasted only 7 focal turns against RandomAgent opponents, providing minimal opportunity to develop or exercise strategic skill.",
+            "curiosity": "Hidden stock and opponent hands existed but the simple match-suit-or-rank mechanic offered little incentive to explore deeper game-state implications.",
+            "challenge_fit": "Player won comfortably against RandomAgent opponents, reducing hand from 5 to 0 without ever being stuck for more than one draw; difficulty was low relative to any competent player.",
+            "cognitive_challenge": "Decisions were largely mechanical (play the only matching card or draw); no multi-step planning or inference about opponents was required.",
+            "decision_challenge": "When multiple plays were available (decision 5: Q♦ vs 4♦ vs draw), the consequences were trivial and no option was clearly superior in a meaningful strategic sense.",
+            "meaning": "The session was a short, mechanically straightforward win with a numerical payoff of 110; no narrative, social, or personal stakes were evident.",
+            "immersion": "The session comprised 7 rapid decisions with no thematic framing or tension-building moments; absorption was minimal.",
+            "emotional_challenge": "No moral dilemmas, social pressure, or emotionally consequential choices appeared in any decision.",
+            "progress_feedback": "Hand size visibly decreased each turn (5→4→3→4→3→2→1→0), target card and played-card history updated clearly, and terminal payoff was explicit.",
+            "ease_of_control": "Legal actions were enumerated each turn and the player selected among them without any apparent procedural friction or confusion across all 7 decisions."
+          },
+          "limitations": [
+            "No subjective player reports, think-aloud data, or post-game ratings were recorded.",
+            "Opponent behavior was purely random, limiting evidence about strategic depth or social dynamics.",
+            "The session was very short (7 focal decisions), constraining evidence for mastery, curiosity, and immersion.",
+            "No timing data available to infer deliberation or engagement.",
+            "Cannot assess whether the player found the experience boring or satisfying beyond observable behavior."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "personas-5",
+    "mode": "personas",
+    "name": "The Efficiency Essentialist",
+    "model": "qwen3.8-max",
+    "persona": "The Efficiency Essentialist",
+    "score": 6,
+    "reason": "The game is highly streamlined with elegant, minimal rules (match suit/rank or draw), zero bookkeeping overhead, and fast decision cycles—all aligning with the Efficiency Essentialist's core values. Player 0 won decisively (payoff 110 vs. negative opponents) in only 7 decisions, suggesting strong flow and high fun-per-time ROI. However, strategic depth is limited: opponents are RandomAgent, reducing meaningful interaction, and the decision space is often trivial (frequently only one legal play). The forced draw at decision 3 introduces mild luck-based friction. Overall a smooth, efficient session but lacking the 'deep strategy' layer the profile prizes alongside elegance.",
+    "evidence": [
+      "Decision 1: Immediately played matching suit (10♠ on 5♠) — no hesitation, clean opening.",
+      "Decision 3: Forced draw due to no matching card — only instance of non-agentic downtime.",
+      "Decision 4: Played rank-matching 2♦ on 2♠ — efficient use of drawn card.",
+      "Decision 5–7: Three consecutive suit/rank matches emptied hand rapidly, ending the game.",
+      "Terminal payoff 110 vs. next-best -9 — dominant win with minimal decisions, high ROI.",
+      "All 7 decisions had small legal action sets (1–3 options), keeping pace fast and fiddliness near zero."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 2,
+      "mastery": 2,
+      "curiosity": 2,
+      "challenge_fit": 2,
+      "cognitive_challenge": 2,
+      "decision_challenge": 2,
+      "meaning": 2,
+      "immersion": 3,
+      "emotional_challenge": 1,
+      "progress_feedback": 4,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "Rules are immediately clear: match suit or rank to shed cards; target card, hand contents, and deck size are always visible in the state representation.",
+      "autonomy": "In 5 of 7 decisions the player had only one legal action (decisions 3, 7) or a trivially obvious play; only decision 5 offered a genuine choice between Q♦ and 4♦.",
+      "mastery": "All seven decisions required no skill beyond basic matching; no opportunity to develop or demonstrate improving competence across the short session.",
+      "curiosity": "Mechanics are fully transparent after one turn; hidden information (stock order, opponent hands) has minimal strategic implication given the simple matching rule.",
+      "challenge_fit": "The session lasted only 7 decisions with mostly forced moves, providing insufficient difficulty to induce flow for a player seeking elegant challenge.",
+      "cognitive_challenge": "No planning, sequencing, or resource management was required; each turn reduced to pattern-matching the top card against hand contents.",
+      "decision_challenge": "Only decision 5 (Q♦ vs 4♦ on a 5♦ target) presented a non-trivial choice, and even that had low consequence since both cards needed to be played eventually.",
+      "meaning": "Winning by emptying the hand is mechanically clear but carries no narrative weight, personal stakes, or emergent significance beyond the +110 payoff.",
+      "immersion": "The fast pace (7 rapid decisions, no downtime between turns) supports light flow, but the mechanical simplicity prevents deep absorption.",
+      "emotional_challenge": "No social negotiation, moral dilemma, or pressure beyond the trivial desire to win; opponents are random agents with no interactive presence.",
+      "progress_feedback": "Hand size visibly decreased from 5 to 0 across decisions; deck size tracked from 31 to 14; opponent hand sizes updated each turn, giving clear progress signals.",
+      "ease_of_control": "Actions are presented as a simple list of legal options (play specific card or draw); no bookkeeping, setup overhead, or procedural friction observed."
+    },
+    "limitations": [
+      "No wall-clock timing data available to assess actual pace or downtime between turns.",
+      "Opponents are RandomAgent, so no adaptive or social challenge emerged; a human opponent might change autonomy and decision_challenge scores.",
+      "Only one session observed; cannot assess whether repeated play would reveal deeper strategic layers (e.g., eight timing, voluntary drawing).",
+      "No subjective player feedback or self-report was recorded to confirm or contradict inferred experience qualities."
+    ],
+    "sources": [
+      {
+        "label": "completed_persona",
+        "job_id": "99d65f19e35f8a26c70b499e",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Efficiency Essentialist",
+        "instrument": "play_score",
+        "branch": "persona",
+        "system_sha256": "84ef314d7ad42374fdf12dd2dc2cd3fdff1d8eafb61fb7c4d19251f89874eccd",
+        "user_sha256": "bc2fcebfded87ec6abc802f429eba5baa3869c17aeb7a65c4d9af511c7107d90",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/efficiency_essentialist/play_score/result.json",
+        "source_sha256": "01eb3e0f550848db0b75c0423e79dbde1ca92ba6ec9555df7786e23f334c1a94",
+        "source_chain": [
+          {
+            "file": "blobs/01eb3e0f550848db0b75c0423e79dbde1ca92ba6ec9555df7786e23f334c1a94.json",
+            "sha256": "01eb3e0f550848db0b75c0423e79dbde1ca92ba6ec9555df7786e23f334c1a94",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/efficiency_essentialist/play_score/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      },
+      {
+        "label": "completed_persona",
+        "job_id": "19c8054e53841bdbfd9ff8a8",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Efficiency Essentialist",
+        "instrument": "experience12",
+        "branch": "persona",
+        "system_sha256": "0ea57f0784b668d200d8a627e372e5a555392e3b35826a24e6a7627071dda6e5",
+        "user_sha256": "6f390ec7d63a1cf0c05063935905e9c36889914a20169751c87011099b6e8218",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/efficiency_essentialist/experience12/result.json",
+        "source_sha256": "535562fc9be7040f83fa054a55c6784e36aa43d99c403d95f8ab413e61690bb7",
+        "source_chain": [
+          {
+            "file": "blobs/535562fc9be7040f83fa054a55c6784e36aa43d99c403d95f8ab413e61690bb7.json",
+            "sha256": "535562fc9be7040f83fa054a55c6784e36aa43d99c403d95f8ab413e61690bb7",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/efficiency_essentialist/experience12/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali_existing",
+        "protocol": "completed_20260926_mixed_endpoints"
+      }
+    ]
+  },
+  {
+    "id": "personas-6",
+    "mode": "personas",
+    "name": "The Narrative Architect",
+    "model": "qwen3.8-max",
+    "persona": "The Narrative Architect",
+    "score": 2,
+    "reason": "This is a bare-bones card-matching game (Crazy Eights/UNO variant) with zero narrative, thematic, or growth elements. The Narrative Architect values immersion, epic journeys, growth mechanics, and thematic depth—none of which are present. The session consists entirely of mechanical suit/rank matching against random opponents with no story, no progression, no cooperation, and no flavor. While the player won (payoff 110), the experience is thematically void and mechanically shallow from this profile's perspective.",
+    "evidence": [
+      "Game is a simple card-matching mechanic (match suit or rank) with no thematic framing or narrative context.",
+      "No growth, progression, or empire-building mechanics exist—only hand reduction toward winning.",
+      "All decisions are purely tactical card selection (e.g., playing 10 of spades to match suit, then A of clubs).",
+      "Opponents are RandomAgent, eliminating any possibility of meaningful negotiation or cooperative interaction.",
+      "No flavor text, story events, or immersive elements appear anywhere in the session record.",
+      "Player won with payoff 110, but victory in a thematically empty game does not satisfy this profile's core motivations."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 2,
+      "mastery": 2,
+      "curiosity": 2,
+      "challenge_fit": 2,
+      "cognitive_challenge": 1,
+      "decision_challenge": 2,
+      "meaning": 1,
+      "immersion": 1,
+      "emotional_challenge": 1,
+      "progress_feedback": 3,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "The match-suit-or-rank rule and hand-emptying win condition were consistently visible and unambiguous across all seven decisions.",
+      "autonomy": "Decisions 3 and 7 offered only a single legal action (draw or play the only matching card), and most other turns presented at most two options, severely limiting meaningful choice.",
+      "mastery": "The shallow strategy space (match suit/rank, save eights) offers little room for skill development or strategic depth across a single short session.",
+      "curiosity": "Hidden information was limited to stock order and opponent hands; no mechanics invited deeper exploration of emergent systems or unknown possibilities.",
+      "challenge_fit": "Player 0 won comfortably against RandomAgents with no forced draws beyond one, suggesting the difficulty was well below what would engage a player seeking epic or growth-oriented experiences.",
+      "cognitive_challenge": "Most turns required only pattern-matching a single card to the target; no planning, sequencing, or multi-step reasoning was evident in any decision.",
+      "decision_challenge": "Decision 5 offered three legal plays (Q♦, 4♦, or draw) but all were low-consequence; no decision carried significant strategic weight or trade-off.",
+      "meaning": "The session contained no narrative arc, thematic framing, character identity, or sense of journey—only mechanical card matching toward an arbitrary win condition.",
+      "immersion": "No thematic elements, world-building, or narrative context were present; the game state was purely abstract card data with no representational layer to absorb into.",
+      "emotional_challenge": "No moral dilemmas, social negotiations, or emotionally consequential choices arose; the only stakes were numerical point differentials at game end.",
+      "progress_feedback": "Hand size reduction from 5 to 1 was clearly tracked, opponent hand sizes were visible, and the terminal payoff (+110) confirmed the outcome unambiguously.",
+      "ease_of_control": "Legal actions were explicitly enumerated each turn, and selecting among them required no complex bookkeeping or interface navigation."
+    },
+    "limitations": [
+      "No thematic or narrative framing was provided in the interface, so it is unclear whether any was available but simply not logged.",
+      "Opponent behavior (RandomAgent) cannot be distinguished from human play in the log, so social or cooperative dimensions cannot be assessed.",
+      "No player self-reports, think-aloud data, or subjective ratings were recorded to confirm or contradict inferred experience qualities.",
+      "The session comprised only seven decisions in a single short game, insufficient to assess whether repeated play might reveal deeper strategic or narrative layers.",
+      "Wall-clock timing, pacing, and any audiovisual presentation elements are absent from the log."
+    ],
+    "sources": [
+      {
+        "label": "completed_persona",
+        "job_id": "940e072bc6d96b458a30af5e",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Narrative Architect",
+        "instrument": "play_score",
+        "branch": "persona",
+        "system_sha256": "84ef314d7ad42374fdf12dd2dc2cd3fdff1d8eafb61fb7c4d19251f89874eccd",
+        "user_sha256": "ee2ffb1ef68c7576e66db6448f1c5b9229c31337d6b72ca3850c3b8de690324c",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/narrative_architect/play_score/result.json",
+        "source_sha256": "48b319e05698532dfdadc09456161aedee023a324fd994b78a3bc661e17cadf1",
+        "source_chain": [
+          {
+            "file": "blobs/48b319e05698532dfdadc09456161aedee023a324fd994b78a3bc661e17cadf1.json",
+            "sha256": "48b319e05698532dfdadc09456161aedee023a324fd994b78a3bc661e17cadf1",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/narrative_architect/play_score/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      },
+      {
+        "label": "completed_persona",
+        "job_id": "afc6cce44e0639747220bfe5",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Narrative Architect",
+        "instrument": "experience12",
+        "branch": "persona",
+        "system_sha256": "0ea57f0784b668d200d8a627e372e5a555392e3b35826a24e6a7627071dda6e5",
+        "user_sha256": "5f522ba0a6a113dd2418cdc907af2e6c375d16dedb0924f7b8931f61031959d1",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/narrative_architect/experience12/result.json",
+        "source_sha256": "c7b1abfbd8d20be980245a8e5f65385f88b0acd183044612e279555c0f96abe0",
+        "source_chain": [
+          {
+            "file": "blobs/c7b1abfbd8d20be980245a8e5f65385f88b0acd183044612e279555c0f96abe0.json",
+            "sha256": "c7b1abfbd8d20be980245a8e5f65385f88b0acd183044612e279555c0f96abe0",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/narrative_architect/experience12/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali_existing",
+        "protocol": "completed_20260926_mixed_endpoints"
+      }
+    ]
+  },
+  {
+    "id": "personas-7",
+    "mode": "personas",
+    "name": "The Social Lubricator",
+    "model": "qwen3.8-max",
+    "persona": "The Social Lubricator",
+    "score": 2,
+    "reason": "The Social Lubricator's core motivation is human connection and social interaction, yet this session is entirely automated play against RandomAgent bots with zero social dynamics. While the underlying card game is mechanically simple (matching suit/rank, play or draw), which aligns with the profile's preference for low barrier to entry, the complete absence of bluffing, laughter, group dynamics, or any interpersonal element renders the experience hollow for this profile. The player won decisively (110 vs negative scores), but winning is irrelevant to a profile that prioritizes experience over scoring.",
+    "evidence": [
+      "All three opponents are RandomAgent bots, eliminating any possibility of social interaction or group dynamic.",
+      "Decisions are purely mechanical (play a matching card or draw), with no bluffing, negotiation, or social deduction elements.",
+      "The game is a simple shedding/matching card game, which is easy to learn but offers no party-game social layer in this format.",
+      "Player 0 won with score 110 while opponents scored negatively, but outcome is irrelevant to a profile that values connection over competition.",
+      "No evidence of any communication, reaction, or shared experience between participants."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 2,
+      "mastery": 2,
+      "curiosity": 2,
+      "challenge_fit": 2,
+      "cognitive_challenge": 1,
+      "decision_challenge": 1,
+      "meaning": 1,
+      "immersion": 1,
+      "emotional_challenge": 1,
+      "progress_feedback": 3,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "The match-suit-or-rank rule and win-by-emptying-hand condition are immediately apparent from the first decision, with legal actions clearly enumerated each turn.",
+      "autonomy": "Most decisions offered only 1-2 legal actions (e.g., decisions 3 and 7 had a single forced play or draw); decision 5 offered three options but all were functionally equivalent diamond plays.",
+      "mastery": "The game's shallow decision space (usually one forced play) provides no opportunity to develop or demonstrate skill across the seven decisions.",
+      "curiosity": "No hidden mechanics or emergent patterns emerged; the game state was fully transparent and predictable from turn to turn.",
+      "challenge_fit": "The near-absence of meaningful choices (most turns had a single legal action) provides almost no challenge, well below even a casual threshold.",
+      "cognitive_challenge": "No planning, sequencing, or trade-off reasoning was required; each turn reduced to pattern-matching a single card against the target.",
+      "decision_challenge": "Only decision 5 presented multiple legal plays, and all three options (Q♦, 4♦, or draw) led to trivially similar outcomes with no meaningful consequence differentiation.",
+      "meaning": "Winning against three RandomAgents in a purely mechanical card-matching exercise carries no personal resonance or felt significance beyond the numerical payoff.",
+      "immersion": "The session is a sequence of forced mechanical plays with no narrative tension, social stakes, or evolving situation to become absorbed in.",
+      "emotional_challenge": "No social pressure, moral dilemma, or interpersonal tension existed; opponents were automated agents with no capacity for interaction.",
+      "progress_feedback": "Hand size reduction was visible each turn (5→4→3→4→3→2→1→0), and the win condition was unambiguous when the last card was played.",
+      "ease_of_control": "Legal actions were always clearly listed and few in number; selecting a card index or 'draw' required no bookkeeping or procedural navigation."
+    },
+    "limitations": [
+      "No human opponents were present; all social interaction dimensions are necessarily absent from this automated session.",
+      "No wall-clock timing, chat, or behavioral signals from opponents are recorded, so any potential social dynamics cannot be assessed.",
+      "The RandomAgent opponents' behavior (e.g., Player 3 accumulating 13 cards) is visible but their intent or effect on experience is unknowable.",
+      "No subjective player feedback, emotional reports, or post-game reflections were logged."
+    ],
+    "sources": [
+      {
+        "label": "completed_persona",
+        "job_id": "007cc7499fdfb82035ef268a",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Social Lubricator",
+        "instrument": "play_score",
+        "branch": "persona",
+        "system_sha256": "84ef314d7ad42374fdf12dd2dc2cd3fdff1d8eafb61fb7c4d19251f89874eccd",
+        "user_sha256": "01e2962c1b0f6aca7fe51b22841d7449497b3f390c2cd4a788b2978c92fccf9e",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/social_lubricator/play_score/result.json",
+        "source_sha256": "1e1e5f64998d2d2da832d885eae09c4f6b12d3cc8ca8ae09f4b85f64f3dec652",
+        "source_chain": [
+          {
+            "file": "blobs/1e1e5f64998d2d2da832d885eae09c4f6b12d3cc8ca8ae09f4b85f64f3dec652.json",
+            "sha256": "1e1e5f64998d2d2da832d885eae09c4f6b12d3cc8ca8ae09f4b85f64f3dec652",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/social_lubricator/play_score/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      },
+      {
+        "label": "completed_persona",
+        "job_id": "0bb7f7e2f930fb4c90364721",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Social Lubricator",
+        "instrument": "experience12",
+        "branch": "persona",
+        "system_sha256": "0ea57f0784b668d200d8a627e372e5a555392e3b35826a24e6a7627071dda6e5",
+        "user_sha256": "de561e1cd637c4e092699ec01565e4d7697692f765a037b183f934d149518325",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/social_lubricator/experience12/result.json",
+        "source_sha256": "3bd915d55157848b0f02327062f659d8536f5fb3cfdca24e47cd12388f6a0505",
+        "source_chain": [
+          {
+            "file": "blobs/3bd915d55157848b0f02327062f659d8536f5fb3cfdca24e47cd12388f6a0505.json",
+            "sha256": "3bd915d55157848b0f02327062f659d8536f5fb3cfdca24e47cd12388f6a0505",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/social_lubricator/experience12/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali_existing",
+        "protocol": "completed_20260926_mixed_endpoints"
+      }
+    ]
+  },
+  {
+    "id": "personas-8",
+    "mode": "personas",
+    "name": "The System Purist",
+    "model": "qwen3.8-max",
+    "persona": "The System Purist",
+    "score": 2,
+    "reason": "This session is a simple matching card game (Crazy Eights variant) with hidden information, random card draws, and trivially shallow decisions—nearly everything The System Purist despises. Most turns offered forced or near-forced plays with minimal optimization potential. The imperfect information (hidden opponent hands, unknown deck order) directly contradicts the profile's demand for perfect information. The few genuine choices (e.g., which diamond to play in decision 5) are lightweight, not the 'heavy/crunchy' decisions this profile craves. Winning against RandomAgent opponents provides no sense of intellectual superiority or system mastery. The game is the antithesis of 'tight' and 'punishing.'",
+    "evidence": [
+      "Decision 3: only legal action was draw—no meaningful choice, pure luck dependency.",
+      "Decision 5: chose Q♦ over 4♦ when both matched diamonds—one of the few moments of actual choice, but trivially simple.",
+      "Decision 7: only one legal action (play 3♥ matching rank), again a forced move.",
+      "Opponent hands hidden throughout—imperfect information contradicts profile's core demand for perfect information.",
+      "Terminal payoff +110 (win) against RandomAgent opponents provides no evidence of outthinking a system.",
+      "Game mechanics are suit/rank matching with random draws—no optimization depth, no blocking strategy, no tight resource management."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 2,
+      "mastery": 2,
+      "curiosity": 2,
+      "challenge_fit": 1,
+      "cognitive_challenge": 1,
+      "decision_challenge": 1,
+      "meaning": 2,
+      "immersion": 2,
+      "emotional_challenge": 1,
+      "progress_feedback": 3,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "The shedding objective (empty your hand) and matching rules (suit or rank) are immediately clear from the first observation, with wild eights as the only added complexity.",
+      "autonomy": "Decisions 3 and 7 offered only a single legal action (forced draw, forced play); most other turns offered only play-or-draw with one matching card, leaving little room for meaningful choice.",
+      "mastery": "The optimal play was nearly always obvious (play a matching card when available), leaving minimal opportunity to develop or demonstrate superior skill across the 7 decisions.",
+      "curiosity": "Hidden stock and opponent hands exist but the simple matching mechanic provides little incentive to deduce or model deeper state; no eights were ever encountered by Player 0.",
+      "challenge_fit": "A System Purist seeking heavy, crunchy decisions faces a game where 5 of 7 turns had a single dominant action and the remaining choices were trivially resolved by basic matching logic.",
+      "cognitive_challenge": "No turn required planning ahead, weighing trade-offs, or considering opponent modeling; the best move was always the immediately playable card.",
+      "decision_challenge": "Decision 5 offered three options (Q♦, 4♦, or draw) but playing a diamond was clearly superior; all other decisions had one or two options with an obvious best choice.",
+      "meaning": "Player 0 won with +110 payoff against random agents, but the victory required no strategic insight and felt like a mechanical progression rather than a hard-won achievement.",
+      "immersion": "The rapid, low-stakes turns with trivial decisions provide little opportunity for sustained absorption; the game resolved in only 7 focal decisions.",
+      "emotional_challenge": "No moral dilemmas, social pressure, or emotionally consequential choices arose; opponents were random agents with no interactive tension.",
+      "progress_feedback": "Hand size decreased visibly from 5 to 1 across decisions, and the win condition was unambiguous when the last card was played.",
+      "ease_of_control": "The action space was minimal (play a specific card index or draw), and every intention mapped directly to a single legal action without bookkeeping friction."
+    },
+    "limitations": [
+      "No wall-clock timing data available to assess pacing or deliberation.",
+      "Opponent behavior was purely random, so no evidence of interactive strategic tension can be assessed.",
+      "Only one game session is recorded, preventing assessment of learning or mastery across repeated play.",
+      "No subjective player feedback or self-report was captured.",
+      "The session was short (7 decisions), limiting evidence for dimensions like immersion and curiosity that may develop over longer play."
+    ],
+    "sources": [
+      {
+        "label": "completed_persona",
+        "job_id": "d51d875aee4393a5c3da3d37",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The System Purist",
+        "instrument": "play_score",
+        "branch": "persona",
+        "system_sha256": "84ef314d7ad42374fdf12dd2dc2cd3fdff1d8eafb61fb7c4d19251f89874eccd",
+        "user_sha256": "08502ddbfd0a2594ac04d103b4f520a71a53e34f1bdbf20f990ebb099746cab8",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/system_purist/play_score/result.json",
+        "source_sha256": "d2b5fadad48ef2d6985172207b1835c9ad9f186d62bc76eb396ae00e810186f2",
+        "source_chain": [
+          {
+            "file": "blobs/d2b5fadad48ef2d6985172207b1835c9ad9f186d62bc76eb396ae00e810186f2.json",
+            "sha256": "d2b5fadad48ef2d6985172207b1835c9ad9f186d62bc76eb396ae00e810186f2",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/system_purist/play_score/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      },
+      {
+        "label": "completed_persona",
+        "job_id": "e373da2280a618baf673ae34",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The System Purist",
+        "instrument": "experience12",
+        "branch": "persona",
+        "system_sha256": "0ea57f0784b668d200d8a627e372e5a555392e3b35826a24e6a7627071dda6e5",
+        "user_sha256": "a80d5d96a475162610715bb4ad177532e05a9d3e2264ae2f7343a616f3071fbe",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/system_purist/experience12/result.json",
+        "source_sha256": "8538ef21f7f80262717a077a49451cbc587a6c21643b1cf23b50487d0d646add",
+        "source_chain": [
+          {
+            "file": "blobs/8538ef21f7f80262717a077a49451cbc587a6c21643b1cf23b50487d0d646add.json",
+            "sha256": "8538ef21f7f80262717a077a49451cbc587a6c21643b1cf23b50487d0d646add",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/system_purist/experience12/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali_existing",
+        "protocol": "completed_20260926_mixed_endpoints"
+      }
+    ]
+  },
+  {
+    "id": "personas-9",
+    "mode": "personas",
+    "name": "The Thrill Seeker",
+    "model": "qwen3.8-max",
+    "persona": "The Thrill Seeker",
+    "score": 5,
+    "reason": "The session ends in a decisive win (+110 payoff) with a fast pace (only 7 decisions), which a Thrill Seeker would appreciate. There is one forced-draw moment creating brief tension, and Player 3's hand ballooning to 13 cards offers mild schadenfreude. However, the decisions themselves are largely mechanical (play the matching card), with no genuine push-your-luck gambles, no meaningful risk/reward tradeoffs, and no high-stakes moments. The RandomAgent opponents provide no competitive tension. The experience is pleasant but shallow for a profile that craves dopamine spikes and active gambling.",
+    "evidence": [
+      "Decision 3: forced draw when no legal play available — the only moment of tension in the session.",
+      "Player 3's hand grew from 5 to 13 cards, providing mild schadenfreude.",
+      "Decisions 4–7 were consecutive plays with no risk element, reducing hand from 4 to 0.",
+      "Terminal payoff +110 for Player 0 is a strong positive outcome.",
+      "Only 7 total decisions; game resolved quickly with no comeback or close-call moments."
+    ],
+    "dimensions": {
+      "goals_rules": 4,
+      "autonomy": 2,
+      "mastery": 2,
+      "curiosity": 2,
+      "challenge_fit": 2,
+      "cognitive_challenge": 2,
+      "decision_challenge": 2,
+      "meaning": 2,
+      "immersion": 2,
+      "emotional_challenge": 1,
+      "progress_feedback": 4,
+      "ease_of_control": 4
+    },
+    "dimension_evidence": {
+      "goals_rules": "Standard shedding game with clear match-suit-or-rank mechanics; win condition (empty hand) and scoring (collect opponents' remaining card values) are straightforward.",
+      "autonomy": "Most turns offered only 1-2 legal actions (decisions 2, 3, 7 had exactly one option); the widest choice was 3 options at decision 5, all matching by suit with no strategic tradeoff.",
+      "mastery": "Player 0 won in 7 turns with no mistakes or learning moments; all plays were mechanically obvious matches with no opportunity to develop skill.",
+      "curiosity": "Hidden information (opponent hands, stock order) existed but the session was too short and linear to provoke investigation; no eights were played by Player 0 to create suit-declaration dilemmas.",
+      "challenge_fit": "Player 0 drew one card (decision 3) then immediately found a playable card; no risk of accumulating a large hand or being stuck, making the session trivially easy for a risk-seeking profile.",
+      "cognitive_challenge": "No turn required weighing competing objectives or planning ahead; every play was a direct suit or rank match with no wild-card strategy involved.",
+      "decision_challenge": "At decision 5, choosing Q♦ over 4♦ had negligible strategic consequence since both matched suit and the game ended two turns later regardless.",
+      "meaning": "Player 0 collected +110 points but the win came through steady attrition rather than a dramatic swing; no opponent bust or comeback narrative emerged.",
+      "immersion": "Only 7 decisions total; the game resolved before any sustained tension or engagement could build.",
+      "emotional_challenge": "No push-your-luck moment, no risk of busting, no high-stakes gamble; the single draw (decision 3) immediately yielded a playable card, eliminating any tension.",
+      "progress_feedback": "Hand size visibly decreased from 5 to 1 across decisions; played cards were appended to a visible history; terminal payoff (+110) was reported.",
+      "ease_of_control": "Legal actions were clearly enumerated each turn; selecting a card index or draw required no complex bookkeeping or interface navigation."
+    },
+    "limitations": [
+      "No wall-clock timing data available to assess pacing or whether the fast resolution felt exciting or anticlimactic.",
+      "Opponents were RandomAgent, so no social interaction, schadenfreude, or competitive tension from skilled opponents could be evaluated.",
+      "No subjective player feedback or self-reported emotional state was recorded.",
+      "Only one game was played, so no assessment of replayability or 'instant restart' desire is possible.",
+      "The session is too short to determine whether longer play would have generated the tension and risk the Thrill Seeker profile seeks."
+    ],
+    "sources": [
+      {
+        "label": "completed_persona",
+        "job_id": "9c67241570c7f0128e3bcbe5",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Thrill Seeker",
+        "instrument": "play_score",
+        "branch": "persona",
+        "system_sha256": "84ef314d7ad42374fdf12dd2dc2cd3fdff1d8eafb61fb7c4d19251f89874eccd",
+        "user_sha256": "8ca81eb987637e4f2eae66160b930fae08c3f511e8f937e2db1c85c8ef13d915",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/thrill_seeker/play_score/result.json",
+        "source_sha256": "3bd662e52728824127572a5825276772a49c77df848ca6622ebd81ded8ed7fba",
+        "source_chain": [
+          {
+            "file": "blobs/3bd662e52728824127572a5825276772a49c77df848ca6622ebd81ded8ed7fba.json",
+            "sha256": "3bd662e52728824127572a5825276772a49c77df848ca6622ebd81ded8ed7fba",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/thrill_seeker/play_score/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali",
+        "protocol": "completed_20260926_mixed_endpoints"
+      },
+      {
+        "label": "completed_persona",
+        "job_id": "875558557443b6968f8e5c63",
+        "sample": "ec26b42b8c2659a832d227ad3ec92c7daa959e07d15c76bd5058fc6168de8c13",
+        "game": "crazy_eights__initial",
+        "judge": "qwen3.8-max",
+        "judge_persona": "The Thrill Seeker",
+        "instrument": "experience12",
+        "branch": "persona",
+        "system_sha256": "0ea57f0784b668d200d8a627e372e5a555392e3b35826a24e6a7627071dda6e5",
+        "user_sha256": "d562aa5a5413e984a823532060d532b6a034813cb23364157f05f769f0cfa96f",
+        "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/thrill_seeker/experience12/result.json",
+        "source_sha256": "7d4889fa1e516fa2fd3e0855869bdd0d0188aff772bae34b1b7ef1af812f843d",
+        "source_chain": [
+          {
+            "file": "blobs/7d4889fa1e516fa2fd3e0855869bdd0d0188aff772bae34b1b7ef1af812f843d.json",
+            "sha256": "7d4889fa1e516fa2fd3e0855869bdd0d0188aff772bae34b1b7ef1af812f843d",
+            "source": "/home/hdd3/chaiqi/Cardiverse_repro/research/neutral_model49_20260923/questionnaires_v7_overnight/results/deepseek-v4.1-flash/crazy_eights__initial/persona/thrill_seeker/experience12/result.json"
+          }
+        ],
+        "actual_models": "qwen3.8-max",
+        "endpoint": "ali_existing",
+        "protocol": "completed_20260926_mixed_endpoints"
+      }
+    ]
+  }
+]
